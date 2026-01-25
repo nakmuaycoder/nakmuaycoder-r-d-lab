@@ -4,7 +4,9 @@ project:
 website:
   description: "Welcome to nakmuaycoder r&d-lab"
   site-url: https://nakmuaycoder.github.io/nakmuaycoder-r-d-lab/
-  title: "nakmuaycoder r&d-lab"
+  title: "My R&D Lab"
+  open-graph: true
+  twitter-card: true
   navbar:
     right:
       - about.qmd

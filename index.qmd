@@ -1,8 +1,22 @@
 ---
-title: "NakMuay R&D Lab"
+title: "R&D Lab"
 image: profile.jpg
+
+listing:
+  id: blog-listings
+  contents: posts
+  sort: "date desc"
+  type: default
+  categories: true
+  sort-ui: true
+  filter-ui: false
+  page-size: 3  
+
+
+
 about:
-  template: broadside
+  template: jolla
+  image-shape: rectangle
   links:
     - icon: github
       text: Github
@@ -36,3 +50,10 @@ I don't just train models; I build systems to solve my own problems, often going
 * **Hardware & Edge:** Tinkering with devices and custom setups.
 
 I share my findings, concepts, and snippets of code here.
+
+---
+
+### 📝 Latest Experiments
+
+:::{#blog-listings}
+:::
