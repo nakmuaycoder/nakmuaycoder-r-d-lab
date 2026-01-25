@@ -1,0 +1,60 @@
+---
+title: "R&D Lab"
+image: profile.jpg
+
+listing:
+  id: blog-listings
+  contents: posts
+  sort: "date desc"
+  type: default
+  categories: true
+  sort-ui: true
+  filter-ui: false
+  page-size: 3  
+
+
+
+about:
+  template: jolla
+  image-shape: rectangle
+  links:
+    - icon: github
+      text: Github
+      href: https://github.com/nakmuaycoder
+    - icon: linkedin
+      text: LinkedIn
+      href: https://www.linkedin.com/in/olivier-feher-9446b5105/
+---
+
+**Welcome to the lab.** 🧪
+
+I am a Data Scientist and Tech Enthusiast.
+
+I have a few **neuroses**: learning the **Thai language** (my second home 🇹🇭) and sports.
+
+I used to be a **Nak Muay** fighting in Thailand. But let's face it, I am officially "old" now (34 years old, ouch). My pro fighting career is behind me.
+So, I traded my **boxing gloves** for **trail running poles** and **tight cycling bibs**. 🚴‍♂️🏔️
+
+### 🛠️ What is this place?
+
+This blog is my **digital workbench**.
+It is not a polished tutorial site. It is a log of my personal experiments where I try to solve real-world problems using code and data.
+
+### 🚀 Philosophy
+
+I don't just train models; I build systems to solve my own problems, often going against the grain of standard tech ecosystems. 
+
+### Topics I explore
+
+- **Sports Science & Data:** Building custom tools to optimize endurance training.
+- **Automation:** Escaping standard workflows to regain control over my data.
+- **Hardware & Edge:** Tinkering with devices and custom setups.
+
+I share my findings, concepts, and snippets of code here.
+
+---
+
+### 📝 Latest Experiments
+
+:::{#blog-listings}
+:::
