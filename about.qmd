@@ -1,0 +1,63 @@
+---
+title: "nakmuaycoder"
+subtitle: "Data Scientist @ Syroco | Ex-Pro Nak Muay"
+image: profile.jpg
+about:
+  template: trestles
+  image-shape: rectangle
+  links:
+    - icon: linkedin
+      text: Full CV (LinkedIn)
+      href: https://www.linkedin.com/in/olivier-feher-9446b5105/
+    - icon: github
+      text: Github
+      href: https://github.com/nakmuaycoder
+    - icon: youtube
+      text: Watch Me Fight 🥊
+      href: https://www.youtube.com/watch?v=Cl7UZN4Wqzk
+---
+
+## The Short Version
+
+I am a **Data Scientist** currently working at **Syroco** in Marseille. I help decarbonize the maritime industry using digital twins and efficient weather routing.
+
+Before diving into code, I spent a significant part of my life in the ring as a **Professional Muay Thai Fighter** in Thailand.
+
+---
+
+## 🛠️ Tech Stack
+
+I don't just collect badges; I use these tools to build production-grade systems.
+
+* **Languages:** Python, Bash, SQL.
+* **AI & ML:** PyTorch, TensorFlow, Scikit-learn, Pandas.
+* **Hardware:** Nvidia Jetson, Raspberry Pi (Edge AI).
+
+---
+
+## 🗺️ The Journey
+
+My career path is not linear, and that's my strength.
+
+### **The Fighter (2016-2017)**
+I lived in Buriram (Isan, Thailand) to fight for **Sitboonmee Gym**. 
+No corporate metaphor here about "resilience" or "agility". I just loved the sport, the culture, and the grind.
+
+### **The Engineer (2018-Present)**
+I eventually traded the gloves for a keyboard (it hurts less physically).
+I have since worked on high-stakes projects for industrial players:
+
+* **Aerospace:** Flight data analysis at **Airbus Helicopters**.
+* **Defense:** AI for naval systems at **Naval Group**.
+* **Sensing:** Computer Vision at **Ams-Osram**.
+* **Maritime:** Weather routing & Digital Twins at **Syroco** (Current).
+
+> **Want the chronological details?**
+> Check my [LinkedIn Profile](https://www.linkedin.com/in/olivier-feher-9446b5105/) for the full resume.
+
+---
+
+## 🎓 Education
+
+* **Master in Mathematics & Applications** | Aix-Marseille Université
+* **Bachelor in Applied Mathematics** | Aix-Marseille Université
