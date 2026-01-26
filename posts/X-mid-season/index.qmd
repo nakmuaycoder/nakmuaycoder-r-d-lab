@@ -1,0 +1,23 @@
+Debut du test, je suis assez sceptique, meme si ca me semble pas mal coherent, surtout l'approche autour des blessures:
+
+- blessure 1: entorse à la reprise, pas de vrai probleme mais mis le pied sur ue pierre
+  la veille de la premiere seance de proprio (retour d'une entorse non traitée pendant la prepa du 100k de decembre).
+
+- aponevrosite plantaire: vrai blessure problematique pour l'ultra trail. lors de l'analyse,
+  j'ai donné au LLM les dates ou mon aponevrosite plantaire s'est decanchee,
+  il a tout de suite fais le lien avec une augmentation de charge, a cause d'un weekend ou je me suis trop fait plaisir.
+  Le LLM a egalement spotte un probleme dans la polarisation du plan pour 100k achete sur trainingpeks (une des raisons qui m'a pousse à ce projet):
+  - Des seances d'assimilation à trop haut volume compare a la charge: HRV qui remonte pas
+  - ainsi que des seances de seuil suivi de sortie longue faisant attaquer le bloc suivant non reposé: causant HRV plonge en fin d'assimilation
+
+La proposition de remplacer le fractioné en course par du home trainer pour limiter l'impact sur mon aponevrosite et d'eviter me tordre la cheville
+dans les sentiers forrestiers de nuits à la frontale, avec ma chienne (car oui elle est de toutes les sorties) m'a tout de suite semblée faire sens. L'analyse du LLM etant, au vu de l'absence de drift 
+cardio lors de mes 20h d'effort pour le 100k de chiang mai revele que le cardio est bon mais le corps ne suit pas, et me propose un gros bloc de renfo.
+Gemini repete souvent que j'ai un moteur de lambo monté sur une deux chevaux.
+
+Adaptation du plan par le LLM:
+Suite a mon entorse de nouvel an en reprise, je suis rentre de chez le kine avec un plan d'exo renfo et proprioception et la
+consigne d'attendre 6 semaines avant la reprise du trail engage (cica des ligaments) mais feux vert pour le home trainer.
+Apres avoir pris en photo le plan du kine, le Lgemini a reconnu les exos, a cree une session et les a ajoute a mon plan d'entrainement.
+Je n'ai en revanche pas pu regarder si la polarisation etait bien respectée car c'était le bloc de reprise, retour de Thailande post ultra,
+manque de sommeil, jet lag, suivi de quelques jours malade avec de la fievre puis une entorse autant dire un HRV super bas.
