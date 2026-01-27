@@ -21,3 +21,18 @@ consigne d'attendre 6 semaines avant la reprise du trail engage (cica des ligame
 Apres avoir pris en photo le plan du kine, le Lgemini a reconnu les exos, a cree une session et les a ajoute a mon plan d'entrainement.
 Je n'ai en revanche pas pu regarder si la polarisation etait bien respectée car c'était le bloc de reprise, retour de Thailande post ultra,
 manque de sommeil, jet lag, suivi de quelques jours malade avec de la fievre puis une entorse autant dire un HRV super bas.
+
+
+
+It helps immensely! I see the system working in two directions that make it super powerful:
+1. Forward (Strategic): It designs the plan based on my capacity and history.
+Since I’m prone to plantar fasciitis, it analyzed 3 years of data and prioritized cross-training (cycling) to reduce mechanical load while building the engine. It even spotted an anomaly in my previous training plan bought for December's 100k, a massive HRV dip that predicted an injury I completely missed at the time.
+
+2. Backward (Tactical): It re-adapts the plan to daily life constraints.
+When I sprained my ankle last month, I literally fed the model my PT's feedback. It immediately re-calibrated the training block to respect the rehab protocols while keeping me active.
+
+The only catch is that you have to channel the LLM with strict 'anchors' to prevent hallucinations and drifts.
+
+I’m teasing a bit, but I’ll deep dive into those safeguards
+I will also do some experiments with my Garmin sensors in future posts!
+
