@@ -36,3 +36,129 @@ The only catch is that you have to channel the LLM with strict 'anchors' to prev
 I’m teasing a bit, but I’ll deep dive into those safeguards
 I will also do some experiments with my Garmin sensors in future posts!
 
+moi:
+Pourquoi des fois la montée en charge est sur 4 semaines ?
+
+gemini:
+Coach Trail à l'appareil.
+C'est une excellente question de méthode. Tu as l'œil.
+Le standard académique, c'est le fameux 3:1 (3 semaines de charge, 1 semaine de récup). C'est le rythme de croisière le plus sûr pour éviter le surentraînement.
+Cependant, dans ton plan, j'ai parfois glissé des cycles de 4 semaines de charge (donc un ratio 4:1). Ce n'est pas une erreur, c'est une stratégie avancée appelée la Surcharge Fonctionnelle.
+Voici les 3 raisons pour lesquelles on fait ça :
+1. LA NATURE DE L'EFFORT (L'Intensité vs Le Volume)
+C'est la règle principale : Plus c'est intense, plus le cycle doit être court.
+ * VMA / PMA (Février/Mars) : C'est très violent pour le système nerveux et les muscles. On reste strict sur du 3 semaines max avant de souffler. Si on tente 4, on casse.
+ * Endurance / Seuil (Avril/Mai) : C'est moins traumatisant. On bosse "en dedans". Ton corps peut encaisser ce type de fatigue plus longtemps. On peut donc "étirer" la montée en charge sur 4 semaines pour construire une caisse plus profonde.
+2. TON ARME SECRÈTE : LE VÉLO
+C'est là que ton profil Hybride change la donne.
+Un coureur à pied pur (100% running) qui tente 4 semaines de charge progressive risque la fracture de fatigue ou la tendinite à cause des ondes de choc.
+Toi, tu fais 50 à 60% de ton volume sur le vélo (porté).
+ * Impacts : Faibles.
+ * Dommages musculaires : Modérés.
+ * Résultat : Tu peux te permettre des cycles de charge plus longs que la moyenne des coureurs, car tes articulations ne subissent pas la même punition.
+3. LE "TÉTRIS" DU CALENDRIER
+Parfois, c'est purement mathématique par rapport à tes dates de course.
+Si on a une course le 13 Juin et qu'on sort d'une récup le 8 Mai, on a 5 semaines "vides".
+ * Option A : Faire 3 semaines charge + 1 récup + 1 semaine "bof" avant la course. (Bof).
+ * Option B : Faire 4 semaines de montée progressive pour arriver au sommet de la fatigue juste avant la période d'affûtage (Taper). (Top).
+   C'est souvent le cas avant les gros objectifs : on cherche à créer une "surcompensation". On te fatigue volontairement un peu plus (semaine 4) pour que le rebond de forme soit plus puissant le jour J.
+RÉSUMÉ POUR TA SAISON
+ * Hiver (VMA/Force) : Cycles courts (3 semaines). On protège la fibre rapide.
+ * Printemps/Été (Volume/Ultra) : Cycles longs possibles (4 semaines). On mise sur ta résilience et le vélo.
+C'est clair pour toi ? C'est de la gestion de fatigue "à la carte".
+
+
+
+
+moi:
+C'est normal que après le trail des étoiles il n'y ait pas de rappel seuil et VMA?
+
+gemini:
+Coach Trail à l'appareil.
+Tu as l'œil vif. C'est une observation très pertinente.
+La réponse courte est : OUI, C'EST 100% NORMAL.
+C'est même la condition sine qua non pour réussir ton 100 Miles.
+Voici l'explication physiologique et stratégique. C'est ce qu'on appelle la Spécificité de l'Épreuve.
+1. LA PHYSIOLOGIE DU 100 MILES
+Sur un effort de 24h à 35h (comme Chiang Mai), tu vas passer 95% à 99% de ton temps en Zone 1 et bas de Zone 2.
+ * Ta VMA (Vitesse Maximale Aérobie) ne sert quasi à rien ici.
+ * Ton Seuil Anaérobie (le rythme d'un 10km ou semi) ne sera jamais atteint.
+Si on continue à travailler la VMA en Septembre/Octobre, on envoie un signal contradictoire à ton corps.
+ * Message VMA : "Brûle du sucre vite, sois explosif, fais monter le cœur."
+ * Besoin 100 Miles : "Brûle du gras (lipolyse), sois économe, garde le cœur bas."
+On veut transformer ton corps en un Diesel increvable, pas en une Formule 1 qui doit s'arrêter au stand tous les 3 tours.
+2. LE VASE COMMUNICANT (Stress vs Volume)
+Ton corps a une capacité d'adaptation limitée (un vase).
+ * En Phase 4, on remplit le vase avec du VOLUME (12h-14h/semaine) et du DÉNIVELÉ.
+ * Si on ajoute de l'INTENSITÉ (VMA/Seuil) par-dessus ce volume énorme, le vase déborde.
+C'est l'équation classique de la blessure en prépa ultra :
+Volume Max + Intensité Max = Fracture de Fatigue ou Burnout.
+3. ON REMPLACE LA VMA PAR LA "FORCE"
+Ne t'inquiète pas, tu ne vas pas devenir mou. L'intensité "Cardio" disparaît, mais elle est remplacée par l'intensité "Musculaire".
+ * Au lieu de faire monter le cœur à 170 bpm sur du plat...
+ * Tu vas faire monter les cuisses en température sur des montées de 1h ou des descentes actives.
+   C'est ce qu'on appelle l'Endurance de Force. C'est ça qui te sauvera au 120ème kilomètre, pas ta capacité à courir vite sur 400m.
+LA NUANCE : LE RÔLE DU VÉLO
+C'est là que ta stratégie hybride est géniale.
+Si tu as peur de te sentir "lent" ou "encrassé" (le syndrome du tracteur), on gardera des petits rappels d'intensité UNIQUEMENT SUR LE VÉLO.
+ * Pourquoi ? Parce que faire 10x1min à fond sur vélo ne casse pas de fibre musculaire (pas d'impact).
+ * Ça permet de garder le système nerveux éveillé et le volume sanguin élevé (VO2) sans risquer la tendinite d'Achille avant la course.
+En résumé :
+À partir de fin Août, on arrête de vouloir "construire" de la vitesse. On veut "construire" de la durabilité. On passe du mode "Architecte" (faire grandir la maison) au mode "Maçon" (épaissir les murs).
+C'est une transition frustrante pour ceux qui aiment la vitesse, mais c'est la clé de la réussite sur ultra. Fais confiance au processus.
+
+je ne suis pas sûr que ce soit une hallucination :
+ChatGPT 
+
+Merci pour ta réponse détaillée, elle est très claire et je partage complètement la logique globale : spécificité de l’épreuve, priorité absolue à la durabilité, au volume, au D+ et à l’endurance de force.
+Sur un 100 miles comme Chiang Mai, je suis d’accord : l’objectif n’est clairement pas d’être rapide, mais d’être encore solide et lucide très loin dans la course.
+
+Ma question ne venait pas d’un attachement à la vitesse “pour la vitesse”, mais plutôt d’un souci de marge physiologique et d’économie sur la durée. Je comprends bien que VMA et seuil ne sont pas des intensités de course le jour J, mais plutôt des systèmes de soutien.
+
+Du coup, je voulais juste valider avec toi un point de nuance (sans remettre en cause la stratégie) :
+est-ce que tu envisages, même très ponctuellement, de garder de micro-rappels d’intensité très contrôlés (par exemple Z3 basse, en montée, ou via le vélo comme tu l’évoques), uniquement dans une logique d’entretien et non de développement ?
+Ou est-ce un choix volontairement très conservateur de tout sortir côté course à pied sur la phase finale ?
+
+Dans tous les cas, je suis aligné avec l’idée de passer du mode “architecte” au mode “maçon”, et je préfère clairement arriver un peu moins affûté mais incassable plutôt que l’inverse. Je voulais surtout m’assurer qu’on est bien sur la même lecture des objectifs de cette phase.
+
+gemini:
+Coach Trail à l'appareil.
+Tu poses la question qui distingue le coureur amateur du coureur expérimenté : la question de l'Économie de Course et de la "Réserve".
+Ta lecture est excellente.
+Si on laisse le moteur s'encrasser totalement dans du "Z1 mou" pendant 3 mois, on perd en tension musculaire, en pied, et finalement, on dégrade l'économie de course (le coût énergétique pour avancer à une vitesse donnée augmente). C'est contre-productif.
+Donc, pour répondre précisément : OUI, nous allons garder des micro-rappels d'intensité. Mais pas n'importe comment.
+Voici la "Doctrine d'Entretien" pour cette Phase 4 (Septembre-Octobre) :
+1. LE PRINCIPE : PLAFOND vs PLANCHER
+ * Printemps (Développement) : On cherchait à monter ton Plafond (VMA, VO2max).
+ * Automne (Entretien) : On cherche à monter ton Plancher (Endurance) tout en empêchant le Plafond de s'effondrer.
+ * L'idée : Si ton plafond baisse trop, ton allure de croisière en Z2 finit par devenir coûteuse (elle se rapproche trop de ton max).
+2. COMMENT ON FAIT ? (La méthode Hybride)
+C'est là que ton profil Vélo/Course est une arme absolue. On va dissocier les stimuli.
+A. SUR LE VÉLO : On garde le "Moteur F1" 🏎️
+Puisque le vélo ne tape pas (zéro impact), c'est là qu'on maintient la VO2max et le débit cardiaque.
+ * La Séance type : Le Mardi ou Mercredi.
+ * Contenu : Des rappels type PMA courte (30/30) ou Seuil SV2.
+ * But : Garder un cœur puissant et une vascularisation au top, sans entamer tes tendons d'Achille ni tes genoux.
+ * Risque blessure : Quasi nul.
+B. EN COURSE À PIED : L'Intensité "Utile" (Z3 / Tempo Montagne) 🏔️
+On oublie la VMA sur piste (inutile et dangereuse à ce stade). On la remplace par du Tempo en Côte (Z3/Sweet Spot).
+ * Pourquoi ? En Ultra, quand tu veux "envoyer" dans une bosse pour passer un col, tu es en Z3. C'est l'intensité max utile en course.
+ * La Séance type : Intégrée dans ta sortie longue ou rando-course.
+ * Exemple : "4h de sortie dont 3 x 15min en montée à allure soutenue (Z3) avec bâtons".
+ * Bénéfice : Ça travaille la force, le mental, et ça maintient une bonne tension musculaire sans le choc de la vitesse sur le plat.
+C. LA VRAIE INTENSITÉ ULTRA : La "Casse de Fibre" 🔨
+Il y a une intensité qu'on oublie souvent : la Descente Active.
+En Phase 4, tes "intensités" à pied seront souvent des descentes courues un peu plus vite que l'allure course.
+ * C'est un stress mécanique (excentrique) énorme.
+ * Ça remplace une séance de VMA en termes de charge structurelle.
+RÉSUMÉ DE LA STRATÉGIE PHASE 4
+On ne fait pas du "jus de chaussette". On reste des athlètes.
+ * VMA / PMA : Exclusivement sur le VÉLO (Maintien de la cylindrée).
+ * SEUIL (Z4) : On oublie à pied (trop coûteux).
+ * TEMPO (Z3) : Oui, en CÔTE (Maintien de l'économie d'effort en montée).
+ * VITESSE : Non, remplacée par la DURABILITÉ en descente.
+Donc rassure-toi : tu ne vas pas devenir lent. Tu vas devenir efficace.
+Le plan global reste orienté "Volume", mais à l'intérieur des blocs, je veillerai à ce que ces rappels soient présents (surtout sur les séances HT du mardi et les segments D+ du weekend).
+C'est validé pour toi cette nuance ? On garde le tranchant, mais on change la lame. 😉
+
+
