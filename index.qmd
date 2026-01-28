@@ -17,7 +17,7 @@ listing:
     title: "nakmuaycoder r&d lab"
     description: "latest topics"
     items: 10
-    image: true
+    image: profile.jpg
   
 about:
   template: jolla
