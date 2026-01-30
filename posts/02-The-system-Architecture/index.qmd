@@ -116,9 +116,14 @@ I sent this feedback back to Gemini. Its response was a masterclass in **Refacto
 1.  *VO2Max/Power kept **exclusively on the bike** (Zero impact).*
 2.  *On foot: Tempo on hills and 'Eccentric loading' on downhills."*
 
-![Heart Rate Zone Distribution Patced](Code_Generated_Image (1).png)
-![Heart Rate Zone Distribution Patched](../01-ai-board-of-directors/viz-zones.jpg)
-*The final result (v1.1): Intensity reminders (orange/red) are preserved thanks to this negotiation.*
+
+::: {layout-ncol=2}
+![Initial Version](Code_Generated_Image (1).png)
+
+![Patched Version](../01-ai-board-of-directors/viz-zones.jpg)
+:::
+
+*The final result: Intensity reminders (orange/red) are preserved thanks to this negotiation.*
 
 > **💡 Key Takeaway:**
 > Use one LLM to generate (The Creative) and another to critique (The QA). The friction between the two often produces a better solution than either could alone.
