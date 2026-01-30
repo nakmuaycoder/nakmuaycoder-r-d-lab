@@ -1,10 +1,10 @@
 ---
-title: "Episode 2: The System Architecture"
+title: "AI Coach Series - Episode 2: The System Architecture"
 subtitle: "Training plan Design Time: AI Code Review"
 description: "How I validated the architecture of my ultra-trail training plan using an Adversarial approach (Gemini vs ChatGPT vs Experts)."
 author: "nakmuaycoder"
 date: "2026-02-08"
-categories: [methodology, prompt-engineering, sports-science, system-design]
+categories: [methodology, prompt-engineering, sports-science, system-design, ai-coach-series]
 image: image1.png
 title-block-banner: false
 draft: true

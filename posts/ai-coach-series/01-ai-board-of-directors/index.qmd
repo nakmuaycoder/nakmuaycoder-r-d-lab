@@ -1,10 +1,10 @@
 ---
-title: "Episode 1: The AI Board of Directors: How I Engineered My Ultra-Trail Season"
+title: "AI Coach Series - Episode 1: The AI Board of Directors: How I Engineered My Ultra-Trail Season"
 subtitle: "Stop asking ChatGPT for generic plans. Here is the 4-Layer Architecture and System Prompt I use to target my first 100-Miler."
 description: "A deep dive into using Gemini and ChatGPT as adversarial consultants to build a data-driven, adaptive training protocol."
 author: "nakmuaycoder"
 date: "2026-01-25"
-categories: [methodology, prompt-engineering, sports-science, system-design]
+categories: [methodology, prompt-engineering, sports-science, system-design, ai-coach-series]
 image: board.jpg
 title-block-banner: false
 draft: false
