@@ -5,7 +5,7 @@ description: "How I validated the architecture of my ultra-trail training plan u
 author: "nakmuaycoder"
 date: "2026-02-08"
 categories: [methodology, prompt-engineering, sports-science, system-design]
-image: board.jpg
+image: image1.png
 title-block-banner: false
 draft: true
 ---
@@ -63,7 +63,7 @@ Why go through a complex adversarial review? Why not just trust the model?
 
 Because Generative AI optimizes for **plausibility**, not **safety**. Without strict constraints, an LLM can hallucinate a workout that looks valid syntactically but is physiologically suicidal.
 
-![AI Sports Planner Meme: Expectation vs Reality](image_1.png)
+![AI Sports Planner Meme: Expectation vs Reality](image1.png)
 *Fig 2. The Danger Zone. While the "Bear Fight" is obvious, the real danger comes from subtle bugs—like a plan that forgets intensity for 3 months.*
 
 To avoid these "silent failures," I established a strict testing protocol.
