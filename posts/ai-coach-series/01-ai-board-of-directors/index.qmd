@@ -1,5 +1,5 @@
 ---
-title: "The AI Board of Directors: How I Engineered My Ultra-Trail Season"
+title: "AI Coaching: The AI Board of Directors: How I Engineered My Ultra-Trail Season"
 subtitle: "Stop asking ChatGPT for generic plans. Here is the 4-Layer Architecture and System Prompt I use to target my first 100-Miler."
 description: "A deep dive into using Gemini and ChatGPT as adversarial consultants to build a data-driven, adaptive training protocol."
 author: "nakmuaycoder"
@@ -8,6 +8,8 @@ categories: [methodology, prompt-engineering, sports-science, system-design]
 image: board.jpg
 title-block-banner: false
 draft: false
+aliases: 
+  - /posts/01-ai-board-of-directors/
 ---
 
 
