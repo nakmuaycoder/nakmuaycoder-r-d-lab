@@ -1,5 +1,5 @@
 ---
-title: "The System Architecture"
+title: "Episode 2: The System Architecture"
 subtitle: "Training plan Design Time: AI Code Review"
 description: "How I validated the architecture of my ultra-trail training plan using an Adversarial approach (Gemini vs ChatGPT vs Experts)."
 author: "nakmuaycoder"
