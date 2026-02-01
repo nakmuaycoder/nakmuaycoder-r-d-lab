@@ -10,7 +10,7 @@ title-block-banner: false
 draft: true
 ---
 
-In my [previous post](/posts/ai-coach-series/01-ai-board-of-directors/), I introduced my "Board of Directors" composed of AI agents. The concept is seductive: getting virtual experts to collaborate on designing the ultimate training plan.
+In my [previous post](../01-ai-board-of-directors/), I introduced my "Board of Directors" composed of AI agents. The concept is seductive: getting virtual experts to collaborate on designing the ultimate training plan.
 
 But in engineering, we know that **"Theory is when you know everything but nothing works."**
 
