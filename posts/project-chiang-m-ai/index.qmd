@@ -1,0 +1,20 @@
+---
+title: "Project Chiang M-AI"
+subtitle: "Engineering my way to a 100-miler with Generative AI"
+description: "A comprehensive R&D log documenting the use of LLMs, Python automation, and system engineering to prepare for the Hoka Chiang Mai 160km."
+image: "01-ai-board-of-directors/board.jpg"
+listing:
+  contents: 
+    - "*/index.qmd"
+  sort: "date asc"
+  type: default
+  categories: false
+  fields: [date, title, subtitle, description, reading-time]
+title-block-banner: true
+---
+
+Welcome to the official repository of **Project Chiang M-AI**. 
+
+Here, I document every step of building an AI-driven coaching system, treating the human body like a legacy server and injury management like DevOps incidents.
+
+### The Episodes
