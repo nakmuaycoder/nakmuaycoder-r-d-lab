@@ -4,14 +4,18 @@ image: profile.jpg
 
 listing:
   id: blog-listings
-  contents: posts
+  
+  contents: 
+    - posts/**/*.qmd                  
+    - "!posts/index.qmd"              
+    - "!posts/project-chiang-m-ai/index.qmd"
+  
   sort: "date desc"
   type: default
   categories: true
-  sort-ui: true
-  filter-ui: false
-  page-size: 3
-
+  sort-ui: false   
+  filter-ui: false   
+  page-size: 5       
   feed:
     type: partial
     title: "nakmuaycoder r&d lab"
@@ -20,15 +24,15 @@ listing:
     image: profile.jpg
   
 about:
-  template: jolla
-  image-shape: rectangle
+  template: jolla    
+  image-shape: round 
   links:
     - icon: github
       text: Github
       href: https://github.com/nakmuaycoder
     - icon: linkedin
       text: LinkedIn
-      href: https://www.linkedin.com/in/olivier-feher-9446b5105/
+      href: https://www.linkedin.com/in/olivier-feher-%E0%B9%80%E0%B8%9F%E0%B9%81%E0%B8%AD%E0%B8%A3%E0%B9%8C-%E0%B9%82%E0%B8%AD%E0%B8%A5%E0%B8%B4%E0%B9%80%E0%B8%A7%E0%B8%B5%E0%B8%A2%E0%B8%A3%E0%B9%8C-9446b5105/
 ---
 
 **Welcome to the lab.** 🧪

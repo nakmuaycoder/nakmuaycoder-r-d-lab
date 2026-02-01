@@ -21,10 +21,8 @@ website:
         text: RSS
 
     left:
-      - href: index.qmd
-        text: Blog
-      - href: posts/project-chiang-m-ai/index.qmd
-        text: "Série : Chiang M-AI"
+      - href: posts/index.qmd
+        text: "Posts"
       - href: about.qmd
         text: About
 

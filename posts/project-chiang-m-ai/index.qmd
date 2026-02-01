@@ -2,19 +2,38 @@
 title: "Project Chiang M-AI"
 subtitle: "Engineering my way to a 100-miler with Generative AI"
 description: "A comprehensive R&D log documenting the use of LLMs, Python automation, and system engineering to prepare for the Hoka Chiang Mai 160km."
-image: "01-ai-board-of-directors/board.jpg"
+image: "image.png"
 listing:
+  id: episodes-list
   contents: 
     - "*/index.qmd"
   sort: "date asc"
   type: default
   categories: false
-  fields: [date, title, subtitle, description, reading-time]
+  fields: [image, date, title, subtitle, description, reading-time]
+
+author: "nakmuaycoder"
+date: "2026-01-25"
+categories: [methodology, prompt-engineering, sports-science, system-design, project-chiang-m-ai, ai-coaching]
 title-block-banner: true
 ---
 
-Welcome to the official repository of **Project Chiang M-AI**. 
+!["Fine-Tuning the Fighter: Lumpinee Stadium vs UTMB"](image.png){width=800px}
 
-Here, I document every step of building an AI-driven coaching system, treating the human body like a legacy server and injury management like DevOps incidents.
+# Fine-Tuning the Fighter: From Nak Muay to Ultra-Trailer
 
-### The Episodes
+**Baseline Model:** A physiology overfitted for 5 rounds of explosivity (Muay Thai).  
+**New Objective Function:** Maximize endurance over 160km while minimizing the "Injury" loss function.  
+**The Optimizer:** Generative AI.
+
+**Project Chiang M-AI** is a live experiment in **Transfer Learning**.  
+I am using LLMs to re-weight my fast-twitch muscle fibers into a diesel engine. The goal? Solving a complex domain adaptation problem: taking a body trained on the "Lumpinee Stadium" dataset and deploying it to the "UTMB" distribution.
+
+
+# The Episodes
+
+---
+
+
+:::{#episodes-list}
+:::

@@ -7,7 +7,7 @@ date: "2026-02-08"
 categories: [methodology, prompt-engineering, sports-science, system-design, project-chiang-m-ai, ai-coaching]
 image: image1.png
 title-block-banner: false
-draft: true
+draft: false
 ---
 
 In my [previous post](../01-ai-board-of-directors/), I introduced my "Board of Directors" composed of AI agents. The concept is seductive: getting virtual experts to collaborate on designing the ultimate training plan.
