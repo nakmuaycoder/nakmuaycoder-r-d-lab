@@ -1,10 +1,10 @@
 ---
-title: "AI Coach Series - Episode 2: AI Training Plan: From Generation to Validation"
+title: "Project Chiang M-AI - Episode 2: AI Training Plan: From Generation to Validation"
 subtitle: "Training plan Design Time: AI Code Review"
 description: "How I validated the architecture of my ultra-trail training plan using an Adversarial approach (Gemini vs ChatGPT vs Experts)."
 author: "nakmuaycoder"
 date: "2026-02-08"
-categories: [methodology, prompt-engineering, sports-science, system-design, ai-coach-series]
+categories: [methodology, prompt-engineering, sports-science, system-design, project-chiang-m-ai, ai-coaching]
 image: image1.png
 title-block-banner: false
 draft: true
