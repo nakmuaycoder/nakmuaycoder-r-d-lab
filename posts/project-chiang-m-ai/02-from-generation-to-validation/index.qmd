@@ -60,7 +60,7 @@ To bypass the bottleneck (plantar fasciitis), the AI proposed a strong architect
 
 Instead of betting everything on running (high impact), the plan shifts a massive load of the aerobic volume to a third-party "Micro-service": **The Bike**.
 
-![Weekly Volume Planning - Bike vs Run](../01-ai-board-of-directors/viz-volume.jpg)
+![Weekly Volume Planning - Bike vs Run](vol.png)
 
 * **Blue (Bike):** We build the base without wearing out the disks (the feet).
 * **Orange (Run):** We switch to specificity (running) only when approaching "Production Deployments" (races).
@@ -151,8 +151,7 @@ After the adversarial review, the bug fixes (removing the 4-week load), and the 
 Here is the finalized "Source Code" for the 2026 Season. This is what a data-driven, safety-first 100-miler plan looks like.
 
 ### A. The Corrected Zone Distribution (Polarized)
-Notice the return of intensity (Orange/Red) in the final phase, which was missing in the beta version.
-![Final Zone Distribution](../01-ai-board-of-directors/viz-zones.jpg)
+![Final Zone Distribution](fc.png)
 
 ### B. The TSS Load Curve (Progressiveness Check)
 This is the chart ChatGPT insisted on. It allows us to visualize the **Ramp Rate**: a steady, linear progression with clear "drop weeks" (valleys) to allow the nervous system to reboot.
@@ -160,7 +159,12 @@ This is the chart ChatGPT insisted on. It allows us to visualize the **Ramp Rate
 
 ### C. The Volume Strategy (Bike vs Run)
 The "Load Balancing" architecture in action. High volume on the bike (Blue) to protect the chassis, specific running volume (Orange) peaking only when the body is ready.
-![Volume Distribution](viz-volume.jpg)
+
+::: {layout-cols=3}
+![Volume Distribution](vol.png)
+![Run Volume Distribution](vol_cap.png)
+![Strength Distribution](renfo.png)
+:::
 
 ## Conclusion: Ready to Deploy?
 
