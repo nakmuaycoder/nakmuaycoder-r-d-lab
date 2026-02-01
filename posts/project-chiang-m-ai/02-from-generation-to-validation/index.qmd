@@ -60,7 +60,7 @@ To bypass the bottleneck (plantar fasciitis), the AI proposed a strong architect
 
 Instead of betting everything on running (high impact), the plan shifts a massive load of the aerobic volume to a third-party "Micro-service": **The Bike**.
 
-![Weekly Volume Planning - Bike vs Run](vol.png)
+![Weekly Volume Planning - Bike vs Run](../01-ai-board-of-directors/viz-volume.jpg)
 
 * **Blue (Bike):** We build the base without wearing out the disks (the feet).
 * **Orange (Run):** We switch to specificity (running) only when approaching "Production Deployments" (races).
@@ -113,6 +113,12 @@ I forwarded this error to Gemini. It immediately accepted the patch.
 * **🤖 Gemini (Patch):** "Correct. Added specific VO2Max maintenance blocks on the bike to preserve the engine without impacting the chassis."
 * **Result:** ✅ **Fixed.** This was a standard, successful code review.
 
+::: {layout-ncol=2}
+![Weekly Volume Planning - Bike vs Run](no_intensity.png)
+
+![Weekly Volume Planning - Bike vs Run (Patched)](../01-ai-board-of-directors/viz-zones.jpg)
+:::
+
 ### Case B: The "4-Week Load" Hallucination (The Sycophancy Loop)
 
 **The Issue:** The plan featured **4 consecutive weeks of loading** before a rest week. The industry standard (Joe Friel's Bible) is strictly 3:1 (3 weeks load, 1 week rest) or even 2:1 for older athletes.
@@ -160,9 +166,11 @@ This is the chart ChatGPT insisted on. It allows us to visualize the **Ramp Rate
 ### C. The Volume Strategy (Bike vs Run)
 The "Load Balancing" architecture in action. High volume on the bike (Blue) to protect the chassis, specific running volume (Orange) peaking only when the body is ready.
 
-::: {layout-cols=3}
+::: {layout-ncol=3}
 ![Volume Distribution](vol.png)
+
 ![Run Volume Distribution](vol_cap.png)
+
 ![Strength Distribution](renfo.png)
 :::
 
