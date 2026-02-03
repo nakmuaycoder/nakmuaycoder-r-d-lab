@@ -74,9 +74,11 @@ While Friel is a triathlon coach and not the absolute gospel of ultra-running, h
 
 I set up a **Unit Testing Suite** to verify if Gemini's output respected these classic periodization rules.
 
-* **🧪 Test 1: Polarization (The 80/20 Rule)**
-    * *Check:* Is training volume ~80% Zone 2 and ~20% Intensity?
-    * *Result:* **✅ PASS.** No "Zone 3 plateau" (junk miles) detected. The AI adhered to a strict "Hard Ceiling" on intensity.
+* **🧪 Test 1: Intensity Distribution (Pyramidal vs Polarized)**
+    * *The Logic:* Strict polarization (80% Easy / 20% Hard / 0% Moderate) is the gold standard for 10Ks, but for a 100-miler, we often prefer a **"Pyramidal" architecture** (Z1/Z2 > Z3 > Z4/Z5).
+    * *The Check:* Did the AI assign "Junk Miles" (accidental Z3) or structured "Tempo" blocks?
+    * *The Result:* **✅ PASS.** The chart reveals a perfect Pyramid. The base is massive aerobic volume (Green). The middle layer (Yellow/Tempo) is wider than the top intensity tip (Red/Threshold).
+    * *Why it matters:* This is a Feature, not a Bug. The AI correctly identified that for an ultra, **Muscular Durability** (built in Zone 3) is more critical than raw VO2Max speed. It builds a diesel engine, not a dragster.
 
 * **🧪 Test 2: The TSS Audit (Ramp Rate Check)**
     * *The Conflict:* Gemini initially focused heavily on subjective feeling and "Volume in Hours."
