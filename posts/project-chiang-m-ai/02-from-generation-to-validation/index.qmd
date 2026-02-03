@@ -163,7 +163,7 @@ One final check: Is this plan actually survivable? I compared the projected 2026
 
 At the end of this "Design Time" phase, I have a plan that:
 1.  Respects my Hardware constraints (2CV Chassis).
-2.  Passed the Physiological Unit Tests (TSS Progressiveness & Friel Standards).
+2.  Passed the Physiological Unit Tests (TSS Progressiveness).
 3.  Was sanitized by a human-led double-blind review.
 
 Everything looks perfect on paper. But as every developer knows, **nothing survives first contact with Production.**
