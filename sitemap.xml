@@ -2,14 +2,26 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://nakmuaycoder.github.io/nakmuaycoder-r-d-lab/about.html</loc>
-    <lastmod>2026-01-28T20:08:08.469Z</lastmod>
+    <lastmod>2026-02-03T20:54:16.477Z</lastmod>
+  </url>
+  <url>
+    <loc>https://nakmuaycoder.github.io/nakmuaycoder-r-d-lab/posts/project-chiang-m-ai/01-ai-board-of-directors/index.html</loc>
+    <lastmod>2026-02-03T20:54:16.488Z</lastmod>
+  </url>
+  <url>
+    <loc>https://nakmuaycoder.github.io/nakmuaycoder-r-d-lab/posts/project-chiang-m-ai/02-from-generation-to-validation/index.html</loc>
+    <lastmod>2026-02-03T20:54:16.532Z</lastmod>
   </url>
   <url>
     <loc>https://nakmuaycoder.github.io/nakmuaycoder-r-d-lab/index.html</loc>
-    <lastmod>2026-01-28T20:08:08.469Z</lastmod>
+    <lastmod>2026-02-03T20:54:16.477Z</lastmod>
   </url>
   <url>
-    <loc>https://nakmuaycoder.github.io/nakmuaycoder-r-d-lab/posts/01-ai-board-of-directors/index.html</loc>
-    <lastmod>2026-01-28T20:08:08.480Z</lastmod>
+    <loc>https://nakmuaycoder.github.io/nakmuaycoder-r-d-lab/posts/project-chiang-m-ai/index.html</loc>
+    <lastmod>2026-02-03T20:54:16.535Z</lastmod>
+  </url>
+  <url>
+    <loc>https://nakmuaycoder.github.io/nakmuaycoder-r-d-lab/posts/index.html</loc>
+    <lastmod>2026-02-03T20:54:16.477Z</lastmod>
   </url>
 </urlset>

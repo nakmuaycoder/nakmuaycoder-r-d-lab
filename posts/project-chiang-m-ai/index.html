@@ -6,8 +6,11 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="nakmuaycoder">
+<meta name="dcterms.date" content="2026-01-25">
+<meta name="description" content="A comprehensive R&amp;D log documenting the use of LLMs, Python automation, and system engineering to prepare for the Hoka Chiang Mai 160km.">
 
-<title>nakmuaycoder – My R&amp;D Lab</title>
+<title>Project Chiang M-AI – My R&amp;D Lab</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,23 +26,26 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-0b37c64f34216b628666a8dac638b53b.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-listing/list.min.js"></script>
+<script src="../../site_libs/quarto-listing/quarto-listing.js"></script>
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-0b37c64f34216b628666a8dac638b53b.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -67,27 +73,89 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script>
 
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-episodes-list .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
 
-<link rel="stylesheet" href="styles.css">
-<meta property="og:title" content="nakmuaycoder – My R&amp;D Lab">
-<meta property="og:description" content="Data Scientist @ Syroco | Ex-Pro Nak Muay">
-<meta property="og:image" content="https://nakmuaycoder.github.io/nakmuaycoder-r-d-lab/profile.jpg">
+    const options = {
+      valueNames: ['listing-image','listing-date','listing-title','listing-subtitle','listing-description','listing-reading-time',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      
+      searchColumns: ["listing-date","listing-title","listing-author","listing-subtitle","listing-image","listing-description"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-episodes-list'] = new List('listing-episodes-list', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  </script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../../styles.css">
+<meta property="og:title" content="Project Chiang M-AI – My R&amp;D Lab">
+<meta property="og:description" content="A comprehensive R&amp;D log documenting the use of LLMs, Python automation, and system engineering to prepare for the Hoka Chiang Mai 160km.">
+<meta property="og:image" content="https://nakmuaycoder.github.io/nakmuaycoder-r-d-lab/posts/project-chiang-m-ai/image.png">
 <meta property="og:site_name" content="My R&amp;D Lab">
-<meta name="twitter:title" content="nakmuaycoder – My R&amp;D Lab">
-<meta name="twitter:description" content="Data Scientist @ Syroco | Ex-Pro Nak Muay">
-<meta name="twitter:image" content="https://nakmuaycoder.github.io/nakmuaycoder-r-d-lab/profile.jpg">
+<meta property="og:image:height" content="414">
+<meta property="og:image:width" content="508">
+<meta name="twitter:title" content="Project Chiang M-AI – My R&amp;D Lab">
+<meta name="twitter:description" content="A comprehensive R&amp;D log documenting the use of LLMs, Python automation, and system engineering to prepare for the Hoka Chiang Mai 160km.">
+<meta name="twitter:image" content="https://nakmuaycoder.github.io/nakmuaycoder-r-d-lab/posts/project-chiang-m-ai/image.png">
+<meta name="twitter:image-height" content="414">
+<meta name="twitter:image-width" content="508">
 <meta name="twitter:card" content="summary_large_image">
 </head>
 
 <body class="nav-fixed quarto-light">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
+  <header id="quarto-header" class="headroom fixed-top quarto-banner">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">My R&amp;D Lab</span>
     </a>
   </div>
@@ -98,17 +166,17 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./posts/index.html"> 
+    <a class="nav-link" href="../../posts/index.html"> 
 <span class="menu-text">Posts</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./about.html" aria-current="page"> 
+    <a class="nav-link" href="../../about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
+    <a class="nav-link" href="../../about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item compact">
@@ -122,7 +190,7 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text"></span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./index.xml"> <i class="bi bi-rss" role="img">
+    <a class="nav-link" href="../../index.xml"> <i class="bi bi-rss" role="img">
 </i> 
 <span class="menu-text">RSS</span></a>
   </li>  
@@ -134,106 +202,157 @@ ul.task-list li input[type="checkbox"] {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Project Chiang M-AI</h1>
+            <p class="subtitle lead">Engineering my way to a 100-miler with Generative AI</p>
+                  <div>
+        <div class="description">
+          A comprehensive R&amp;D log documenting the use of LLMs, Python automation, and system engineering to prepare for the Hoka Chiang Mai 160km.
+        </div>
+      </div>
+                          <div class="quarto-categories">
+                <div class="quarto-category">methodology</div>
+                <div class="quarto-category">prompt-engineering</div>
+                <div class="quarto-category">sports-science</div>
+                <div class="quarto-category">system-design</div>
+                <div class="quarto-category">project-chiang-m-ai</div>
+                <div class="quarto-category">ai-coaching</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>nakmuaycoder </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">January 25, 2026</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">On this page</h2>
+   
   <ul>
-  <li><a href="#the-short-version" id="toc-the-short-version" class="nav-link active" data-scroll-target="#the-short-version">The Short Version</a></li>
-  <li><a href="#tech-stack" id="toc-tech-stack" class="nav-link" data-scroll-target="#tech-stack">🛠️ Tech Stack</a></li>
-  <li><a href="#the-journey" id="toc-the-journey" class="nav-link" data-scroll-target="#the-journey">🗺️ The Journey</a>
-  <ul class="collapse">
-  <li><a href="#the-fighter-2016-2017" id="toc-the-fighter-2016-2017" class="nav-link" data-scroll-target="#the-fighter-2016-2017"><strong>The Fighter (2016-2017)</strong></a></li>
-  <li><a href="#the-engineer-2018-present" id="toc-the-engineer-2018-present" class="nav-link" data-scroll-target="#the-engineer-2018-present"><strong>The Engineer (2018-Present)</strong></a></li>
-  </ul></li>
-  <li><a href="#education" id="toc-education" class="nav-link" data-scroll-target="#education">🎓 Education</a></li>
+  <li><a href="#fine-tuning-the-fighter-from-nak-muay-to-ultra-trailer" id="toc-fine-tuning-the-fighter-from-nak-muay-to-ultra-trailer" class="nav-link active" data-scroll-target="#fine-tuning-the-fighter-from-nak-muay-to-ultra-trailer">Fine-Tuning the Fighter: From Nak Muay to Ultra-Trailer</a></li>
+  <li><a href="#the-episodes" id="toc-the-episodes" class="nav-link" data-scroll-target="#the-episodes">The Episodes</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
-<div class="quarto-about-trestles">
-  <div class="about-entity">
-    <img src="profile.jpg" class="about-image
-  rectangle " style="width: 20em;">
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">nakmuaycoder</h1>
-<p class="subtitle lead">Data Scientist @ Syroco | Ex-Pro Nak Muay</p>
-</div>
-<div class="quarto-title-meta">
-  </div>
-</header>
-    <div class="about-links">
-  <a href="https://www.linkedin.com/in/olivier-feher-%E0%B9%80%E0%B8%9F%E0%B9%81%E0%B8%AD%E0%B8%A3%E0%B9%8C-%E0%B9%82%E0%B8%AD%E0%B8%A5%E0%B8%B4%E0%B9%80%E0%B8%A7%E0%B8%B5%E0%B8%A2%E0%B8%A3%E0%B9%8C-9446b5105/" class="about-link" rel="" target="">
-    <i class="bi bi-linkedin"></i>
-     <span class="about-link-text">Full CV (LinkedIn)</span>
-  </a>
-  <a href="https://github.com/nakmuaycoder" class="about-link" rel="" target="">
-    <i class="bi bi-github"></i>
-     <span class="about-link-text">Github</span>
-  </a>
-  <a href="https://www.youtube.com/watch?v=Cl7UZN4Wqzk" class="about-link" rel="" target="">
-    <i class="bi bi-youtube"></i>
-     <span class="about-link-text">Watch Me Fight 🥊</span>
-  </a>
-</div>
-  </div>
-  <div class="about-contents"><main class="content" id="quarto-document-content">
-
-<section id="the-short-version" class="level2">
-<h2 data-anchor-id="the-short-version">The Short Version</h2>
-<p>I am a <strong>Data Scientist</strong> currently working at <strong>Syroco</strong> in Marseille. I help decarbonize the maritime industry using digital twins and efficient weather routing.</p>
-<p>Before diving into code, I spent a significant part of my life in the ring as a <strong>Professional Muay Thai Fighter</strong> in Thailand.</p>
-<hr>
-</section>
-<section id="tech-stack" class="level2">
-<h2 data-anchor-id="tech-stack">🛠️ Tech Stack</h2>
-<p>I don’t just collect badges; I use these tools to build production-grade systems.</p>
-<ul>
-<li><strong>Languages:</strong> Python, Bash, SQL.</li>
-<li><strong>AI &amp; ML:</strong> PyTorch, TensorFlow, Scikit-learn, Pandas.</li>
-<li><strong>Hardware:</strong> Nvidia Jetson, Raspberry Pi (Edge AI).</li>
-</ul>
-<hr>
-</section>
-<section id="the-journey" class="level2">
-<h2 data-anchor-id="the-journey">🗺️ The Journey</h2>
-<p>My career path is not linear, and that’s my strength.</p>
-<section id="the-fighter-2016-2017" class="level3">
-<h3 data-anchor-id="the-fighter-2016-2017"><strong>The Fighter (2016-2017)</strong></h3>
-<p>I lived in Buriram (Isan, Thailand) to fight for <strong>Sitboonmee Gym</strong>. No corporate metaphor here about “resilience” or “agility”. I just loved the sport, the culture, and the grind.</p>
-</section>
-<section id="the-engineer-2018-present" class="level3">
-<h3 data-anchor-id="the-engineer-2018-present"><strong>The Engineer (2018-Present)</strong></h3>
-<p>I eventually traded the gloves for a keyboard (it hurts less physically). I have since worked on high-stakes projects for industrial players:</p>
-<ul>
-<li><strong>Aerospace:</strong> Flight data analysis at <strong>Airbus Helicopters</strong>.</li>
-<li><strong>Defense:</strong> AI for naval systems at <strong>Naval Group</strong>.</li>
-<li><strong>Sensing:</strong> Computer Vision at <strong>Ams-Osram</strong>.</li>
-<li><strong>Maritime:</strong> Weather routing &amp; Digital Twins at <strong>Syroco</strong> (Current).</li>
-</ul>
-<blockquote class="blockquote">
-<p><strong>Want the chronological details?</strong> Check my <a href="https://www.linkedin.com/in/olivier-feher-9446b5105/">LinkedIn Profile</a> for the full resume.</p>
-</blockquote>
-<hr>
-</section>
-</section>
-<section id="education" class="level2">
-<h2 data-anchor-id="education">🎓 Education</h2>
-<ul>
-<li><strong>Master in Mathematics &amp; Applications</strong> | Aix-Marseille Université</li>
-<li><strong>Bachelor in Applied Mathematics</strong> | Aix-Marseille Université</li>
-</ul>
+<main class="content quarto-banner-title-block" id="quarto-document-content">
 
 
-</section>
-</main></div>
+
+
+
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="image.png" class="img-fluid figure-img" width="800"></p>
+<figcaption>“Fine-Tuning the Fighter: Lumpinee Stadium vs UTMB”</figcaption>
+</figure>
 </div>
- <!-- /main -->
+<section id="fine-tuning-the-fighter-from-nak-muay-to-ultra-trailer" class="level1">
+<h1>Fine-Tuning the Fighter: From Nak Muay to Ultra-Trailer</h1>
+<p><strong>Baseline Model:</strong> A physiology overfitted for 5 rounds of explosivity (Muay Thai).<br>
+<strong>New Objective Function:</strong> Maximize endurance over 160km while minimizing the “Injury” loss function.<br>
+<strong>The Optimizer:</strong> Generative AI.</p>
+<p><strong>Project Chiang M-AI</strong> is a live experiment in <strong>Transfer Learning</strong>.<br>
+I am using LLMs to re-weight my fast-twitch muscle fibers into a diesel engine. The goal? Solving a complex domain adaptation problem: taking a body trained on the “Lumpinee Stadium” dataset and deploying it to the “UTMB” distribution.</p>
+</section>
+<section id="the-episodes" class="level1">
+<h1>The Episodes</h1>
+<hr>
+<div id="listing-episodes-list" class="quarto-listing quarto-listing-container-default">
+<div class="list quarto-listing-default">
+<div class="quarto-post image-right" data-index="0" data-categories="bWV0aG9kb2xvZ3klMkNwcm9tcHQtZW5naW5lZXJpbmclMkNzcG9ydHMtc2NpZW5jZSUyQ3N5c3RlbS1kZXNpZ24lMkNwcm9qZWN0LWNoaWFuZy1tLWFpJTJDYWktY29hY2hpbmc=" data-listing-date-sort="1769299200000" data-listing-file-modified-sort="1770152056488" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1030">
+<div class="thumbnail"><a href="../../posts/project-chiang-m-ai/01-ai-board-of-directors/index.html" class="no-external">
+
+<img loading="lazy" src="../../posts/project-chiang-m-ai/01-ai-board-of-directors/board.jpg" class="thumbnail-image">
+
+</a></div>
+<div class="body">
+<h3 class="no-anchor listing-title" data-anchor-id="the-episodes">
+<a href="../../posts/project-chiang-m-ai/01-ai-board-of-directors/index.html" class="no-external">Project Chiang M-AI - Episode 1: The AI Board of Directors: How I Engineered My Ultra-Trail Season</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../../posts/project-chiang-m-ai/01-ai-board-of-directors/index.html" class="no-external">Stop asking ChatGPT for generic plans. Here is the 4-Layer Architecture and System Prompt I use to target my first 100-Miler.</a>
+</div>
+<div class="delink listing-description"><a href="../../posts/project-chiang-m-ai/01-ai-board-of-directors/index.html" class="no-external">
+<p>A deep dive into using Gemini and ChatGPT as adversarial consultants to build a data-driven, adaptive training protocol.</p>
+</a></div>
+</div>
+<div class="metadata">
+<a href="../../posts/project-chiang-m-ai/01-ai-board-of-directors/index.html" class="no-external">
+<div class="listing-date">
+Jan 25, 2026
+</div>
+<div class="listing-reading-time">6 min</div>
+</a>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="1" data-categories="bWV0aG9kb2xvZ3klMkNwcm9tcHQtZW5naW5lZXJpbmclMkNzcG9ydHMtc2NpZW5jZSUyQ3N5c3RlbS1kZXNpZ24lMkNwcm9qZWN0LWNoaWFuZy1tLWFp" data-listing-date-sort="1770076800000" data-listing-file-modified-sort="1770152056532" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="9" data-listing-word-count-sort="1662">
+<div class="thumbnail"><a href="../../posts/project-chiang-m-ai/02-from-generation-to-validation/index.html" class="no-external">
+
+<img loading="lazy" src="../../posts/project-chiang-m-ai/02-from-generation-to-validation/image1.png" class="thumbnail-image">
+
+</a></div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="../../posts/project-chiang-m-ai/02-from-generation-to-validation/index.html" class="no-external">Project Chiang M-AI - Episode 2: AI Training Plan: From Generation to Validation</a>
+</h3>
+<div class="listing-subtitle">
+<a href="../../posts/project-chiang-m-ai/02-from-generation-to-validation/index.html" class="no-external">AI Training Plan: From Generation to Validation</a>
+</div>
+<div class="delink listing-description"><a href="../../posts/project-chiang-m-ai/02-from-generation-to-validation/index.html" class="no-external">
+<p>How I validated the architecture of my ultra-trail training plan using an Adversarial approach (Gemini vs ChatGPT vs Experts).</p>
+</a></div>
+</div>
+<div class="metadata">
+<a href="../../posts/project-chiang-m-ai/02-from-generation-to-validation/index.html" class="no-external">
+<div class="listing-date">
+Feb 3, 2026
+</div>
+<div class="listing-reading-time">9 min</div>
+</a>
+</div>
+</div>
+</div>
+<div class="listing-no-matching d-none">No matching items</div>
+</div>
+
+
+
+</section>
+
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
     const isCodeAnnotation = (el) => {
       for (const clz of el.classList) {
         if (clz.startsWith('code-annotation-')) {                     

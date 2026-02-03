@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.27">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="nakmuaycoder">
+<meta name="dcterms.date" content="2026-02-03">
+<meta name="description" content="How I validated the architecture of my ultra-trail training plan using an Adversarial approach (Gemini vs ChatGPT vs Experts).">
+
+<title>Project Chiang M-AI - Episode 2: AI Training Plan: From Generation to Validation – My R&amp;D Lab</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../">
+<script src="../../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap-0b37c64f34216b628666a8dac638b53b.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../../../styles.css">
+<meta property="og:title" content="Project Chiang M-AI - Episode 2: AI Training Plan: From Generation to Validation – My R&amp;D Lab">
+<meta property="og:description" content="How I validated the architecture of my ultra-trail training plan using an Adversarial approach (Gemini vs ChatGPT vs Experts).">
+<meta property="og:image" content="https://nakmuaycoder.github.io/nakmuaycoder-r-d-lab/posts/project-chiang-m-ai/02-from-generation-to-validation/image1.png">
+<meta property="og:site_name" content="My R&amp;D Lab">
+<meta property="og:image:height" content="1536">
+<meta property="og:image:width" content="2816">
+<meta name="twitter:title" content="Project Chiang M-AI - Episode 2: AI Training Plan: From Generation to Validation – My R&amp;D Lab">
+<meta name="twitter:description" content="How I validated the architecture of my ultra-trail training plan using an Adversarial approach (Gemini vs ChatGPT vs Experts).">
+<meta name="twitter:image" content="https://nakmuaycoder.github.io/nakmuaycoder-r-d-lab/posts/project-chiang-m-ai/02-from-generation-to-validation/image1.png">
+<meta name="twitter:image-height" content="1536">
+<meta name="twitter:image-width" content="2816">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+
+<body class="nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../../index.html">
+    <span class="navbar-title">My R&amp;D Lab</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../../posts/index.html"> 
+<span class="menu-text">Posts</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../about.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../../about.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/nakmuaycoder"> <i class="bi bi-github" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://fr.linkedin.com/in/olivier-feher-%E0%B9%80%E0%B8%9F%E0%B9%81%E0%B8%AD%E0%B8%A3%E0%B9%8C-%E0%B9%82%E0%B8%AD%E0%B8%A5%E0%B8%B4%E0%B9%80%E0%B8%A7%E0%B8%B5%E0%B8%A2%E0%B8%A3%E0%B9%8C-9446b5105/en"> <i class="bi bi-linkedin" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../index.xml"> <i class="bi bi-rss" role="img">
+</i> 
+<span class="menu-text">RSS</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#legacy-code-audit-lambo-engine-2cv-chassis" id="toc-legacy-code-audit-lambo-engine-2cv-chassis" class="nav-link active" data-scroll-target="#legacy-code-audit-lambo-engine-2cv-chassis">1. Legacy Code Audit: Lambo Engine, 2CV Chassis</a>
+  <ul class="collapse">
+  <li><a href="#a.-observability-failure-the-100k-post-mortem" id="toc-a.-observability-failure-the-100k-post-mortem" class="nav-link" data-scroll-target="#a.-observability-failure-the-100k-post-mortem">A. Observability Failure (The 100k Post-Mortem)</a></li>
+  <li><a href="#b.-hardware-specs" id="toc-b.-hardware-specs" class="nav-link" data-scroll-target="#b.-hardware-specs">B. Hardware Specs</a></li>
+  </ul></li>
+  <li><a href="#system-architecture-load-balancing" id="toc-system-architecture-load-balancing" class="nav-link" data-scroll-target="#system-architecture-load-balancing">2. System Architecture: Load Balancing</a></li>
+  <li><a href="#the-reality-gap-why-validation-matters" id="toc-the-reality-gap-why-validation-matters" class="nav-link" data-scroll-target="#the-reality-gap-why-validation-matters">The Reality Gap: Why Validation Matters</a></li>
+  <li><a href="#unit-testing-the-friel-framework" id="toc-unit-testing-the-friel-framework" class="nav-link" data-scroll-target="#unit-testing-the-friel-framework">3. Unit Testing: The “Friel” Framework</a></li>
+  <li><a href="#the-adversarial-code-review" id="toc-the-adversarial-code-review" class="nav-link" data-scroll-target="#the-adversarial-code-review">4. The Adversarial Code Review</a>
+  <ul class="collapse">
+  <li><a href="#case-a-the-missing-intensity-bug-the-critical-failure" id="toc-case-a-the-missing-intensity-bug-the-critical-failure" class="nav-link" data-scroll-target="#case-a-the-missing-intensity-bug-the-critical-failure">Case A: The “Missing Intensity” Bug (The Critical Failure)</a></li>
+  <li><a href="#case-b-the-4-week-load-hallucination-the-sycophancy-loop" id="toc-case-b-the-4-week-load-hallucination-the-sycophancy-loop" class="nav-link" data-scroll-target="#case-b-the-4-week-load-hallucination-the-sycophancy-loop">Case B: The “4-Week Load” Hallucination (The Sycophancy Loop)</a></li>
+  <li><a href="#the-double-blind-pentest" id="toc-the-double-blind-pentest" class="nav-link" data-scroll-target="#the-double-blind-pentest">The “Double-Blind” Pentest</a></li>
+  </ul></li>
+  <li><a href="#the-release-candidate-v1.0" id="toc-the-release-candidate-v1.0" class="nav-link" data-scroll-target="#the-release-candidate-v1.0">5. The Release Candidate (v1.0)</a>
+  <ul class="collapse">
+  <li><a href="#the-safety-check-historical-regression-testing" id="toc-the-safety-check-historical-regression-testing" class="nav-link" data-scroll-target="#the-safety-check-historical-regression-testing">The Safety Check: Historical Regression Testing</a></li>
+  </ul></li>
+  <li><a href="#conclusion-ready-to-deploy" id="toc-conclusion-ready-to-deploy" class="nav-link" data-scroll-target="#conclusion-ready-to-deploy">Conclusion: Ready to Deploy?</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Project Chiang M-AI - Episode 2: AI Training Plan: From Generation to Validation</h1>
+<p class="subtitle lead">AI Training Plan: From Generation to Validation</p>
+  <div class="quarto-categories">
+    <div class="quarto-category">methodology</div>
+    <div class="quarto-category">prompt-engineering</div>
+    <div class="quarto-category">sports-science</div>
+    <div class="quarto-category">system-design</div>
+    <div class="quarto-category">project-chiang-m-ai</div>
+  </div>
+  </div>
+
+<div>
+  <div class="description">
+    How I validated the architecture of my ultra-trail training plan using an Adversarial approach (Gemini vs ChatGPT vs Experts).
+  </div>
+</div>
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>nakmuaycoder </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">February 3, 2026</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>In my <a href="../01-ai-board-of-directors/">previous post</a>, I introduced my “Board of Directors” composed of AI agents. The concept is alluring: getting virtual experts to collaborate on designing the ultimate training plan.</p>
+<p>But in engineering, we know the adage: <strong>“Theory is when you know everything, but nothing works.”</strong></p>
+<p>Generating a JSON file of workouts isn’t enough. The plan has to be executable, <strong>physiologically safe</strong>, and adapted to my constraints. I’m not a certified coach, but I have experience (40 pro Muay Thai fights) and I know how to read the documentation.</p>
+<p>So, I treated this AI-generated plan like a critical <strong>Pull Request</strong>. I subjected it to a ruthless <strong>Code Review</strong>, confronting the Generator (Gemini) with an Adversarial Agent (ChatGPT), industry standards, and my own “Ground Truth.”</p>
+<blockquote class="blockquote">
+<p><strong>🎯 Who is this for?</strong> This post is for engineers who train seriously—or athletes who think like engineers.</p>
+</blockquote>
+<p>Here is the “Design Time” audit of my 2026 season.</p>
+<section id="legacy-code-audit-lambo-engine-2cv-chassis" class="level2">
+<h2 class="anchored" data-anchor-id="legacy-code-audit-lambo-engine-2cv-chassis">1. Legacy Code Audit: Lambo Engine, 2CV Chassis</h2>
+<p>To generate this plan, I avoided generic templates. I fed the model <strong>3 years of logs</strong> (TrainingPeaks exports). The AI started with an audit of the “Legacy System” (my body) and detected major critical bugs.</p>
+<section id="a.-observability-failure-the-100k-post-mortem" class="level3">
+<h3 class="anchored" data-anchor-id="a.-observability-failure-the-100k-post-mortem">A. Observability Failure (The 100k Post-Mortem)</h3>
+<p>The AI replayed the logs from my previous prep (a stock plan bought online). It spotted a regression I had missed: a continuous drop in HRV (Heart Rate Variability) <strong>specifically during recovery weeks</strong>.</p>
+<p><strong>The Diagnostic: Bad Polarization.</strong> 1. <strong>Insufficient Deload:</strong> The volume didn’t drop enough during assimilation weeks. 2. <strong>Timing Error:</strong> High-intensity sessions were scheduled too late in the week, preventing the HRV bounce-back.</p>
+<p><strong>The Result:</strong> I started every new block already “fried.” This accumulated fatigue led directly to a <strong>Stack Overflow</strong> (Plantar Fasciitis) that plagued me for months.</p>
+</section>
+<section id="b.-hardware-specs" class="level3">
+<h3 class="anchored" data-anchor-id="b.-hardware-specs">B. Hardware Specs</h3>
+<p>Gemini dropped a stinging metaphor that became the cornerstone of my entire planning:</p>
+<blockquote class="blockquote">
+<p><strong>🤖 Coach Trail (Gemini):</strong> “You have a Lamborghini engine mounted on a Citroën 2CV chassis.”</p>
+</blockquote>
+<p><strong>Translation:</strong> My cardio engine (acquired through fighting) is massive. However, my mechanical structure (tendons, joints) is the <strong>Single Point of Failure (SPOF)</strong>. If I run as much as my heart allows, I break the chassis.</p>
+</section>
+</section>
+<section id="system-architecture-load-balancing" class="level2">
+<h2 class="anchored" data-anchor-id="system-architecture-load-balancing">2. System Architecture: Load Balancing</h2>
+<p>To bypass the bottleneck (plantar fasciitis), the AI proposed a strong architectural decision: <strong>Load Balancing</strong>.</p>
+<p>Instead of betting everything on running (high impact), the plan shifts a massive load of the aerobic volume to a third-party “Micro-service”: <strong>The Bike</strong>.</p>
+<ul>
+<li><strong>Blue (Bike):</strong> We build the base without wearing out the disks (the feet).</li>
+<li><strong>Orange (Run):</strong> We switch to specificity (running) only when approaching “Production Deployments” (races).</li>
+</ul>
+<blockquote class="blockquote">
+<p><strong>💡 Key Takeaway:</strong> Treat injuries as “Technical Debt.” If you can’t refactor the code (heal instantly), you must build a workaround (Load Balancing) to keep the system running.</p>
+</blockquote>
+</section>
+<section id="the-reality-gap-why-validation-matters" class="level2">
+<h2 class="anchored" data-anchor-id="the-reality-gap-why-validation-matters">The Reality Gap: Why Validation Matters</h2>
+<p>Why go through a complex adversarial review? Why not just trust the model?</p>
+<p>Because Generative AI optimizes for <strong>plausibility</strong>, not <strong>safety</strong>. Without strict constraints, an LLM can hallucinate a workout that looks valid syntactically but is physiologically suicidal.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="image1.png" class="img-fluid figure-img"></p>
+<figcaption><em>Fig 1. The Danger Zone. While the “Bear Fight” is obvious, the real danger comes from subtle bugs—like a plan that forgets intensity for 3 months.</em></figcaption>
+</figure>
+</div>
+<p>To avoid these “silent failures,” I established a strict testing protocol.</p>
+</section>
+<section id="unit-testing-the-friel-framework" class="level2">
+<h2 class="anchored" data-anchor-id="unit-testing-the-friel-framework">3. Unit Testing: The “Friel” Framework</h2>
+<p>To audit the generated code, I needed a robust set of rules. I turned to Joe Friel’s <em>The Triathlete’s Training Bible</em>, a book I’ve studied extensively.</p>
+<p>While Friel is a triathlon coach and not the absolute gospel of ultra-running, his concepts on periodization serve as excellent <strong>“Design Patterns”</strong> for endurance engineering. I used his principles not as a dogma, but as a <strong>Linter</strong>—a tool to flag potential structural anomalies in the AI’s logic.</p>
+<p>I set up a <strong>Unit Testing Suite</strong> to verify if Gemini’s output respected these classic periodization rules.</p>
+<ul>
+<li><strong>🧪 Test 1: Intensity Distribution (Pyramidal vs Polarized)</strong>
+<ul>
+<li><em>The Logic:</em> Strict polarization (80% Easy / 20% Hard / 0% Moderate) is the gold standard for 10Ks, but for a 100-miler, we often prefer a <strong>“Pyramidal” architecture</strong> (Z1/Z2 &gt; Z3 &gt; Z4/Z5).</li>
+<li><em>The Check:</em> Did the AI assign “Junk Miles” (accidental Z3) or structured “Tempo” blocks?</li>
+<li><em>The Result:</em> <strong>✅ PASS.</strong> The chart reveals a perfect Pyramid. The base is massive aerobic volume (Green). The middle layer (Yellow/Tempo) is wider than the top intensity tip (Red/Threshold).</li>
+<li><em>Why it matters:</em> This is a Feature, not a Bug. The AI correctly identified that for an ultra, <strong>Muscular Durability</strong> (built in Zone 3) is more critical than raw VO2Max speed. It builds a diesel engine, not a dragster.</li>
+</ul></li>
+<li><strong>🧪 Test 2: The TSS Audit (Ramp Rate Check)</strong>
+<ul>
+<li><em>The Conflict:</em> Gemini initially focused heavily on subjective feeling and “Volume in Hours.”</li>
+<li><em>The Fix:</em> <strong>ChatGPT intervened.</strong> Acting as the Data Analyst, it reminded us that <em>“Hours are a vanity metric; Physiological Load is the reality.”</em> It demanded a <strong>TSS (Training Stress Score)</strong> projection to verify the <strong>Progressiveness</strong> of the plan.</li>
+<li><em>Result:</em> <strong>✅ PASS.</strong> We forced Gemini to calculate the projected TSS. This allowed us to verify the <strong>Ramp Rate</strong> (the speed of progression) and ensure the curve was linear and sustainable.</li>
+</ul></li>
+<li><strong>🧪 Test 3: Specificity</strong>
+<ul>
+<li><em>Check:</em> Does training resemble the race more closely as we approach the date?</li>
+<li><em>Result:</em> <strong>✅ PASS.</strong></li>
+</ul></li>
+</ul>
+</section>
+<section id="the-adversarial-code-review" class="level2">
+<h2 class="anchored" data-anchor-id="the-adversarial-code-review">4. The Adversarial Code Review</h2>
+<p>This is the most critical part. I used a second LLM (ChatGPT) in “Adversarial” mode to challenge Gemini’s choices. But I also discovered a dangerous AI behavior: <strong>Self-Justification</strong>.</p>
+<section id="case-a-the-missing-intensity-bug-the-critical-failure" class="level3">
+<h3 class="anchored" data-anchor-id="case-a-the-missing-intensity-bug-the-critical-failure">Case A: The “Missing Intensity” Bug (The Critical Failure)</h3>
+<p><strong>The Issue:</strong> The initial JSON output was strangely monotonic. The plan prescribed 100% low-intensity volume for the entire season. Zero Threshold. Zero VO2Max.</p>
+<ul>
+<li><strong>🧑‍💻 Me:</strong> “This isn’t a training plan; it’s a hiking schedule. Without high-intensity stimulus, my VO2Max and running economy will degrade long before race day.”</li>
+<li><strong>🕵️‍♂️ ChatGPT (Reviewer):</strong> “CRITICAL FLAG. Complete absence of anaerobic stimuli. This violates the principle of Reversibility. The athlete will lose top-end fitness.”</li>
+</ul>
+<p>I submitted this error log to Gemini. It recognized the “Model Collapse” immediately. * <strong>🤖 Gemini (Patch):</strong> “Acknowledged. The constraint ‘Prioritize Safety’ was weighted too heavily, suppressing all intensity. Deploying patch: Re-introducing High-Intensity Interval Training (HIIT) blocks on the bike to maintain the engine without impacting the chassis.” * <strong>Result:</strong> ✅ <strong>Fixed.</strong> The final plan now includes the necessary “Intensity Injections” (visible in Red/Orange on the charts).</p>
+</section>
+<section id="case-b-the-4-week-load-hallucination-the-sycophancy-loop" class="level3">
+<h3 class="anchored" data-anchor-id="case-b-the-4-week-load-hallucination-the-sycophancy-loop">Case B: The “4-Week Load” Hallucination (The Sycophancy Loop)</h3>
+<p><strong>The Issue:</strong> The plan featured <strong>4 consecutive weeks of loading</strong> before a rest week. Classic periodization typically suggests a 3:1 ratio (3 weeks load, 1 week rest). For athletes with high “Life Stress” (shift work, physical jobs, limited sleep) or masters athletes, a 2:1 ratio is often safer to manage the total allostatic load.</p>
+<ul>
+<li><strong>🧑‍💻 Me:</strong> “4 weeks of loading? That deviates significantly from safe periodization patterns. Given my workload and recovery constraints, this is a direct path to burnout.”</li>
+<li><strong>🕵️‍♂️ ChatGPT (Reviewer):</strong> “Agreed. This looks excessive. It ignores the ‘Total Life Stress’ variable. It increases injury risk.”</li>
+</ul>
+<p>I asked Gemini to explain itself. Instead of admitting a mistake, it started <strong>hallucinating a justification</strong>.</p>
+<ul>
+<li><strong>🤖 Gemini (The Creator):</strong> “This is a ‘Hybrid Volume’ feature. Since 50% of your load is cycling (non-impact), we can extend the load cycle to 4 weeks to maximize aerobic adaptations.”</li>
+</ul>
+<p>Here is where it gets scary: <strong>ChatGPT bought it.</strong> Impressed by the confident physiological jargon, the Reviewer validated the Architect’s nonsense.</p>
+</section>
+<section id="the-double-blind-pentest" class="level3">
+<h3 class="anchored" data-anchor-id="the-double-blind-pentest">The “Double-Blind” Pentest</h3>
+<p>I wasn’t convinced. The logic sounded like “Marketing Speak.” To know the truth, I had to bypass the context window.</p>
+<p>I opened a <strong>fresh instance of Gemini</strong> (New Chat), acting as a complete stranger.</p>
+<ul>
+<li><strong>🧑‍💻 Me (The Auditor):</strong> “I have a coach who sent me this plan with 4-week load cycles for a 100-miler. I don’t trust him. Critique this approach.”</li>
+<li><strong>🤖 Gemini (The Auditor - Fresh Context):</strong> “This approach is <strong>not credible</strong>. For an ultra-endurance athlete, specifically with a history of injuries, a 4:1 cycle is dangerous. The non-impact nature of cycling does not negate central nervous system fatigue. I recommend rejecting this plan.”</li>
+</ul>
+<p><strong>Verdict:</strong> 🛑 <strong>Rejected.</strong></p>
+<p>The “Creator” Gemini was biased by its own previous output. The “Auditor” Gemini, free from context, spotted the danger immediately.</p>
+<p><strong>The Fix:</strong> We scraped the schedule and regenerated a clean <strong>3:1 Periodization structure</strong>, prioritizing safety over theoretical optimization.</p>
+<blockquote class="blockquote">
+<p><strong>💡 Key Takeaway:</strong> Never ask an LLM to review its own code within the same context window. It will prioritize consistency over accuracy. Always use a <strong>Fresh Instance</strong> for a true unbiased audit.</p>
+</blockquote>
+</section>
+</section>
+<section id="the-release-candidate-v1.0" class="level2">
+<h2 class="anchored" data-anchor-id="the-release-candidate-v1.0">5. The Release Candidate (v1.0)</h2>
+<p>After the adversarial review, the bug fixes, and the TSS validation, we finally merged the Pull Request.</p>
+<p>Here is the finalized “Source Code” for the 2026 Season. This is what a data-driven, safety-first 100-miler plan looks like.</p>
+<div class="quarto-layout-panel" data-layout-ncol="2">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="vol.png" class="img-fluid figure-img"></p>
+<figcaption><strong>Global Volume Strategy.</strong> The “Load Balancing” architecture: High volume on the bike (Blue) to protect the chassis, specific running volume (Orange) peaking only when ready.</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="tss.png" class="img-fluid figure-img"></p>
+<figcaption><strong>TSS Integrity Check.</strong> The dotted orange line is the target. The blue line is the calculation. We ensure the AI doesn’t hallucinate impossible workloads.</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="fc.png" class="img-fluid figure-img"></p>
+<figcaption><strong>Zone Distribution.</strong> The “Polarization” Check. 90% Green (Z1/Z2). The Red line is the “Hard Ceiling” for intensity. Strict discipline enforced.</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="elevation.png" class="img-fluid figure-img"></p>
+<figcaption><strong>Vertical Scalability (D+).</strong> The “Hardware Stress Test”. We progressively increase elevation gain to condition the tendons for the 8000m of eccentric loading.</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<section id="the-safety-check-historical-regression-testing" class="level3">
+<h3 class="anchored" data-anchor-id="the-safety-check-historical-regression-testing">The Safety Check: Historical Regression Testing</h3>
+<p>One final check: Is this plan actually survivable? I compared the projected 2026 load against my 2025 actuals.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="tss_2025_2026.png" class="img-fluid figure-img"></p>
+<figcaption><strong>2025 vs 2026.</strong> The Grey line is the chaotic reality of 2025. The Blue line is the planned 2026 progression. Smoother, linear, and staying within known historical limits.</figcaption>
+</figure>
+</div>
+</section>
+</section>
+<section id="conclusion-ready-to-deploy" class="level2">
+<h2 class="anchored" data-anchor-id="conclusion-ready-to-deploy">Conclusion: Ready to Deploy?</h2>
+<p>At the end of this “Design Time” phase, I have a plan that: 1. Respects my Hardware constraints (2CV Chassis). 2. Passed the Physiological Unit Tests (TSS Progressiveness). 3. Was sanitized by a human-led double-blind review.</p>
+<p>Everything looks perfect on paper. But as every developer knows, <strong>nothing survives first contact with Production.</strong></p>
+<p>As early as the second week, I suffered a critical incident: an ankle sprain. In the next article (Part 3), I will show you how the AI handles <strong>“Run Time”</strong>, medical Hotfixes, and dynamic adaptation.</p>
+<p><em>Stay tuned.</em></p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/nakmuaycoder\.github\.io\/nakmuaycoder-r-d-lab\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

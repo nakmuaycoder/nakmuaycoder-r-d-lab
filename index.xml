@@ -15,19 +15,35 @@
 <link>https://nakmuaycoder.github.io/nakmuaycoder-r-d-lab/</link>
 </image>
 <generator>quarto-1.8.27</generator>
-<lastBuildDate>Sun, 25 Jan 2026 00:00:00 GMT</lastBuildDate>
+<lastBuildDate>Tue, 03 Feb 2026 00:00:00 GMT</lastBuildDate>
 <item>
-  <title>The AI Board of Directors: How I Engineered My Ultra-Trail Season</title>
+  <title>Project Chiang M-AI - Episode 2: AI Training Plan: From Generation to Validation</title>
   <dc:creator>nakmuaycoder </dc:creator>
-  <link>https://nakmuaycoder.github.io/nakmuaycoder-r-d-lab/posts/01-ai-board-of-directors/</link>
+  <link>https://nakmuaycoder.github.io/nakmuaycoder-r-d-lab/posts/project-chiang-m-ai/02-from-generation-to-validation/</link>
+  <description><![CDATA[ How I validated the architecture of my ultra-trail training plan using an Adversarial approach (Gemini vs ChatGPT vs Experts). ]]></description>
+  <category>methodology</category>
+  <category>prompt-engineering</category>
+  <category>sports-science</category>
+  <category>system-design</category>
+  <category>project-chiang-m-ai</category>
+  <guid>https://nakmuaycoder.github.io/nakmuaycoder-r-d-lab/posts/project-chiang-m-ai/02-from-generation-to-validation/</guid>
+  <pubDate>Tue, 03 Feb 2026 00:00:00 GMT</pubDate>
+  <media:content url="https://nakmuaycoder.github.io/nakmuaycoder-r-d-lab/posts/project-chiang-m-ai/02-from-generation-to-validation/image1.png" medium="image" type="image/png" height="79" width="144"/>
+</item>
+<item>
+  <title>Project Chiang M-AI - Episode 1: The AI Board of Directors: How I Engineered My Ultra-Trail Season</title>
+  <dc:creator>nakmuaycoder </dc:creator>
+  <link>https://nakmuaycoder.github.io/nakmuaycoder-r-d-lab/posts/project-chiang-m-ai/01-ai-board-of-directors/</link>
   <description><![CDATA[ A deep dive into using Gemini and ChatGPT as adversarial consultants to build a data-driven, adaptive training protocol. ]]></description>
   <category>methodology</category>
   <category>prompt-engineering</category>
   <category>sports-science</category>
   <category>system-design</category>
-  <guid>https://nakmuaycoder.github.io/nakmuaycoder-r-d-lab/posts/01-ai-board-of-directors/</guid>
+  <category>project-chiang-m-ai</category>
+  <category>ai-coaching</category>
+  <guid>https://nakmuaycoder.github.io/nakmuaycoder-r-d-lab/posts/project-chiang-m-ai/01-ai-board-of-directors/</guid>
   <pubDate>Sun, 25 Jan 2026 00:00:00 GMT</pubDate>
-  <media:content url="https://nakmuaycoder.github.io/nakmuaycoder-r-d-lab/posts/01-ai-board-of-directors/board.jpg" medium="image" type="image/jpeg"/>
+  <media:content url="https://nakmuaycoder.github.io/nakmuaycoder-r-d-lab/posts/project-chiang-m-ai/01-ai-board-of-directors/board.jpg" medium="image" type="image/jpeg"/>
 </item>
 </channel>
 </rss>
