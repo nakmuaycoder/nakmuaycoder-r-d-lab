@@ -1,0 +1,16 @@
+---
+title: "Blog"
+listing:
+  contents:
+    - "*/index.qmd"
+    - "!*/*/index.qmd"
+    
+  sort: "date desc"
+  type: default     
+  categories: true  
+  sort-ui: true     
+  filter-ui: true   
+  page-size: 10
+author: "nakmuaycoder"
+tit*/le-block-banner: true
+---
