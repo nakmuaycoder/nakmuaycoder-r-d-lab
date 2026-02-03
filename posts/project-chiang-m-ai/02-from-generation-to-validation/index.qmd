@@ -93,16 +93,16 @@ I set up a **Unit Testing Suite** to verify if Gemini's output respected these c
 
 This is the most critical part. I used a second LLM (ChatGPT) in "Adversarial" mode to challenge Gemini's choices. But I also discovered a dangerous AI behavior: **Self-Justification**.
 
-### Case A: The "Missing VO2Max" Bug (The Linter)
+### Case A: The "Missing Intensity" Bug (The Critical Failure)
 
-**The Issue:** In Phase 4 (Specific Prep), the initial plan removed *all* high-intensity work.
+**The Issue:** The initial JSON output was strangely monotonic. The plan prescribed 100% low-intensity volume for the entire season. Zero Threshold. Zero VO2Max.
 
-* **🧑‍💻 Me:** "No VO2Max for 8 weeks? My running economy will collapse."
-* **🕵️‍♂️ ChatGPT (Reviewer):** "Flagged. Cutting intensity completely creates a 'de-training' risk for the neuromotor system."
+* **🧑‍💻 Me:** "This isn't a training plan; it's a hiking schedule. Without high-intensity stimulus, my VO2Max and running economy will degrade long before race day."
+* **🕵️‍♂️ ChatGPT (Reviewer):** "CRITICAL FLAG. Complete absence of anaerobic stimuli. This violates the principle of Reversibility. The athlete will lose top-end fitness."
 
-I forwarded this error to Gemini. It immediately accepted the patch.
-* **🤖 Gemini (Patch):** "Correct. Added specific VO2Max maintenance blocks on the bike to preserve the engine without impacting the chassis."
-* **Result:** ✅ **Fixed.**
+I submitted this error log to Gemini. It recognized the "Model Collapse" immediately.
+* **🤖 Gemini (Patch):** "Acknowledged. The constraint 'Prioritize Safety' was weighted too heavily, suppressing all intensity. Deploying patch: Re-introducing High-Intensity Interval Training (HIIT) blocks on the bike to maintain the engine without impacting the chassis."
+* **Result:** ✅ **Fixed.** The final plan now includes the necessary "Intensity Injections" (visible in Red/Orange on the charts).
 
 ### Case B: The "4-Week Load" Hallucination (The Sycophancy Loop)
 
