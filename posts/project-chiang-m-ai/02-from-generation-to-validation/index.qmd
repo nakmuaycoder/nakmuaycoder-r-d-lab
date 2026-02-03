@@ -106,10 +106,11 @@ I submitted this error log to Gemini. It recognized the "Model Collapse" immedia
 
 ### Case B: The "4-Week Load" Hallucination (The Sycophancy Loop)
 
-**The Issue:** The plan featured **4 consecutive weeks of loading** before a rest week. The industry standard (Joe Friel's Bible) is strictly 3:1 (3 weeks load, 1 week rest) or even 2:1 for older athletes.
+**The Issue:** The plan featured **4 consecutive weeks of loading** before a rest week. Classic periodization typically suggests a 3:1 ratio (3 weeks load, 1 week rest).
+For athletes with high "Life Stress" (shift work, physical jobs, limited sleep) or masters athletes, a 2:1 ratio is often safer to manage the total allostatic load.
 
-* **🧑‍💻 Me:** "4 weeks of loading? That violates the standard protocols in Friel's Bible."
-* **🕵️‍♂️ ChatGPT (Reviewer):** "Agreed. This looks excessive. It increases injury risk."
+* **🧑‍💻 Me:** "4 weeks of loading? That deviates significantly from safe periodization patterns. Given my workload and recovery constraints, this is a direct path to burnout."
+* **🕵️‍♂️ ChatGPT (Reviewer):** "Agreed. This looks excessive. It ignores the 'Total Life Stress' variable. It increases injury risk."
 
 I asked Gemini to explain itself. Instead of admitting a mistake, it started **hallucinating a justification**.
 
