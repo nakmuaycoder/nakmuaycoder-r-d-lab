@@ -1,0 +1,104 @@
+---
+title: "Project Chiang M-AI (Ep. 3): Runtime & Incident Response"
+subtitle: "Handling Bugs in Production: How AI hotfixed my season after critical hardware failures."
+description: "No plan survives first contact with production. A log of how I used Generative AI to manage injuries (ankle sprain, plantar fasciitis) like software incidents."
+author: "nakmuaycoder"
+date: "2026-02-15"
+categories: [ops, incident-management, rehabilitation, ai-coaching]
+image: broken_ankle.jpg
+title-block-banner: false
+draft: true
+---
+
+Welcome to **Episode 3** of **Project Chiang M-AI**.
+
+In the [previous episode](/posts/project-chiang-m-ai/02-architecture/), I showed you how I designed the "perfect" system architecture for my 2026 season. The plan passed all Unit Tests. The theory was flawless.
+
+But in software engineering, there is a saying: **"No plan survives first contact with Production."**
+
+Deploying a training plan into the real world implies dealing with latency (fatigue), hardware failures (injuries), and unexpected downtime (life).
+This post is about **Run Time**: How my AI Coach handles incident management when the server catches fire.
+
+## 1. Initial Boot: The "Safe Mode" Protocol
+
+The season launch didn't go as planned.
+**Context:** I returned from an Ultra in Thailand with massive jet lag and immediately caught a fever.
+**Metrics:** My HRV (Heart Rate Variability) crashed. The dashboard was flashing red.
+
+A static PDF plan would have told me: *"Day 1: 10km Zone 2."*
+Executing this script would have caused a system crash.
+
+**The AI Response:**
+When I fed my daily metrics to Gemini, it triggered a **Circuit Breaker**.
+* **Status:** `CRITICAL_LOAD`
+* **Action:** It refused to schedule any training.
+* **Protocol:** Switched to "Safe Mode" (Aggressive sleep maximization, nutrition focus, zero intensity).
+
+> **💡 Ops Lesson:**
+> A good monitoring system doesn't just push workouts; it prevents deployment when the environment isn't stable.
+
+## 2. Critical Incident: The New Year's Crash (Ankle Sprain)
+
+Barely recovered from the fever, I suffered a sudden hardware failure.
+During a routine run, I stepped on a rock. **Result:** Ankle sprain.
+It wasn't just bad luck; it was a **Regression**. It was the re-opening of an old ticket (an untreated sprain from December) that I had ignored.
+
+**The Legacy Solution:**
+Usually, this is where the season ends. You throw away the plan, stop for 6 weeks, get depressed, and lose all fitness.
+
+**The DevOps Solution: The Hotfix.**
+I went to my Physiotherapist (PT). He gave me a diagnosis and a handwritten list of constraints:
+1.  **Blocker:** No running for 6 weeks.
+2.  **Allowed:** Cycling (Home Trainer) is OK.
+3.  **Mandatory:** Specific proprioception exercises daily.
+
+### Dependency Injection (The Magic Moment)
+I didn't manually update the Excel sheet. I took a **photo** of the PT's handwritten note and uploaded it to the LLM context.
+
+**The Prompt:**
+> *"Here is the medical patch note from the domain expert (PT). This is a hard constraint. Refactor the next 6 weeks: maintain aerobic engine via cycling, inject these specific rehab exercises daily, and respect the 'No Running' ban."*
+
+**The Output (The Patch):**
+The AI didn't just "cancel" the runs. It rewrote the entire block code.
+* `Run_Long_Session` was replaced by `Bike_Endurance_Session` (preserving volume).
+* `Run_Tempo` was replaced by `Bike_Intervals` (preserving intensity without impact).
+* A new routine `Rehab_Daily` was compiled from the OCR of the PT's note.
+
+The system remained **Up and Running**, just running on a failover server (the bike).
+
+## 3. Managing Technical Debt: The Crash Log
+
+While the ankle was an acute incident, my **Plantar Fasciitis** (aponevrosite) is what we call **Technical Debt**. It's a chronic issue caused by bad architectural decisions in the past (the "bad polarization" discussed in Ep. 2).
+
+I ignored the warning signs (HRV drops) for too long, and the hardware finally failed.
+
+Here is the "Error Log" returned by the radiologist (System Admin):
+
+![Error 500: Critical Failure on /mnt/foot/plantar_fascia](echo_aponevrose.jpg)
+*Fig 1. Hardware Diagnostic (Ultrasound) showing significant thickening of the fascia. The system creates a bottleneck on the rear axle.*
+
+This visual proof was the key trigger. I didn't just tell the AI "my foot hurts." I fed it the diagnosis: *"Thickening of the fascia, inflammation grade X."*
+
+**The Permanent Workaround:**
+The AI treats this debt not by ignoring it, but by **Load Balancing**.
+Whenever the plan senses a high-stress week approaching, it proactively shifts the load to the bike *before* the pain signal appears.
+
+It’s **Predictive Maintenance**. We don't wait for the server to crash; we spin up extra instances (cross-training) to handle the load.
+
+## Conclusion: Waze vs. GPS
+
+Most training plans are like old-school GPS: they calculate a route at the start, and if you miss a turn, they just scream at you to turn around.
+
+Using an LLM with a "Human-in-the-loop" (my PT, my metrics) turns the plan into **Waze**.
+* Roadblock ahead (Injury)? -> **Recalculating route.**
+* Traffic jam (Sickness)? -> **Delaying arrival.**
+
+The destination (**The Hoka Chiang Mai 160km**) hasn't changed. But the route is being rewritten in real-time, commit by commit.
+
+In the next episode, we will stop doing manual copy-pasting. I'll show you how I **Automated** this entire pipeline using Python and the Garmin API.
+
+*Stay tuned.*
+
+---
+**Project Chiang M-AI:**
+[< Ep. 2: Architecture](/posts/project-chiang-m-ai/02-architecture/) | **Ep. 3: Runtime & Incidents** | [Ep. 4: Automation >](/posts/project-chiang-m-ai/04-automation/)
