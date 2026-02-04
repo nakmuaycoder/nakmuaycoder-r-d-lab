@@ -10,14 +10,6 @@ title-block-banner: false
 draft: true
 ---
 
----
-title: "Project Chiang M-AI - Episode 3: The Runtime Loop - Agile Sprint Planning for Ultra-Running"
-date: 2026-02-04
-categories: [methodology, prompt-engineering, productivity, agile]
-tags: [project-chiang-m-ai, agile, work-life-balance, context-aware-scheduling]
-description: "How I use LLMs as an Agile Scrum Master to adapt a 100-mile training plan to the chaos of professional life."
-author: "nakmuaycoder"
----
 
 In the previous episodes ([Architecture](../01-ai-board-of-directors/) and [Validation](../02-from-generation-to-validation/)), we built the "Master Plan" for my 2026 season. We ended up with a perfect JSON file, physiologically validated, covering 6 months of training.
 
