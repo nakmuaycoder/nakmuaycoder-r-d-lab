@@ -102,3 +102,120 @@ In the next episode, we will stop doing manual copy-pasting. I'll show you how I
 ---
 **Project Chiang M-AI:**
 [< Ep. 2: Architecture](/posts/project-chiang-m-ai/02-architecture/) | **Ep. 3: Runtime & Incidents** | [Ep. 4: Automation >](/posts/project-chiang-m-ai/04-automation/)
+
+
+adaptation du plan a l'emploi du temps : maximisation de la récupération.
+
+
+moi:
+
+Comment gérer le volume sur la semaine.
+Il faut profiter du fait que j'ai 2 jours de remote par semaine.
+J'ai maintenant droit a 2 jours de remote.
+Je pensais faire niveau training:
+
+lundi jeudi off training: work on site
+
+jeudi off training: on site
+
+mardi (ou mercredi) on site: je cours entre midi et deux et fait du home trainer le soir.
+
+le reste en semaine : home trainer le matin course le soir.
+
+le weekend: on a le temps
+
+
+Ça te semble comment?
+
+
+chatgpt :
+
+
+
+Bonne réflexion. Là on passe du “est-ce que le plan est bon ?” à “est-ce que je peux l’exécuter sans me griller ?”
+Je vais être direct et corriger ce qui doit l’être.
+1️⃣ Ton schéma général : bonne intuition, mais à sécuriser
+Ton idée clé est juste : 👉 profiter à fond des jours remote 👉 réduire la friction les jours on-site 👉 week-end = banque d’heures
+Mais en l’état, il y a 2 risques :
+trop de doubles rapprochées en semaine
+mauvais placement des séances “clés” (VO₂ / CAP impact)
+On ajuste.
+2️⃣ Clarification de ton cadre réel (important)
+Si je résume correctement :
+2 jours remote
+3 jours on-site
+week-end libre
+tu veux :
+éviter doubles tous les jours
+garder de l’énergie mentale
+sécuriser la cheville
+👉 On doit donc concentrer, pas étaler.
+3️⃣ Organisation hebdomadaire OPTIMISÉE (réaliste)
+Je te propose un cadre stable, que tu pourras répéter toute l’année.
+🔵 Lundi – On-site (OFF entraînement)
+✔️ Très bon choix
+OFF CAP / vélo
+éventuellement 20–30 min mobilité le soir
+👉 Tu démarres la semaine frais.
+🟢 Mardi – Remote (GROS JOUR)
+👉 Jour clé n°1
+Matin
+Home trainer VO₂ ou Z3/Z4 (60–75 min)
+Soir
+CAP Z1 60–75 min
+strides (6–8 × 20 s)
+✔️ Double justifiée
+✔️ Métabolique + mécanique
+✔️ Pas trop tard dans la semaine
+🔵 Mercredi – On-site (simple, intelligent)
+CAP Z1 / vallonné 60–90 min
+idéalement à midi
+👉 Pas de vélo ce jour-là
+👉 Tu laisses le système nerveux respirer
+🟢 Jeudi – Remote (SOLIDE mais contrôlé)
+👉 Jour clé n°2
+Matin
+Vélo Z2 long 90–120 min
+Soir
+Muscu lourde 45–60 min
+⚠️ Pas de CAP ce jour-là
+👉 On évite impact + fatigue cumulée
+🔵 Vendredi – On-site (simple / optionnel)
+Deux options selon fatigue :
+Option A (forme OK) :
+Vélo Z1/Z2 60 min
+Option B (fatigue) :
+OFF total
+👉 Vendredi n’est jamais une séance clé
+🔴 Samedi – GROS BLOC
+Rando-course D+ 4–5 h
+Fueling, bâtons, gestion chaleur
+👉 Cœur de la prépa ultra
+🔴 Dimanche – Back-to-back
+Rando-course Z1 3–4 h
+Objectif : fatigue résiduelle
+4️⃣ Volume obtenu (sans forcer)
+Sur une grosse semaine :
+CAP : 7–9 h
+Vélo : 5–6 h
+Muscu : 1–1.5 h 👉 Total : 14–17 h
+✔️ Sans doubles tous les jours
+✔️ Sans séance clé un jour “faible”
+✔️ Compatible avec ton CSV
+5️⃣ Ce que je CORRIGE par rapport à ton idée initiale
+❌ Ce que je n’aime pas
+courir et home trainer tard le même jour on-site trop souvent
+trop de doubles consécutives
+CAP impact + VO₂ vélo le soir tard
+✅ Ce que je garde
+doubles sur jours remote
+midi CAP les jours on-site
+week-end très chargé
+6️⃣ Règle simple à retenir
+Max 2 jours doubles / semaine
+Max 1 séance “dure” par jour
+Jamais CAP impact + VO₂ vélo tard le soir
+Si tu respectes ça : 👉 le volume passe 👉 la cheville tient 👉 le mental suit
+7️⃣ Verdict honnête
+Ton intuition est bonne à 80 %.
+Avec les ajustements ci-dessus, tu passes à 95 % exécutable.
