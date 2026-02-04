@@ -10,212 +10,121 @@ title-block-banner: false
 draft: true
 ---
 
-Welcome to **Episode 3** of **Project Chiang M-AI**.
+---
+title: "Project Chiang M-AI - Episode 3: The Runtime Loop - Agile Sprint Planning for Ultra-Running"
+date: 2026-02-04
+categories: [methodology, prompt-engineering, productivity, agile]
+tags: [project-chiang-m-ai, agile, work-life-balance, context-aware-scheduling]
+description: "How I use LLMs as an Agile Scrum Master to adapt a 100-mile training plan to the chaos of professional life."
+author: "nakmuaycoder"
+---
 
-In the [previous episode](/posts/project-chiang-m-ai/02-architecture/), I showed you how I designed the "perfect" system architecture for my 2026 season. The plan passed all Unit Tests. The theory was flawless.
+In the previous episodes ([Architecture](../01-ai-board-of-directors/) and [Validation](../02-from-generation-to-validation/)), we built the "Master Plan" for my 2026 season. We ended up with a perfect JSON file, physiologically validated, covering 6 months of training.
 
-But in software engineering, there is a saying: **"No plan survives first contact with Production."**
+In traditional project management, this is called the **Waterfall** model.
+But in tech (and in life), Waterfall doesn't work.
+Why? Because reality has high entropy.
 
-Deploying a training plan into the real world implies dealing with latency (fatigue), hardware failures (injuries), and unexpected downtime (life).
-This post is about **Run Time**: How my AI Coach handles incident management when the server catches fire.
+* A client meeting runs late on a Tuesday.
+* A critical production bug hits on Friday.
+* Sleep quality drops on Thursday.
 
-## 1. Initial Boot: The "Safe Mode" Protocol
+If I follow my static JSON plan to the letter ("Run 2h Zone 2"), I am heading straight for a system crash. I need agility.
 
-The season launch didn't go as planned.
-**Context:** I returned from an Ultra in Thailand with massive jet lag and immediately caught a fever.
-**Metrics:** My HRV (Heart Rate Variability) crashed. The dashboard was flashing red.
+In this episode, I document how I transform the LLM from a "System Architect" into a weekly **Scrum Master** to handle the "Runtime" operations.
 
-A static PDF plan would have told me: *"Day 1: 10km Zone 2."*
-Executing this script would have caused a system crash.
+## 1. The Sunday Ritual: Sprint Planning
 
-**The AI Response:**
-When I fed my daily metrics to Gemini, it triggered a **Circuit Breaker**.
-* **Status:** `CRITICAL_LOAD`
-* **Action:** It refused to schedule any training.
-* **Protocol:** Switched to "Safe Mode" (Aggressive sleep maximization, nutrition focus, zero intensity).
+Every Sunday evening, I open a session with my "Coach" agent. The goal isn't to reinvent the wheel, but to **Commit** to the upcoming week.
 
-> **💡 Ops Lesson:**
-> A good monitoring system doesn't just push workouts; it prevents deployment when the environment isn't stable.
+I treat my training week exactly like a **Sprint**.
 
-## 2. Critical Incident: The New Year's Crash (Ankle Sprain)
+* **The Backlog:** The workouts prescribed by the Master Plan (Theory).
+* **The Constraints:** My Outlook calendar, travel plans, and cognitive load (Reality).
+* **The Definition of Done:** Successfully executing the key volume without generating "Technical Debt" (excessive fatigue).
 
-Barely recovered from the fever, I suffered a sudden hardware failure.
-During a routine run, I stepped on a rock. **Result:** Ankle sprain.
-It wasn't just bad luck; it was a **Regression**. It was the re-opening of an old ticket (an untreated sprain from December) that I had ignored.
+### The Context Injection
 
-**The Legacy Solution:**
-Usually, this is where the season ends. You throw away the plan, stop for 6 weeks, get depressed, and lose all fitness.
+The secret to effective AI scheduling isn't just asking for a plan; it's giving the model full visibility into non-sporting resources. A stressful 2-hour meeting consumes "mental glycogen." The AI needs to know this.
 
-**The DevOps Solution: The Hotfix.**
-I went to my Physiotherapist (PT). He gave me a diagnosis and a handwritten list of constraints:
-1.  **Blocker:** No running for 6 weeks.
-2.  **Allowed:** Cycling (Home Trainer) is OK.
-3.  **Mandatory:** Specific proprioception exercises daily.
+Here is the typical prompt I use for my **Sprint Planning**:
 
-### Dependency Injection (The Magic Moment)
-I didn't manually update the Excel sheet. I took a **photo** of the PT's handwritten note and uploaded it to the LLM context.
-
-**The Prompt:**
-> *"Here is the medical patch note from the domain expert (PT). This is a hard constraint. Refactor the next 6 weeks: maintain aerobic engine via cycling, inject these specific rehab exercises daily, and respect the 'No Running' ban."*
-
-**The Output (The Patch):**
-The AI didn't just "cancel" the runs. It rewrote the entire block code.
-* `Run_Long_Session` was replaced by `Bike_Endurance_Session` (preserving volume).
-* `Run_Tempo` was replaced by `Bike_Intervals` (preserving intensity without impact).
-* A new routine `Rehab_Daily` was compiled from the OCR of the PT's note.
-
-The system remained **Up and Running**, just running on a failover server (the bike).
-
-## 3. Managing Technical Debt: The Crash Log
-
-While the ankle was an acute incident, my **Plantar Fasciitis** (aponevrosite) is what we call **Technical Debt**. It's a chronic issue caused by bad architectural decisions in the past (the "bad polarization" discussed in Ep. 2).
-
-I ignored the warning signs (HRV drops) for too long, and the hardware finally failed.
-
-Here is the "Error Log" returned by the radiologist (System Admin):
-
-![Error 500: Critical Failure on /mnt/foot/plantar_fascia](echo_aponevrose.jpg)
-*Fig 1. Hardware Diagnostic (Ultrasound) showing significant thickening of the fascia. The system creates a bottleneck on the rear axle.*
-
-This visual proof was the key trigger. I didn't just tell the AI "my foot hurts." I fed it the diagnosis: *"Thickening of the fascia, inflammation grade X."*
-
-**The Permanent Workaround:**
-The AI treats this debt not by ignoring it, but by **Load Balancing**.
-Whenever the plan senses a high-stress week approaching, it proactively shifts the load to the bike *before* the pain signal appears.
-
-It’s **Predictive Maintenance**. We don't wait for the server to crash; we spin up extra instances (cross-training) to handle the load.
-
-## Conclusion: Waze vs. GPS
-
-Most training plans are like old-school GPS: they calculate a route at the start, and if you miss a turn, they just scream at you to turn around.
-
-Using an LLM with a "Human-in-the-loop" (my PT, my metrics) turns the plan into **Waze**.
-* Roadblock ahead (Injury)? -> **Recalculating route.**
-* Traffic jam (Sickness)? -> **Delaying arrival.**
-
-The destination (**The Hoka Chiang Mai 160km**) hasn't changed. But the route is being rewritten in real-time, commit by commit.
-
-In the next episode, we will stop doing manual copy-pasting. I'll show you how I **Automated** this entire pipeline using Python and the Garmin API.
-
-*Stay tuned.*
+> **🧑‍💻 Me (Sunday Prompt):**
+> "Context: Week 5 of General Prep.
+> **The Backlog (Target):**
+> - Tuesday: 1h30 Aerobic Endurance
+> - Wednesday: 1h Intervals (Threshold)
+> - Friday: 1h Easy
+> - Weekend: 3h Long Run
+>
+> **The Constraints (Reality):**
+> - **Tuesday:** Huge release at work. I have meetings from 9am to 6pm. Cognitive load will be critical (9/10).
+> - **Wednesday:** Open window in the morning, but travel in the evening.
+> - **Physiological State:** HRV is baseline, but legs feel heavy from last week's long run.
+>
+> **Task:** Act as an Agile Scheduler. Refactor the Backlog to fit the Constraints.
+> **Goal:** Maximize adherence to the plan while minimizing cortisol spikes. You have permission to move sessions, but not to delete key volume."
 
 ---
-**Project Chiang M-AI:**
-[< Ep. 2: Architecture](/posts/project-chiang-m-ai/02-architecture/) | **Ep. 3: Runtime & Incidents** | [Ep. 4: Automation >](/posts/project-chiang-m-ai/04-automation/)
 
+## 2. The Refactoring Logic: "Cognitive Load Balancing"
 
-adaptation du plan a l'emploi du temps : maximisation de la récupération.
+This is where Gemini shines. It doesn't just move blocks around like Tetris; it understands the physiology of stress. It recognizes that **Stress is Cumulative**.
 
+Here is how it refactored this specific week:
 
-moi:
+> **🤖 Coach Trail (Gemini - Response):**
+> "Conflict Detected on **Tuesday**: High Cognitive Load + High Volume Aerobic Run = Bad Idea.
+> Running 1h30 after a 9h drain day will spike cortisol and ruin sleep quality.
+>
+> **Proposed Refactoring (Sprint Plan v1):**
+>
+> * **Monday (Rest Day -> Active Recovery):** We shift the 1h Easy run here (lunch break) to clear the system before the big Tuesday.
+> * **Tuesday (The Release Day):** **CANCEL** the 1h30 Run. Replace with **30 min Breathwork/Mobility** at home. Save the battery.
+> * **Wednesday (The Swap):** Move the **Threshold Intervals** to Wednesday morning (fresh mental state). High intensity is better handled when cognitive fatigue is low.
+> * **Thursday:** Insert the **1h30 Aerobic Run** here (moved from Tuesday).
+> * **Weekend:** Standard execution.
+>
+> **Result:** Total Volume preserved. Intensity placed where resources are available."
 
-Comment gérer le volume sur la semaine.
-Il faut profiter du fait que j'ai 2 jours de remote par semaine.
-J'ai maintenant droit a 2 jours de remote.
-Je pensais faire niveau training:
+### Lesson Learned: AI as a Guardrail
 
-lundi jeudi off training: work on site
+Without the AI, I probably would have forced the run on Tuesday evening: *"It's on the plan, I'm not weak, let's do this."*
+Probable result: A low-quality "junk mile" session, terrible sleep, and a high risk of illness or injury 3 days later.
 
-jeudi off training: on site
+The AI, cold and logical, prioritized **System Preservation**. It applied a security patch before the bug even occurred.
 
-mardi (ou mercredi) on site: je cours entre midi et deux et fait du home trainer le soir.
+---
 
-le reste en semaine : home trainer le matin course le soir.
+## 3. Micro-Adjustments: The Daily Stand-up
 
-le weekend: on a le temps
+Sometimes, even Sprint Planning isn't enough. On Wednesday morning, I might wake up with my HRV (Heart Rate Variability) in the red.
 
+I run a quick "Daily Stand-up" with the bot:
 
-Ça te semble comment?
+> **🧑‍💻 Me:** "HRV dropped by 15ms. Resting Heart Rate +4bpm. I slept badly."
+>
+> **🤖 Coach Trail:** "Flag raised. The planned Threshold session is too taxing for today's system status.
+> **Hotfix:** Downgrade session to 'Zone 2 Steady State'. Do not exceed 135 bpm. We will re-evaluate intensity for Saturday."
 
+This is **Real-Time Adaptability**.
+A static PDF plan doesn't know you slept poorly. A human coach knows, but they aren't awake at 6:00 AM while you're drinking your coffee. The LLM is always there to adjust the load.
 
-chatgpt :
+---
 
+## Conclusion: Consistency over Perfection
 
+Using LLMs at this "Runtime" stage taught me one essential engineering truth:
+**Consistency beats Intensity.**
 
-Bonne réflexion. Là on passe du “est-ce que le plan est bon ?” à “est-ce que je peux l’exécuter sans me griller ?”
-Je vais être direct et corriger ce qui doit l’être.
-1️⃣ Ton schéma général : bonne intuition, mais à sécuriser
-Ton idée clé est juste : 👉 profiter à fond des jours remote 👉 réduire la friction les jours on-site 👉 week-end = banque d’heures
-Mais en l’état, il y a 2 risques :
-trop de doubles rapprochées en semaine
-mauvais placement des séances “clés” (VO₂ / CAP impact)
-On ajuste.
-2️⃣ Clarification de ton cadre réel (important)
-Si je résume correctement :
-2 jours remote
-3 jours on-site
-week-end libre
-tu veux :
-éviter doubles tous les jours
-garder de l’énergie mentale
-sécuriser la cheville
-👉 On doit donc concentrer, pas étaler.
-3️⃣ Organisation hebdomadaire OPTIMISÉE (réaliste)
-Je te propose un cadre stable, que tu pourras répéter toute l’année.
-🔵 Lundi – On-site (OFF entraînement)
-✔️ Très bon choix
-OFF CAP / vélo
-éventuellement 20–30 min mobilité le soir
-👉 Tu démarres la semaine frais.
-🟢 Mardi – Remote (GROS JOUR)
-👉 Jour clé n°1
-Matin
-Home trainer VO₂ ou Z3/Z4 (60–75 min)
-Soir
-CAP Z1 60–75 min
-strides (6–8 × 20 s)
-✔️ Double justifiée
-✔️ Métabolique + mécanique
-✔️ Pas trop tard dans la semaine
-🔵 Mercredi – On-site (simple, intelligent)
-CAP Z1 / vallonné 60–90 min
-idéalement à midi
-👉 Pas de vélo ce jour-là
-👉 Tu laisses le système nerveux respirer
-🟢 Jeudi – Remote (SOLIDE mais contrôlé)
-👉 Jour clé n°2
-Matin
-Vélo Z2 long 90–120 min
-Soir
-Muscu lourde 45–60 min
-⚠️ Pas de CAP ce jour-là
-👉 On évite impact + fatigue cumulée
-🔵 Vendredi – On-site (simple / optionnel)
-Deux options selon fatigue :
-Option A (forme OK) :
-Vélo Z1/Z2 60 min
-Option B (fatigue) :
-OFF total
-👉 Vendredi n’est jamais une séance clé
-🔴 Samedi – GROS BLOC
-Rando-course D+ 4–5 h
-Fueling, bâtons, gestion chaleur
-👉 Cœur de la prépa ultra
-🔴 Dimanche – Back-to-back
-Rando-course Z1 3–4 h
-Objectif : fatigue résiduelle
-4️⃣ Volume obtenu (sans forcer)
-Sur une grosse semaine :
-CAP : 7–9 h
-Vélo : 5–6 h
-Muscu : 1–1.5 h 👉 Total : 14–17 h
-✔️ Sans doubles tous les jours
-✔️ Sans séance clé un jour “faible”
-✔️ Compatible avec ton CSV
-5️⃣ Ce que je CORRIGE par rapport à ton idée initiale
-❌ Ce que je n’aime pas
-courir et home trainer tard le même jour on-site trop souvent
-trop de doubles consécutives
-CAP impact + VO₂ vélo le soir tard
-✅ Ce que je garde
-doubles sur jours remote
-midi CAP les jours on-site
-week-end très chargé
-6️⃣ Règle simple à retenir
-Max 2 jours doubles / semaine
-Max 1 séance “dure” par jour
-Jamais CAP impact + VO₂ vélo tard le soir
-Si tu respectes ça : 👉 le volume passe 👉 la cheville tient 👉 le mental suit
-7️⃣ Verdict honnête
-Ton intuition est bonne à 80 %.
-Avec les ajustements ci-dessus, tu passes à 95 % exécutable.
+By using AI to negotiate with my professional schedule, I transformed "chaotic" weeks (where I would have normally skipped 50% of sessions) into "optimized" weeks (where I did 90% of the volume, just arranged differently).
+
+I now have a manual workflow that works:
+1.  **Macro:** The Season Plan (Episode 2).
+2.  **Micro:** The Weekly Sprint Planning (This Episode).
+
+However, being the "data mule" that copy-pastes metrics between Garmin, Strava, and Gemini is starting to feel tedious. I am an engineer; I hate manual repetitive tasks.
+
+In the next episode, we are going **DevOps**. I will show you how I wrote Python scripts to **automate this pipeline** and connect the AI directly to my physiological telemetry.
+
+*To be continued...*
