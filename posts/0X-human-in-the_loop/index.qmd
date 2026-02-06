@@ -1,0 +1,16 @@
+methode pour human in the loop
+En utilisant l'app mobile gemini, je lui demande en debut de cycle. Les points fixes de contexts sets (Descriptifs des blocks, volume et intensite
+par semaine lors de l'etape decrite lors du premier sont stockes dans mon agenda Google (utilisant Gemini de google l'integration est native).
+[post](https://nakmuaycoder.github.io/nakmuaycoder-r-d-lab/posts/01-ai-board-of-directors/) Au debut du bloc, je demande au LLM de lire le
+programme de la phase, puis le descripti du bloc, puis de la semaine. Enfin je lui demande génerer les seances d'entrainement
+du bloc d'entrainement pour les 4 prochaines semaines. Une fois Le programme du mois genrere, je m'assure qu'il respecte bien ce qui etait prevu,
+et corrige le Gemini directement depuis l'app mobile ou depuis l'interface web.
+Une fois les seances defini, je deamnde à gemini de creer pour chaque evenement un evenement dans mon agenda, ayant pour titre le nom de la
+session precedé du mot cle Coach. Dans le body de la request je lui demande de d'exporter le contenu de la seance en json.
+C'est la que la magie opere: le script `__main__.py` [llm-coach](https://github.com/nakmuaycoder/llm-coach) parse mon agenda, extrait le json, 
+et upload tout ça vers interval.icu. Interval.icu me sert uniquement de pont, pour faire parvenir les workouts vers trainingpeaks virtual,
+utilise pour controller mon home-trainer ainsi que ma montre garmin. Apres chaque sesison je donne le rpe a mon "coach" qui adaptera. Au matin,
+je donne a mon "coach" mon HRV de la nuit ainsi que ma FCR. En fonction de mon etat de recovery, le LLM peut etre amene a update une ou 
+plusieurs sessions. L'ancienne session du jours est delete (si elle est du meme sport) et le nouveau workout est cree. Cette simple boucle
+est assez simple et permet de piloter tout d'un simple mobile. L'automatisation de l'upload est facultative, il est possible de generer les fit files
+et des les importer à la main directement dans trainingpeaks.  
