@@ -1,15 +1,13 @@
 ---
-title: "Project Chiang M-AI (Ep. 3): Runtime & Incident Response"
-subtitle: "Handling Bugs in Production: How AI hotfixed my season after critical hardware failures."
-description: "No plan survives first contact with production. A log of how I used Generative AI to manage injuries (ankle sprain, plantar fasciitis) like software incidents."
+title: "Project Chiang M-AI - Episode 3: The Runtime Loop - Agile Sprint Planning for Ultra-Running"
+date: 2026-02-04
+categories: [methodology, prompt-engineering, productivity, agile]
+tags: [project-chiang-m-ai, agile, work-life-balance, context-aware-scheduling]
+description: "How I use LLMs as an Agile Scrum Master to adapt a 100-mile training plan to the chaos of professional life."
 author: "nakmuaycoder"
-date: "2026-02-15"
-categories: [ops, incident-management, rehabilitation, ai-coaching]
-image: broken_ankle.jpg
-title-block-banner: false
 draft: true
+image: "Weekly TSS Distribution Across the Year.png"
 ---
-
 
 In the previous episodes ([Architecture](../01-ai-board-of-directors/) and [Validation](../02-from-generation-to-validation/)), we built the "Master Plan" for my 2026 season. We ended up with a perfect JSON file, physiologically validated, covering 6 months of training.
 
