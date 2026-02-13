@@ -6,8 +6,11 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="nakmuaycoder">
+<meta name="dcterms.date" content="2026-02-13">
+<meta name="description" content="How I use LLMs as an Agile Scrum Master to adapt a 100-mile training plan to the chaos of professional life.">
 
-<title>R&amp;D Lab – My R&amp;D Lab</title>
+<title>Project Chiang M-AI - Episode 3: The Runtime Loop - Agile Sprint Planning for Ultra-Running – My R&amp;D Lab</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,25 +26,24 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-afa37c5c79185640b9c231024f4fe5ea.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../">
+<script src="../../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap-afa37c5c79185640b9c231024f4fe5ea.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -69,85 +71,31 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-blog-listings .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
 
-    const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-subtitle','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-subtitle","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-blog-listings'] = new List('listing-blog-listings', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
-<link rel="stylesheet" href="styles.css">
-<link rel="alternate" type="application/rss+xml" title="nakmuaycoder r&amp;d lab" href="index.xml" data-external="1"><meta property="og:title" content="R&amp;D Lab – My R&amp;D Lab">
-<meta property="og:description" content="Welcome to nakmuaycoder r&amp;d-lab">
-<meta property="og:image" content="https://nakmuaycoder.github.io/nakmuaycoder-r-d-lab/profile.jpg">
+<link rel="stylesheet" href="../../../styles.css">
+<meta property="og:title" content="Project Chiang M-AI - Episode 3: The Runtime Loop - Agile Sprint Planning for Ultra-Running – My R&amp;D Lab">
+<meta property="og:description" content="How I use LLMs as an Agile Scrum Master to adapt a 100-mile training plan to the chaos of professional life.">
+<meta property="og:image" content="https://nakmuaycoder.github.io/nakmuaycoder-r-d-lab/posts/project-chiang-m-ai/03-the-runtime-loop/Weekly TSS Distribution Across the Year.png">
 <meta property="og:site_name" content="My R&amp;D Lab">
-<meta name="twitter:title" content="R&amp;D Lab – My R&amp;D Lab">
-<meta name="twitter:description" content="Welcome to nakmuaycoder r&amp;d-lab">
-<meta name="twitter:image" content="https://nakmuaycoder.github.io/nakmuaycoder-r-d-lab/profile.jpg">
+<meta property="og:image:height" content="933">
+<meta property="og:image:width" content="1600">
+<meta name="twitter:title" content="Project Chiang M-AI - Episode 3: The Runtime Loop - Agile Sprint Planning for Ultra-Running – My R&amp;D Lab">
+<meta name="twitter:description" content="How I use LLMs as an Agile Scrum Master to adapt a 100-mile training plan to the chaos of professional life.">
+<meta name="twitter:image" content="https://nakmuaycoder.github.io/nakmuaycoder-r-d-lab/posts/project-chiang-m-ai/03-the-runtime-loop/Weekly TSS Distribution Across the Year.png">
+<meta name="twitter:image-height" content="933">
+<meta name="twitter:image-width" content="1600">
 <meta name="twitter:card" content="summary_large_image">
 </head>
 
 <body class="nav-fixed quarto-light">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
+  <header id="quarto-header" class="headroom fixed-top quarto-banner">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../../index.html">
     <span class="navbar-title">My R&amp;D Lab</span>
     </a>
   </div>
@@ -158,17 +106,17 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./posts/index.html"> 
+    <a class="nav-link" href="../../../posts/index.html"> 
 <span class="menu-text">Posts</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
+    <a class="nav-link" href="../../../about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
+    <a class="nav-link" href="../../../about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item compact">
@@ -182,7 +130,7 @@ window.Quarto = {
 <span class="menu-text"></span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./index.xml"> <i class="bi bi-rss" role="img">
+    <a class="nav-link" href="../../../index.xml"> <i class="bi bi-rss" role="img">
 </i> 
 <span class="menu-text">RSS</span></a>
   </li>  
@@ -194,179 +142,203 @@ window.Quarto = {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Project Chiang M-AI - Episode 3: The Runtime Loop - Agile Sprint Planning for Ultra-Running</h1>
+                  <div>
+        <div class="description">
+          How I use LLMs as an Agile Scrum Master to adapt a 100-mile training plan to the chaos of professional life.
+        </div>
+      </div>
+                          <div class="quarto-categories">
+                <div class="quarto-category">methodology</div>
+                <div class="quarto-category">prompt-engineering</div>
+                <div class="quarto-category">productivity</div>
+                <div class="quarto-category">agile</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>nakmuaycoder </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">February 13, 2026</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">On this page</h2>
+   
   <ul>
-  <li><a href="#what-is-this-place" id="toc-what-is-this-place" class="nav-link active" data-scroll-target="#what-is-this-place">🛠️ What is this place?</a></li>
-  <li><a href="#philosophy" id="toc-philosophy" class="nav-link" data-scroll-target="#philosophy">🚀 Philosophy</a></li>
-  <li><a href="#topics-i-explore" id="toc-topics-i-explore" class="nav-link" data-scroll-target="#topics-i-explore">Topics I explore</a></li>
-  <li><a href="#latest-experiments" id="toc-latest-experiments" class="nav-link" data-scroll-target="#latest-experiments">📝 Latest Experiments</a></li>
+  <li><a href="#the-design-pattern-context-aware-architecture" id="toc-the-design-pattern-context-aware-architecture" class="nav-link active" data-scroll-target="#the-design-pattern-context-aware-architecture">1. The Design Pattern: Context-Aware Architecture</a>
+  <ul class="collapse">
+  <li><a href="#the-office-vs-remote-algorithm" id="toc-the-office-vs-remote-algorithm" class="nav-link" data-scroll-target="#the-office-vs-remote-algorithm">The “Office vs Remote” Algorithm</a></li>
+  <li><a href="#the-friday-taper-strategy" id="toc-the-friday-taper-strategy" class="nav-link" data-scroll-target="#the-friday-taper-strategy">The “Friday Taper” Strategy</a></li>
+  </ul></li>
+  <li><a href="#the-sunday-ritual-sprint-planning" id="toc-the-sunday-ritual-sprint-planning" class="nav-link" data-scroll-target="#the-sunday-ritual-sprint-planning">2. The Sunday Ritual: Sprint Planning</a>
+  <ul class="collapse">
+  <li><a href="#the-scenario-the-thursday-crash" id="toc-the-scenario-the-thursday-crash" class="nav-link" data-scroll-target="#the-scenario-the-thursday-crash">The Scenario: “The Thursday Crash”</a></li>
+  </ul></li>
+  <li><a href="#the-refactoring-logic-cognitive-load-balancing" id="toc-the-refactoring-logic-cognitive-load-balancing" class="nav-link" data-scroll-target="#the-refactoring-logic-cognitive-load-balancing">3. The Refactoring Logic: “Cognitive Load Balancing”</a>
+  <ul class="collapse">
+  <li><a href="#lesson-learned-ai-as-a-guardrail" id="toc-lesson-learned-ai-as-a-guardrail" class="nav-link" data-scroll-target="#lesson-learned-ai-as-a-guardrail">Lesson Learned: AI as a Guardrail</a></li>
+  </ul></li>
+  <li><a href="#micro-adjustments-the-daily-stand-up" id="toc-micro-adjustments-the-daily-stand-up" class="nav-link" data-scroll-target="#micro-adjustments-the-daily-stand-up">4. Micro-Adjustments: The Daily Stand-up</a></li>
+  <li><a href="#conclusion-consistency-over-perfection" id="toc-conclusion-consistency-over-perfection" class="nav-link" data-scroll-target="#conclusion-consistency-over-perfection">Conclusion: Consistency over Perfection</a></li>
   </ul>
 </nav>
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(3)</span></div><div class="category" data-category="YWdpbGU=">agile <span class="quarto-category-count">(1)</span></div><div class="category" data-category="YWktY29hY2hpbmc=">ai-coaching <span class="quarto-category-count">(1)</span></div><div class="category" data-category="bWV0aG9kb2xvZ3k=">methodology <span class="quarto-category-count">(3)</span></div><div class="category" data-category="cHJvZHVjdGl2aXR5">productivity <span class="quarto-category-count">(1)</span></div><div class="category" data-category="cHJvamVjdC1jaGlhbmctbS1haQ==">project-chiang-m-ai <span class="quarto-category-count">(2)</span></div><div class="category" data-category="cHJvbXB0LWVuZ2luZWVyaW5n">prompt-engineering <span class="quarto-category-count">(3)</span></div><div class="category" data-category="c3BvcnRzLXNjaWVuY2U=">sports-science <span class="quarto-category-count">(2)</span></div><div class="category" data-category="c3lzdGVtLWRlc2lnbg==">system-design <span class="quarto-category-count">(2)</span></div></div></div>
+    </div>
 <!-- main -->
-<div class="quarto-about-jolla">
-  <img src="profile.jpg" class="about-image
-  round " style="height: 15em; width: 15em;">
- <header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">R&amp;D Lab</h1>
-</div>
-<div class="quarto-title-meta">
-  </div>
-</header><main class="content" id="quarto-document-content">
+<main class="content quarto-banner-title-block" id="quarto-document-content">
 
-<p><strong>Welcome to the lab.</strong> 🧪</p>
-<p>I am a Data Scientist and Tech Enthusiast.</p>
-<p>I have a few <strong>neuroses</strong>: learning the <strong>Thai language</strong> (my second home 🇹🇭) and sports.</p>
-<p>I used to be a <strong>Nak Muay</strong> fighting in Thailand. But let’s face it, I am officially “old” now (34 years old, ouch). My pro fighting career is behind me. So, I traded my <strong>boxing gloves</strong> for <strong>trail running poles</strong> and <strong>tight cycling bibs</strong>. 🚴‍♂️🏔️</p>
-<section id="what-is-this-place" class="level3">
-<h3 data-anchor-id="what-is-this-place">🛠️ What is this place?</h3>
-<p>This blog is my <strong>digital workbench</strong>. It is not a polished tutorial site. It is a log of my personal experiments where I try to solve real-world problems using code and data.</p>
-</section>
-<section id="philosophy" class="level3">
-<h3 data-anchor-id="philosophy">🚀 Philosophy</h3>
-<p>I don’t just train models; I build systems to solve my own problems, often going against the grain of standard tech ecosystems.</p>
-</section>
-<section id="topics-i-explore" class="level3">
-<h3 data-anchor-id="topics-i-explore">Topics I explore</h3>
+
+
+
+
+<p>In the previous episodes (<a href="../01-ai-board-of-directors/">Architecture</a> and <a href="../02-from-generation-to-validation/">Validation</a>), we built the “Master Plan” for my 2026 season. We ended up with a perfect JSON file, physiologically validated, covering 6 months of training.</p>
+<p>In traditional project management, this is called the <strong>Waterfall</strong> model. But in tech (and in life), Waterfall doesn’t work. Why? Because reality has high entropy.</p>
 <ul>
-<li><strong>Sports Science &amp; Data:</strong> Building custom tools to optimize endurance training.</li>
-<li><strong>Automation:</strong> Escaping standard workflows to regain control over my data.</li>
-<li><strong>Hardware &amp; Edge:</strong> Tinkering with devices and custom setups.</li>
+<li>A release pipeline breaks on a Tuesday.</li>
+<li>A critical production bug hits on Thursday.</li>
+<li>Sleep quality drops on Friday.</li>
 </ul>
-<p>I share my findings, concepts, and snippets of code here.</p>
+<p>If I follow my static JSON plan to the letter, I am heading straight for a system crash. I need agility.</p>
+<p>In this episode, I document how I transform the LLM from a “System Architect” into a weekly <strong>Scrum Master</strong> to handle the “Runtime” operations.</p>
+<section id="the-design-pattern-context-aware-architecture" class="level2">
+<h2 class="anchored" data-anchor-id="the-design-pattern-context-aware-architecture">1. The Design Pattern: Context-Aware Architecture</h2>
+<p>Before we can be agile, we need a robust baseline. Most training plans fail because they fight your schedule. They put long runs on days where you have 2 hours of commuting.</p>
+<p>I built my “Default Week” around my professional constraints (Hybrid Work: Remote 2 days, Office 3 days).</p>
+<section id="the-office-vs-remote-algorithm" class="level3">
+<h3 class="anchored" data-anchor-id="the-office-vs-remote-algorithm">The “Office vs Remote” Algorithm</h3>
+<ul>
+<li><strong>Remote Days (Tue/Thu):</strong> No commute. Full control of nutrition and time.
+<ul>
+<li><em>Strategy:</em> <strong>High Load.</strong> This is where we place double thresholds or long sessions (e.g., Thursday is a 2h Bike + Strength).</li>
+</ul></li>
+<li><strong>Office Days (Mon/Fri):</strong> Commute stress, social drain, unpredictable hours.
+<ul>
+<li><em>Strategy:</em> <strong>Low Load / Recovery.</strong></li>
+</ul></li>
+</ul>
+</section>
+<section id="the-friday-taper-strategy" class="level3">
+<h3 class="anchored" data-anchor-id="the-friday-taper-strategy">The “Friday Taper” Strategy</h3>
+<p>I made a specific engineering decision: <strong>Friday is off (or very light).</strong> Most runners rest on Monday. I rest (active recovery) on Monday, but I keep Friday purposefully light (7% of weekly load) for one reason: <strong>The Weekend Block</strong>.</p>
+<p>To survive the massive back-to-back volume on Saturday/Sunday (which accounts for ~58% of the total load), I need to enter the weekend with a full battery.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Weekly TSS Distribution Across the Year.png" class="img-fluid figure-img"></p>
+<figcaption>Weekly TSS Distribution Across the Year</figcaption>
+</figure>
+</div>
+<p><strong>My Typical “Sprint Backlog” (derived from the 4-week Block Plan):</strong></p>
+<ul>
+<li><strong>Mon (0%):</strong> OFF (Office Day).</li>
+<li><strong>Tue (8%):</strong> Intervals + Run (Remote Day).</li>
+<li><strong>Wed (14%):</strong> Aerobic Endurance (Run).</li>
+<li><strong>Thu (20%):</strong> Long Bike 2h + Strength (Remote Day).</li>
+<li><strong>Fri (0%):</strong> OFF (Office Day - Battery Saving).</li>
+<li><strong>Sat (36%):</strong> Long Bike / Specific work (The big load).</li>
+<li><strong>Sun (22%):</strong> Long Run / Hiking (Cumulative fatigue).</li>
+</ul>
 <hr>
 </section>
-<section id="latest-experiments" class="level3">
-<h3 data-anchor-id="latest-experiments">📝 Latest Experiments</h3>
-<div id="listing-blog-listings" class="quarto-listing quarto-listing-container-default">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="bWV0aG9kb2xvZ3klMkNwcm9tcHQtZW5naW5lZXJpbmclMkNwcm9kdWN0aXZpdHklMkNhZ2lsZQ==" data-listing-date-sort="1770940800000" data-listing-file-modified-sort="1771017101595" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1064">
-<div class="thumbnail"><a href="./posts/project-chiang-m-ai/03-the-runtime-loop/index.html" class="no-external">
-<img loading="lazy" src="./posts/project-chiang-m-ai/03-the-runtime-loop/Weekly TSS Distribution Across the Year.png" class="thumbnail-image">
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/project-chiang-m-ai/03-the-runtime-loop/index.html" class="no-external">Project Chiang M-AI - Episode 3: The Runtime Loop - Agile Sprint Planning for Ultra-Running</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/project-chiang-m-ai/03-the-runtime-loop/index.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('bWV0aG9kb2xvZ3k='); return false;">methodology</div>
-<div class="listing-category" onclick="window.quartoListingCategory('cHJvbXB0LWVuZ2luZWVyaW5n'); return false;">prompt-engineering</div>
-<div class="listing-category" onclick="window.quartoListingCategory('cHJvZHVjdGl2aXR5'); return false;">productivity</div>
-<div class="listing-category" onclick="window.quartoListingCategory('YWdpbGU='); return false;">agile</div>
-</div>
-<div class="delink listing-description"><a href="./posts/project-chiang-m-ai/03-the-runtime-loop/index.html" class="no-external">
-<p>How I use LLMs as an Agile Scrum Master to adapt a 100-mile training plan to the chaos of professional life.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/project-chiang-m-ai/03-the-runtime-loop/index.html" class="no-external">
-<div class="listing-date">
-Feb 13, 2026
-</div>
-<div class="listing-author">
-nakmuaycoder
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="bWV0aG9kb2xvZ3klMkNwcm9tcHQtZW5naW5lZXJpbmclMkNzcG9ydHMtc2NpZW5jZSUyQ3N5c3RlbS1kZXNpZ24lMkNwcm9qZWN0LWNoaWFuZy1tLWFp" data-listing-date-sort="1770076800000" data-listing-file-modified-sort="1771017101593" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="9" data-listing-word-count-sort="1662">
-<div class="thumbnail"><a href="./posts/project-chiang-m-ai/02-from-generation-to-validation/index.html" class="no-external">
-<img loading="lazy" src="./posts/project-chiang-m-ai/02-from-generation-to-validation/image1.png" class="thumbnail-image">
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/project-chiang-m-ai/02-from-generation-to-validation/index.html" class="no-external">Project Chiang M-AI - Episode 2: AI Training Plan: From Generation to Validation</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/project-chiang-m-ai/02-from-generation-to-validation/index.html" class="no-external">AI Training Plan: From Generation to Validation</a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('bWV0aG9kb2xvZ3k='); return false;">methodology</div>
-<div class="listing-category" onclick="window.quartoListingCategory('cHJvbXB0LWVuZ2luZWVyaW5n'); return false;">prompt-engineering</div>
-<div class="listing-category" onclick="window.quartoListingCategory('c3BvcnRzLXNjaWVuY2U='); return false;">sports-science</div>
-<div class="listing-category" onclick="window.quartoListingCategory('c3lzdGVtLWRlc2lnbg=='); return false;">system-design</div>
-<div class="listing-category" onclick="window.quartoListingCategory('cHJvamVjdC1jaGlhbmctbS1haQ=='); return false;">project-chiang-m-ai</div>
-</div>
-<div class="delink listing-description"><a href="./posts/project-chiang-m-ai/02-from-generation-to-validation/index.html" class="no-external">
-<p>How I validated the architecture of my ultra-trail training plan using an Adversarial approach (Gemini vs ChatGPT vs Experts).</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/project-chiang-m-ai/02-from-generation-to-validation/index.html" class="no-external">
-<div class="listing-date">
-Feb 3, 2026
-</div>
-<div class="listing-author">
-nakmuaycoder
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-categories="bWV0aG9kb2xvZ3klMkNwcm9tcHQtZW5naW5lZXJpbmclMkNzcG9ydHMtc2NpZW5jZSUyQ3N5c3RlbS1kZXNpZ24lMkNwcm9qZWN0LWNoaWFuZy1tLWFpJTJDYWktY29hY2hpbmc=" data-listing-date-sort="1769299200000" data-listing-file-modified-sort="1771017101548" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1030">
-<div class="thumbnail"><a href="./posts/project-chiang-m-ai/01-ai-board-of-directors/index.html" class="no-external">
-<img loading="lazy" src="./posts/project-chiang-m-ai/01-ai-board-of-directors/board.jpg" class="thumbnail-image">
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/project-chiang-m-ai/01-ai-board-of-directors/index.html" class="no-external">Project Chiang M-AI - Episode 1: The AI Board of Directors: How I Engineered My Ultra-Trail Season</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/project-chiang-m-ai/01-ai-board-of-directors/index.html" class="no-external">Stop asking ChatGPT for generic plans. Here is the 4-Layer Architecture and System Prompt I use to target my first 100-Miler.</a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('bWV0aG9kb2xvZ3k='); return false;">methodology</div>
-<div class="listing-category" onclick="window.quartoListingCategory('cHJvbXB0LWVuZ2luZWVyaW5n'); return false;">prompt-engineering</div>
-<div class="listing-category" onclick="window.quartoListingCategory('c3BvcnRzLXNjaWVuY2U='); return false;">sports-science</div>
-<div class="listing-category" onclick="window.quartoListingCategory('c3lzdGVtLWRlc2lnbg=='); return false;">system-design</div>
-<div class="listing-category" onclick="window.quartoListingCategory('cHJvamVjdC1jaGlhbmctbS1haQ=='); return false;">project-chiang-m-ai</div>
-<div class="listing-category" onclick="window.quartoListingCategory('YWktY29hY2hpbmc='); return false;">ai-coaching</div>
-</div>
-<div class="delink listing-description"><a href="./posts/project-chiang-m-ai/01-ai-board-of-directors/index.html" class="no-external">
-<p>A deep dive into using Gemini and ChatGPT as adversarial consultants to build a data-driven, adaptive training protocol.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./posts/project-chiang-m-ai/01-ai-board-of-directors/index.html" class="no-external">
-<div class="listing-date">
-Jan 25, 2026
-</div>
-<div class="listing-author">
-nakmuaycoder
-</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">No matching items</div>
-</div>
+</section>
+<section id="the-sunday-ritual-sprint-planning" class="level2">
+<h2 class="anchored" data-anchor-id="the-sunday-ritual-sprint-planning">2. The Sunday Ritual: Sprint Planning</h2>
+<p>This “Default Architecture” works 80% of the time. But then, life happens.</p>
+<p>I generate my plans in <strong>4-Week Blocks</strong> (Meso-cycles). But a block is just a theory. Every Sunday evening, I open a session with my “Coach” agent. The goal is to <strong>Commit</strong> to the upcoming week of the block, checking it against the reality of my Google Calendar.</p>
+<p>I treat my training week exactly like a <strong>Sprint</strong>.</p>
+<ul>
+<li><strong>The Backlog:</strong> The workouts prescribed by the Master Block Plan.</li>
+<li><strong>The Constraints:</strong> My Gmail/Calendar, release deadlines, and cognitive load.</li>
+<li><strong>The Definition of Done:</strong> Successfully executing the key volume (especially the Weekend Block) without generating “Technical Debt”.</li>
+</ul>
+<section id="the-scenario-the-thursday-crash" class="level3">
+<h3 class="anchored" data-anchor-id="the-scenario-the-thursday-crash">The Scenario: “The Thursday Crash”</h3>
+<p>Here is a real example of a <strong>Sprint Planning</strong> prompt where the “Default Week” collided with reality.</p>
+<blockquote class="blockquote">
+<p><strong>🧑‍💻 Me (Sunday Prompt):</strong> “Context: Week 5 of General Prep. <strong>The Backlog (Default):</strong> - … [Standard Schedule as defined above] …</p>
+<p><strong>The Constraints (Reality):</strong> - <strong>Thursday (Critical):</strong> I have an all-day on-site workshop instead of my usual Remote day. I cannot do the planned ‘2h Bike + Gym’. - <strong>Friday:</strong> Remote (Exception). - <strong>Physiological State:</strong> Good, ready to push.</p>
+<p><strong>Task:</strong> Refactor the week. <strong>Goal:</strong> Preserve the Thursday volume (Key Session) but clear the calendar for the workshop.</p>
+</blockquote>
+<hr>
+</section>
+</section>
+<section id="the-refactoring-logic-cognitive-load-balancing" class="level2">
+<h2 class="anchored" data-anchor-id="the-refactoring-logic-cognitive-load-balancing">3. The Refactoring Logic: “Cognitive Load Balancing”</h2>
+<p>This is where Gemini shines. It doesn’t just move blocks around; it understands the physiology of stress.</p>
+<blockquote class="blockquote">
+<p><strong>🤖 Coach Trail (Gemini - Response):</strong> “Conflict Detected on <strong>Thursday</strong>: The proposed workshop will drain your cognitive battery. Doing a 2h Bike session afterwards is suboptimal and logistically impossible.</p>
+<p><strong>Proposed Refactoring (Sprint Plan v1):</strong></p>
+<ul>
+<li><strong>Wednesday:</strong> Remain as is (Aerobic).</li>
+<li><strong>Thursday (The Workshop):</strong> <strong>DOWNGRADE</strong> to Rest Day. Focus on nutrition and hydration during the workshop.</li>
+<li><strong>Friday (Remote Exception):</strong> This is now your loading day. Move the <strong>2h Bike + Gym</strong> here. Since you are remote, you can execute this high-volume block.</li>
+<li><strong>Saturday/Sunday:</strong> Remain as is.</li>
+</ul>
+<p><strong>Warning:</strong> You will have a ‘Super Block’ (Fri/Sat/Sun). Ensure sleep is prioritized on Friday night.”</p>
+</blockquote>
+<p>The AI prevents me from trying to “squeeze it in” on Thursday, which would have resulted in burnout, and creates a logical solution that utilizes the remote Friday.</p>
+<section id="lesson-learned-ai-as-a-guardrail" class="level3">
+<h3 class="anchored" data-anchor-id="lesson-learned-ai-as-a-guardrail">Lesson Learned: AI as a Guardrail</h3>
+<p>Without the AI, I probably would have forced the run on Thursday evening: <em>“It’s on the plan, I’m not weak, let’s do this.”</em> Probable result: A low-quality “junk mile” session, terrible sleep, and a high risk of illness or injury 3 days later.</p>
+<p>The AI, cold and logical, prioritized <strong>System Preservation</strong>. It applied a security patch before the bug even occurred.</p>
+<hr>
+</section>
+</section>
+<section id="micro-adjustments-the-daily-stand-up" class="level2">
+<h2 class="anchored" data-anchor-id="micro-adjustments-the-daily-stand-up">4. Micro-Adjustments: The Daily Stand-up</h2>
+<p>Sometimes, even Sprint Planning isn’t enough. On Wednesday morning, I might wake up with my HRV (Heart Rate Variability) in the red.</p>
+<p>I run a quick “Daily Stand-up” with the bot:</p>
+<blockquote class="blockquote">
+<p><strong>🧑‍💻 Me:</strong> “HRV dropped by 15ms. Resting Heart Rate +4bpm. I slept badly.”</p>
+<p><strong>🤖 Coach Trail:</strong> “Flag raised. The planned Threshold session is too taxing for today’s system status. <strong>Hotfix:</strong> Downgrade session to ‘Zone 2 Steady State’. Do not exceed 135 bpm. We will re-evaluate intensity for Saturday.”</p>
+</blockquote>
+<p>This is <strong>Real-Time Adaptability</strong>. A static PDF plan doesn’t know you slept poorly. A human coach knows, but they aren’t awake at 6:00 AM while you’re drinking your coffee. The LLM is always there to adjust the load.</p>
+<hr>
+</section>
+<section id="conclusion-consistency-over-perfection" class="level2">
+<h2 class="anchored" data-anchor-id="conclusion-consistency-over-perfection">Conclusion: Consistency over Perfection</h2>
+<p>Using LLMs at this “Runtime” stage taught me one essential engineering truth: <strong>Consistency beats Intensity.</strong></p>
+<p>By using AI to negotiate with my professional schedule, I transformed “chaotic” weeks (where I would have normally skipped 50% of sessions) into “optimized” weeks (where I did 90% of the volume, just arranged differently).</p>
+<p>I now have a manual workflow that works: 1. <strong>Macro:</strong> The Season Plan (Episode 2). 2. <strong>Micro:</strong> The Weekly Sprint Planning (This Episode).</p>
+<p>However, being the “data mule” that copy-pastes metrics between Garmin, Strava, and Gemini is starting to feel tedious. I am an engineer; I hate manual repetitive tasks.</p>
+<p>In the next episode, we are going <strong>DevOps</strong>. I will show you how I wrote Python scripts to <strong>automate this pipeline</strong> and connect the AI directly to my physiological telemetry.</p>
+<p><em>To be continued…</em></p>
 
 
 </section>
-</main> 
-  <hr class="about-sep">
-   <div class="about-links">
-  <a href="https://github.com/nakmuaycoder" class="about-link" rel="" target="">
-    <i class="bi bi-github"></i>
-     <span class="about-link-text">Github</span>
-  </a>
-  <a href="https://www.linkedin.com/in/olivier-feher-%E0%B9%80%E0%B8%9F%E0%B9%81%E0%B8%AD%E0%B8%A3%E0%B9%8C-%E0%B9%82%E0%B8%AD%E0%B8%A5%E0%B8%B4%E0%B9%80%E0%B8%A7%E0%B8%B5%E0%B8%A2%E0%B8%A3%E0%B9%8C-9446b5105/" class="about-link" rel="" target="">
-    <i class="bi bi-linkedin"></i>
-     <span class="about-link-text">LinkedIn</span>
-  </a>
-</div>
-</div>
- <!-- /main -->
+
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
     const isCodeAnnotation = (el) => {
       for (const clz of el.classList) {
         if (clz.startsWith('code-annotation-')) {                     

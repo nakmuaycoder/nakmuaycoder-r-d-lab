@@ -2,6 +2,7 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/project-chiang-m-ai/03-the-runtime-loop/index.html",
       "/posts/project-chiang-m-ai/02-from-generation-to-validation/index.html",
       "/posts/project-chiang-m-ai/01-ai-board-of-directors/index.html"
     ]
@@ -10,7 +11,8 @@
     "listing": "/posts/project-chiang-m-ai/index.html",
     "items": [
       "/posts/project-chiang-m-ai/01-ai-board-of-directors/index.html",
-      "/posts/project-chiang-m-ai/02-from-generation-to-validation/index.html"
+      "/posts/project-chiang-m-ai/02-from-generation-to-validation/index.html",
+      "/posts/project-chiang-m-ai/03-the-runtime-loop/index.html"
     ]
   },
   {
