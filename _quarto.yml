@@ -23,9 +23,7 @@ website:
     left:
       - href: posts/index.qmd
         text: "Posts"
-      - href: about.qmd
-        text: About
-
+     
 format:
   html:
     theme:
