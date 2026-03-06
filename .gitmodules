@@ -1,4 +1,0 @@
-[submodule "posts/project-chiang-m-ai/future-post"]
-	path = posts/project-chiang-m-ai/future-post
-	url = git@github.com:nakmuaycoder/project-chiang-m-ai-dev.git
-	branch = refactor/human_in_loop
