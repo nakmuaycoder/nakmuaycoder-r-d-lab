@@ -3,7 +3,7 @@ title: "Project Chiang M-AI - Episode 4: The \"Zero-UI\" Warehouse: Shipping AI 
 description: "How I built a Python script to automate the 'Last Mile' of AI coaching: syncing Gemini chats directly to my watch via Google Calendar and Intervals.icu."
 date: "2026-03-06"
 categories: [python, automation, gemini, intervals.icu, project-chiang-m-ai]
-image: "assets/workflow.png"
+image: "workflow.png"
 draft: false
 ---
 
