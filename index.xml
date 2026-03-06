@@ -15,7 +15,20 @@
 <link>https://nakmuaycoder.github.io/nakmuaycoder-r-d-lab/</link>
 </image>
 <generator>quarto-1.8.27</generator>
-<lastBuildDate>Fri, 13 Feb 2026 00:00:00 GMT</lastBuildDate>
+<lastBuildDate>Fri, 06 Mar 2026 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>Project Chiang M-AI - Episode 4: The “Zero-UI” Warehouse: Shipping AI Plans to Production (Garmin)</title>
+  <link>https://nakmuaycoder.github.io/nakmuaycoder-r-d-lab/posts/project-chiang-m-ai/04-the-automation-warehouse/</link>
+  <description><![CDATA[ How I built a Python script to automate the ‘Last Mile’ of AI coaching: syncing Gemini chats directly to my watch via Google Calendar and Intervals.icu. ]]></description>
+  <category>python</category>
+  <category>automation</category>
+  <category>gemini</category>
+  <category>intervals.icu</category>
+  <category>project-chiang-m-ai</category>
+  <guid>https://nakmuaycoder.github.io/nakmuaycoder-r-d-lab/posts/project-chiang-m-ai/04-the-automation-warehouse/</guid>
+  <pubDate>Fri, 06 Mar 2026 00:00:00 GMT</pubDate>
+  <media:content url="https://nakmuaycoder.github.io/nakmuaycoder-r-d-lab/posts/project-chiang-m-ai/04-the-automation-warehouse/workflow.png" medium="image" type="image/png" height="80" width="144"/>
+</item>
 <item>
   <title>Project Chiang M-AI - Episode 3: The Runtime Loop - Agile Sprint Planning for Ultra-Running</title>
   <dc:creator>nakmuaycoder </dc:creator>

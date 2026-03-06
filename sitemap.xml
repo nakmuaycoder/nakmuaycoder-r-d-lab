@@ -2,30 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://nakmuaycoder.github.io/nakmuaycoder-r-d-lab/about.html</loc>
-    <lastmod>2026-02-15T10:47:22.826Z</lastmod>
+    <lastmod>2026-03-06T21:27:57.680Z</lastmod>
   </url>
   <url>
     <loc>https://nakmuaycoder.github.io/nakmuaycoder-r-d-lab/posts/project-chiang-m-ai/01-ai-board-of-directors/index.html</loc>
-    <lastmod>2026-02-15T10:47:22.836Z</lastmod>
+    <lastmod>2026-03-06T21:27:57.690Z</lastmod>
   </url>
   <url>
-    <loc>https://nakmuaycoder.github.io/nakmuaycoder-r-d-lab/posts/project-chiang-m-ai/02-from-generation-to-validation/index.html</loc>
-    <lastmod>2026-02-15T10:47:22.881Z</lastmod>
-  </url>
-  <url>
-    <loc>https://nakmuaycoder.github.io/nakmuaycoder-r-d-lab/index.html</loc>
-    <lastmod>2026-02-15T10:47:22.826Z</lastmod>
+    <loc>https://nakmuaycoder.github.io/nakmuaycoder-r-d-lab/posts/project-chiang-m-ai/04-the-automation-warehouse/index.html</loc>
+    <lastmod>2026-03-06T21:27:57.737Z</lastmod>
   </url>
   <url>
     <loc>https://nakmuaycoder.github.io/nakmuaycoder-r-d-lab/posts/project-chiang-m-ai/index.html</loc>
-    <lastmod>2026-02-15T10:47:22.885Z</lastmod>
+    <lastmod>2026-03-06T21:27:57.739Z</lastmod>
+  </url>
+  <url>
+    <loc>https://nakmuaycoder.github.io/nakmuaycoder-r-d-lab/index.html</loc>
+    <lastmod>2026-03-06T21:27:57.680Z</lastmod>
+  </url>
+  <url>
+    <loc>https://nakmuaycoder.github.io/nakmuaycoder-r-d-lab/posts/project-chiang-m-ai/02-from-generation-to-validation/index.html</loc>
+    <lastmod>2026-03-06T21:27:57.734Z</lastmod>
   </url>
   <url>
     <loc>https://nakmuaycoder.github.io/nakmuaycoder-r-d-lab/posts/project-chiang-m-ai/03-the-runtime-loop/index.html</loc>
-    <lastmod>2026-02-15T10:47:22.885Z</lastmod>
+    <lastmod>2026-03-06T21:27:57.737Z</lastmod>
   </url>
   <url>
     <loc>https://nakmuaycoder.github.io/nakmuaycoder-r-d-lab/posts/index.html</loc>
-    <lastmod>2026-02-15T10:47:22.827Z</lastmod>
+    <lastmod>2026-03-06T21:27:57.681Z</lastmod>
   </url>
 </urlset>
