@@ -15,7 +15,21 @@
 <link>https://nakmuaycoder.github.io/nakmuaycoder-r-d-lab/</link>
 </image>
 <generator>quarto-1.8.27</generator>
-<lastBuildDate>Fri, 06 Mar 2026 00:00:00 GMT</lastBuildDate>
+<lastBuildDate>Sat, 14 Mar 2026 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>Project Chiang M-AI - Episode 5: Full Auto Mode (Wellness-Based Adaptation)</title>
+  <link>https://nakmuaycoder.github.io/nakmuaycoder-r-d-lab/posts/project-chiang-m-ai/05-wellness-based-adaptation/</link>
+  <description><![CDATA[ Closing one of the final loops in the architecture: letting Gemini 3.1-Flash autonomously rewrite my daily workouts based on live HRV and Resting Heart Rate data. ]]></description>
+  <category>AI</category>
+  <category>Python</category>
+  <category>Ultra-Trail</category>
+  <category>Automation</category>
+  <category>Google Calendar</category>
+  <category>Intervals.icu</category>
+  <guid>https://nakmuaycoder.github.io/nakmuaycoder-r-d-lab/posts/project-chiang-m-ai/05-wellness-based-adaptation/</guid>
+  <pubDate>Sat, 14 Mar 2026 00:00:00 GMT</pubDate>
+  <media:content url="https://nakmuaycoder.github.io/nakmuaycoder-r-d-lab/posts/project-chiang-m-ai/05-wellness-based-adaptation/workflow.png" medium="image" type="image/png" height="86" width="144"/>
+</item>
 <item>
   <title>Project Chiang M-AI - Episode 4: The “Zero-UI” Warehouse: Shipping AI Plans to Production (Garmin)</title>
   <link>https://nakmuaycoder.github.io/nakmuaycoder-r-d-lab/posts/project-chiang-m-ai/04-the-automation-warehouse/</link>

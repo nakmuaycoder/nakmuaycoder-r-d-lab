@@ -6,11 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="nakmuaycoder">
-<meta name="dcterms.date" content="2026-01-25">
-<meta name="description" content="A comprehensive R&amp;D log documenting the use of LLMs, Python automation, and system engineering to prepare for the Hoka Chiang Mai 160km.">
+<meta name="dcterms.date" content="2026-03-14">
+<meta name="description" content="Closing one of the final loops in the architecture: letting Gemini 3.1-Flash autonomously rewrite my daily workouts based on live HRV and Resting Heart Rate data.">
 
-<title>Project Chiang M-AI – My R&amp;D Lab</title>
+<title>Project Chiang M-AI - Episode 5: Full Auto Mode (Wellness-Based Adaptation) – My R&amp;D Lab</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,29 +22,62 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
-<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../../">
-<script src="../../site_libs/quarto-listing/list.min.js"></script>
-<script src="../../site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
-<script src="../../site_libs/quarto-html/popper.min.js"></script>
-<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-afa37c5c79185640b9c231024f4fe5ea.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../">
+<script src="../../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap-afa37c5c79185640b9c231024f4fe5ea.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -73,78 +105,20 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-episodes-list .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
 
-    const options = {
-      valueNames: ['listing-image','listing-date','listing-title','listing-subtitle','listing-description','listing-reading-time',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-subtitle","listing-image","listing-description"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-episodes-list'] = new List('listing-episodes-list', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
-<link rel="stylesheet" href="../../styles.css">
-<meta property="og:title" content="Project Chiang M-AI – My R&amp;D Lab">
-<meta property="og:description" content="A comprehensive R&amp;D log documenting the use of LLMs, Python automation, and system engineering to prepare for the Hoka Chiang Mai 160km.">
-<meta property="og:image" content="https://nakmuaycoder.github.io/nakmuaycoder-r-d-lab/posts/project-chiang-m-ai/image.png">
+<link rel="stylesheet" href="../../../styles.css">
+<meta property="og:title" content="Project Chiang M-AI - Episode 5: Full Auto Mode (Wellness-Based Adaptation) – My R&amp;D Lab">
+<meta property="og:description" content="Closing one of the final loops in the architecture: letting Gemini 3.1-Flash autonomously rewrite my daily workouts based on live HRV and Resting Heart Rate data.">
+<meta property="og:image" content="https://nakmuaycoder.github.io/nakmuaycoder-r-d-lab/posts/project-chiang-m-ai/05-wellness-based-adaptation/workflow.png">
 <meta property="og:site_name" content="My R&amp;D Lab">
-<meta property="og:image:height" content="414">
-<meta property="og:image:width" content="508">
-<meta name="twitter:title" content="Project Chiang M-AI – My R&amp;D Lab">
-<meta name="twitter:description" content="A comprehensive R&amp;D log documenting the use of LLMs, Python automation, and system engineering to prepare for the Hoka Chiang Mai 160km.">
-<meta name="twitter:image" content="https://nakmuaycoder.github.io/nakmuaycoder-r-d-lab/posts/project-chiang-m-ai/image.png">
-<meta name="twitter:image-height" content="414">
-<meta name="twitter:image-width" content="508">
+<meta property="og:image:height" content="718">
+<meta property="og:image:width" content="1201">
+<meta name="twitter:title" content="Project Chiang M-AI - Episode 5: Full Auto Mode (Wellness-Based Adaptation) – My R&amp;D Lab">
+<meta name="twitter:description" content="Closing one of the final loops in the architecture: letting Gemini 3.1-Flash autonomously rewrite my daily workouts based on live HRV and Resting Heart Rate data.">
+<meta name="twitter:image" content="https://nakmuaycoder.github.io/nakmuaycoder-r-d-lab/posts/project-chiang-m-ai/05-wellness-based-adaptation/workflow.png">
+<meta name="twitter:image-height" content="718">
+<meta name="twitter:image-width" content="1201">
 <meta name="twitter:card" content="summary_large_image">
 </head>
 
@@ -155,7 +129,7 @@ window.Quarto = {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="../../index.html">
+    <a class="navbar-brand" href="../../../index.html">
     <span class="navbar-title">My R&amp;D Lab</span>
     </a>
   </div>
@@ -166,13 +140,13 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../posts/index.html"> 
+    <a class="nav-link" href="../../../posts/index.html"> 
 <span class="menu-text">Posts</span></a>
   </li>  
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../about.html"> 
+    <a class="nav-link" href="../../../about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item compact">
@@ -186,7 +160,7 @@ window.Quarto = {
 <span class="menu-text"></span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../index.xml"> <i class="bi bi-rss" role="img">
+    <a class="nav-link" href="../../../index.xml"> <i class="bi bi-rss" role="img">
 </i> 
 <span class="menu-text">RSS</span></a>
   </li>  
@@ -201,20 +175,19 @@ window.Quarto = {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Project Chiang M-AI</h1>
-            <p class="subtitle lead">Engineering my way to a 100-miler with Generative AI</p>
+      <h1 class="title">Project Chiang M-AI - Episode 5: Full Auto Mode (Wellness-Based Adaptation)</h1>
                   <div>
         <div class="description">
-          A comprehensive R&amp;D log documenting the use of LLMs, Python automation, and system engineering to prepare for the Hoka Chiang Mai 160km.
+          Closing one of the final loops in the architecture: letting Gemini 3.1-Flash autonomously rewrite my daily workouts based on live HRV and Resting Heart Rate data.
         </div>
       </div>
                           <div class="quarto-categories">
-                <div class="quarto-category">methodology</div>
-                <div class="quarto-category">prompt-engineering</div>
-                <div class="quarto-category">sports-science</div>
-                <div class="quarto-category">system-design</div>
-                <div class="quarto-category">project-chiang-m-ai</div>
-                <div class="quarto-category">ai-coaching</div>
+                <div class="quarto-category">AI</div>
+                <div class="quarto-category">Python</div>
+                <div class="quarto-category">Ultra-Trail</div>
+                <div class="quarto-category">Automation</div>
+                <div class="quarto-category">Google Calendar</div>
+                <div class="quarto-category">Intervals.icu</div>
               </div>
                   </div>
   </div>
@@ -222,17 +195,11 @@ window.Quarto = {
   
   <div class="quarto-title-meta">
 
-      <div>
-      <div class="quarto-title-meta-heading">Author</div>
-      <div class="quarto-title-meta-contents">
-               <p>nakmuaycoder </p>
-            </div>
-    </div>
       
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">January 25, 2026</p>
+        <p class="date">March 14, 2026</p>
       </div>
     </div>
     
@@ -248,8 +215,16 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#fine-tuning-the-fighter-from-nak-muay-to-ultra-trailer" id="toc-fine-tuning-the-fighter-from-nak-muay-to-ultra-trailer" class="nav-link active" data-scroll-target="#fine-tuning-the-fighter-from-nak-muay-to-ultra-trailer">Fine-Tuning the Fighter: From Nak Muay to Ultra-Trailer</a></li>
-  <li><a href="#the-episodes" id="toc-the-episodes" class="nav-link" data-scroll-target="#the-episodes">The Episodes</a></li>
+  <li><a href="#the-static-plan-problem" id="toc-the-static-plan-problem" class="nav-link active" data-scroll-target="#the-static-plan-problem">The “Static Plan” Problem</a></li>
+  <li><a href="#the-architecture-of-adaptation" id="toc-the-architecture-of-adaptation" class="nav-link" data-scroll-target="#the-architecture-of-adaptation">The Architecture of Adaptation</a></li>
+  <li><a href="#building-the-brains-gemini-3.1-flash" id="toc-building-the-brains-gemini-3.1-flash" class="nav-link" data-scroll-target="#building-the-brains-gemini-3.1-flash">Building the Brains: Gemini 3.1-Flash</a>
+  <ul class="collapse">
+  <li><a href="#the-coachs-instructions-prompt-engineering" id="toc-the-coachs-instructions-prompt-engineering" class="nav-link" data-scroll-target="#the-coachs-instructions-prompt-engineering">The “Coach’s Instructions”: Prompt Engineering</a></li>
+  <li><a href="#the-catch-losing-the-conversation-context" id="toc-the-catch-losing-the-conversation-context" class="nav-link" data-scroll-target="#the-catch-losing-the-conversation-context">The Catch: Losing the Conversation Context</a></li>
+  </ul></li>
+  <li><a href="#beyond-the-calendar-a-brain-first-refactor" id="toc-beyond-the-calendar-a-brain-first-refactor" class="nav-link" data-scroll-target="#beyond-the-calendar-a-brain-first-refactor">Beyond the Calendar: A “Brain-First” Refactor</a></li>
+  <li><a href="#the-cli-experience" id="toc-the-cli-experience" class="nav-link" data-scroll-target="#the-cli-experience">The CLI Experience</a></li>
+  <li><a href="#conclusion-the-ultimate-synthetic-coach" id="toc-conclusion-the-ultimate-synthetic-coach" class="nav-link" data-scroll-target="#conclusion-the-ultimate-synthetic-coach">Conclusion: The Ultimate Synthetic Coach</a></li>
   </ul>
 </nav>
     </div>
@@ -260,159 +235,73 @@ window.Quarto = {
 
 
 
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="image.png" class="img-fluid figure-img" width="800"></p>
-<figcaption>“Fine-Tuning the Fighter: Lumpinee Stadium vs UTMB”</figcaption>
-</figure>
-</div>
-<section id="fine-tuning-the-fighter-from-nak-muay-to-ultra-trailer" class="level1">
-<h1>Fine-Tuning the Fighter: From Nak Muay to Ultra-Trailer</h1>
-<p><strong>Baseline Model:</strong> A physiology overfitted for 5 rounds of explosivity (Muay Thai).<br>
-<strong>New Objective Function:</strong> Maximize endurance over 160km while minimizing the “Injury” loss function.<br>
-<strong>The Optimizer:</strong> Generative AI.</p>
-<p><strong>Project Chiang M-AI</strong> is a live experiment in <strong>Transfer Learning</strong>.<br>
-I am using LLMs to re-weight my fast-twitch muscle fibers into a diesel engine. The goal? Solving a complex domain adaptation problem: taking a body trained on the “Lumpinee Stadium” dataset and deploying it to the “UTMB” distribution.</p>
+<section id="the-static-plan-problem" class="level2">
+<h2 class="anchored" data-anchor-id="the-static-plan-problem">The “Static Plan” Problem</h2>
+<p>In <a href="../04-the-automation-warehouse/">Episode 4</a>, we successfully built our “Zero-UI” warehouse: an automated pipeline that takes an AI-generated JSON workout from Google Calendar and pushes it directly to my Garmin watch via Intervals.icu.</p>
+<p>But there was still one glaring flaw in the system. The pipeline was robust, but the data was <strong>static</strong>.</p>
+<p>What happens if I wake up with a fever? What if my Heart Rate Variability (HRV) has been tanking for three straight days due to work stress? A static plan—even one generated by the smartest LLM on Sunday—will blindly tell me to go out and do 6x3min VO2 Max intervals on Wednesday. Doing intense intervals when your central nervous system is fried is a one-way ticket to overtraining and injury.</p>
+<p>Initially, I handled this feedback loop manually. Every morning, I would check my wellness metrics on Intervals.icu, feed them into the Gemini mobile app alongside my requirements, and ask it to adapt my scheduled workout. Thanks to Gemini’s native Google Workspace integration, it could “reach out” and replace the JSON in my calendar for me. From there, the synchronization script from <a href="../04-the-automation-warehouse/">Episode 4</a> would pick up the change and ship it to my watch.</p>
+<p>It worked, but it still required a manual morning intervention. I wanted to eliminate that “manual chat” entirely—letting the system detect my fatigue and rewrite my plan autonomously while I was still asleep. I needed <strong>Full Auto Mode</strong>.</p>
 </section>
-<section id="the-episodes" class="level1">
-<h1>The Episodes</h1>
-<hr>
-<div id="listing-episodes-list" class="quarto-listing quarto-listing-container-default">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="bWV0aG9kb2xvZ3klMkNwcm9tcHQtZW5naW5lZXJpbmclMkNzcG9ydHMtc2NpZW5jZSUyQ3N5c3RlbS1kZXNpZ24lMkNwcm9qZWN0LWNoaWFuZy1tLWFpJTJDYWktY29hY2hpbmc=" data-listing-date-sort="1769299200000" data-listing-file-modified-sort="1773496606006" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1030">
-<div class="thumbnail"><a href="../../posts/project-chiang-m-ai/01-ai-board-of-directors/index.html" class="no-external">
-
-<img loading="lazy" src="../../posts/project-chiang-m-ai/01-ai-board-of-directors/board.jpg" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title" data-anchor-id="the-episodes">
-<a href="../../posts/project-chiang-m-ai/01-ai-board-of-directors/index.html" class="no-external">Project Chiang M-AI - Episode 1: The AI Board of Directors: How I Engineered My Ultra-Trail Season</a>
-</h3>
-<div class="listing-subtitle">
-<a href="../../posts/project-chiang-m-ai/01-ai-board-of-directors/index.html" class="no-external">Stop asking ChatGPT for generic plans. Here is the 4-Layer Architecture and System Prompt I use to target my first 100-Miler.</a>
-</div>
-<div class="delink listing-description"><a href="../../posts/project-chiang-m-ai/01-ai-board-of-directors/index.html" class="no-external">
-<p>A deep dive into using Gemini and ChatGPT as adversarial consultants to build a data-driven, adaptive training protocol.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="../../posts/project-chiang-m-ai/01-ai-board-of-directors/index.html" class="no-external">
-<div class="listing-date">
-Jan 25, 2026
-</div>
-<div class="listing-reading-time">6 min</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="bWV0aG9kb2xvZ3klMkNwcm9tcHQtZW5naW5lZXJpbmclMkNzcG9ydHMtc2NpZW5jZSUyQ3N5c3RlbS1kZXNpZ24lMkNwcm9qZWN0LWNoaWFuZy1tLWFp" data-listing-date-sort="1770076800000" data-listing-file-modified-sort="1773496606049" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="9" data-listing-word-count-sort="1662">
-<div class="thumbnail"><a href="../../posts/project-chiang-m-ai/02-from-generation-to-validation/index.html" class="no-external">
-
-<img loading="lazy" src="../../posts/project-chiang-m-ai/02-from-generation-to-validation/image1.png" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../../posts/project-chiang-m-ai/02-from-generation-to-validation/index.html" class="no-external">Project Chiang M-AI - Episode 2: AI Training Plan: From Generation to Validation</a>
-</h3>
-<div class="listing-subtitle">
-<a href="../../posts/project-chiang-m-ai/02-from-generation-to-validation/index.html" class="no-external">AI Training Plan: From Generation to Validation</a>
-</div>
-<div class="delink listing-description"><a href="../../posts/project-chiang-m-ai/02-from-generation-to-validation/index.html" class="no-external">
-<p>How I validated the architecture of my ultra-trail training plan using an Adversarial approach (Gemini vs ChatGPT vs Experts).</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="../../posts/project-chiang-m-ai/02-from-generation-to-validation/index.html" class="no-external">
-<div class="listing-date">
-Feb 3, 2026
-</div>
-<div class="listing-reading-time">9 min</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-categories="bWV0aG9kb2xvZ3klMkNwcm9tcHQtZW5naW5lZXJpbmclMkNwcm9kdWN0aXZpdHklMkNhZ2lsZQ==" data-listing-date-sort="1770940800000" data-listing-file-modified-sort="1773496606052" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1064">
-<div class="thumbnail"><a href="../../posts/project-chiang-m-ai/03-the-runtime-loop/index.html" class="no-external">
-
-<img loading="lazy" src="../../posts/project-chiang-m-ai/03-the-runtime-loop/Weekly TSS Distribution Across the Year.png" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../../posts/project-chiang-m-ai/03-the-runtime-loop/index.html" class="no-external">Project Chiang M-AI - Episode 3: The Runtime Loop - Agile Sprint Planning for Ultra-Running</a>
-</h3>
-<div class="listing-subtitle">
-<a href="../../posts/project-chiang-m-ai/03-the-runtime-loop/index.html" class="no-external"></a>
-</div>
-<div class="delink listing-description"><a href="../../posts/project-chiang-m-ai/03-the-runtime-loop/index.html" class="no-external">
-<p>How I use LLMs as an Agile Scrum Master to adapt a 100-mile training plan to the chaos of professional life.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="../../posts/project-chiang-m-ai/03-the-runtime-loop/index.html" class="no-external">
-<div class="listing-date">
-Feb 13, 2026
-</div>
-<div class="listing-reading-time">6 min</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="3" data-categories="cHl0aG9uJTJDYXV0b21hdGlvbiUyQ2dlbWluaSUyQ2ludGVydmFscy5pY3UlMkNwcm9qZWN0LWNoaWFuZy1tLWFp" data-listing-date-sort="1772755200000" data-listing-file-modified-sort="1773496606052" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="852">
-<div class="thumbnail"><a href="../../posts/project-chiang-m-ai/04-the-automation-warehouse/index.html" class="no-external">
-
-<img loading="lazy" src="../../posts/project-chiang-m-ai/04-the-automation-warehouse/workflow.png" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../../posts/project-chiang-m-ai/04-the-automation-warehouse/index.html" class="no-external">Project Chiang M-AI - Episode 4: The “Zero-UI” Warehouse: Shipping AI Plans to Production (Garmin)</a>
-</h3>
-<div class="listing-subtitle">
-<a href="../../posts/project-chiang-m-ai/04-the-automation-warehouse/index.html" class="no-external"></a>
-</div>
-<div class="delink listing-description"><a href="../../posts/project-chiang-m-ai/04-the-automation-warehouse/index.html" class="no-external">
-<p>How I built a Python script to automate the ‘Last Mile’ of AI coaching: syncing Gemini chats directly to my watch via Google Calendar and Intervals.icu.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="../../posts/project-chiang-m-ai/04-the-automation-warehouse/index.html" class="no-external">
-<div class="listing-date">
-Mar 6, 2026
-</div>
-<div class="listing-reading-time">5 min</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="4" data-categories="QUklMkNQeXRob24lMkNVbHRyYS1UcmFpbCUyQ0F1dG9tYXRpb24lMkNHb29nbGUlMjBDYWxlbmRhciUyQ0ludGVydmFscy5pY3U=" data-listing-date-sort="1773446400000" data-listing-file-modified-sort="1773496606053" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1314">
-<div class="thumbnail"><a href="../../posts/project-chiang-m-ai/05-wellness-based-adaptation/index.html" class="no-external">
-
-<img loading="lazy" src="../../posts/project-chiang-m-ai/05-wellness-based-adaptation/workflow.png" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../../posts/project-chiang-m-ai/05-wellness-based-adaptation/index.html" class="no-external">Project Chiang M-AI - Episode 5: Full Auto Mode (Wellness-Based Adaptation)</a>
-</h3>
-<div class="listing-subtitle">
-<a href="../../posts/project-chiang-m-ai/05-wellness-based-adaptation/index.html" class="no-external"></a>
-</div>
-<div class="delink listing-description"><a href="../../posts/project-chiang-m-ai/05-wellness-based-adaptation/index.html" class="no-external">
-<p>Closing one of the final loops in the architecture: letting Gemini 3.1-Flash autonomously rewrite my daily workouts based on live HRV and Resting Heart Rate data.</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="../../posts/project-chiang-m-ai/05-wellness-based-adaptation/index.html" class="no-external">
-<div class="listing-date">
-Mar 14, 2026
-</div>
-<div class="listing-reading-time">7 min</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">No matching items</div>
-</div>
-
+<section id="the-architecture-of-adaptation" class="level2">
+<h2 class="anchored" data-anchor-id="the-architecture-of-adaptation">The Architecture of Adaptation</h2>
+<p>To achieve this, we had to close the feedback loop. The script couldn’t just <em>push</em> workouts blindly; it needed to <em>read</em> my physiological state, <em>evaluate</em> the day’s training load against that state, and dynamically <em>rewrite</em> the workout if necessary, all before shipping it to the Garmin.</p>
+<p>Here is the logic flow of our new <code>adapt_daily_plan()</code> orchestrator:</p>
+<ol type="1">
+<li><strong>Pull Wellness Data</strong>: Fetch the last 10 days of metrics (HRV, RHR, Sleep) via the Intervals.icu API.</li>
+<li><strong>The “Day View” Aggregation</strong>: Instead of treating workouts in isolation, we fetch <strong>every</strong> coach event scheduled for the entire day from Google Calendar (from midnight to midnight).</li>
+<li><strong>Contextual LLM Interception</strong>: We bundle all of today’s workouts into a single JSON array and send it to <strong>Gemini 3.1-Flash</strong> along with the wellness history. This is crucial: if a day has both a run and a strength session, the AI needs to see both to decide if the total daily load is sustainable given my current recovery.</li>
+<li><strong>The Collective Rewrite</strong>: Gemini returns a matching array of adapted workouts. If I’m fried, it might keep the easy swim but scrap the heavy lifting, or turn everything into a rest day. It adds a <code>description</code> to each session explaining the coaching decision.</li>
+<li><strong>Patching the Calendar</strong>: The Python script rewrites the event in Google Calendar with the newly adapted JSON. Crucially, it nests the original workout inside an <code>original_workout</code> property so we never lose the macro-plan history.</li>
+<li><strong>Sync to Watch</strong>: The standard sync function runs, picks up the adapted workout, and ships it to the devices.</li>
+</ol>
+</section>
+<section id="building-the-brains-gemini-3.1-flash" class="level2">
+<h2 class="anchored" data-anchor-id="building-the-brains-gemini-3.1-flash">Building the Brains: Gemini 3.1-Flash</h2>
+<p>To make this reliable without human supervision, we needed speed and strict structured outputs. We use <strong>Gemini 3.1-Flash</strong> as our primary reasoning engine.</p>
+<p>The most critical engineering aspect here isn’t the code itself (you can check the open-source repository for the exact implementation), but the strict enforcement of “JSON Mode”. By configuring the LLM to exclusively reply in a strict <code>application/json</code> format, we eliminate the need to parse messy conversational text. The AI doesn’t reply with “Hello, here is your adapted workout…”, it acts purely as a functional endpoint returning a structured workout dictionary.</p>
+<section id="the-coachs-instructions-prompt-engineering" class="level3">
+<h3 class="anchored" data-anchor-id="the-coachs-instructions-prompt-engineering">The “Coach’s Instructions”: Prompt Engineering</h3>
+<p>To ensure the AI makes sound decisions, we separated the logic into modular prompt templates. This allows us to refine the “coaching philosophy” independently of the Python orchestration logic.</p>
+<ul>
+<li><strong>System Instructions</strong>: Defines the coach’s personality and strict rules (e.g., <em>“If HRV is crashing, prioritize rest over ego”</em>).</li>
+<li><strong>Context Injection</strong>: Dynamically injects the 10-day wellness trend and the day’s workouts.</li>
+<li><strong>Order Preservation</strong>: Forces the AI to return the adapted sessions in the exact same chronological order to ensure correct mapping back to Google Calendar.</li>
+</ul>
+</section>
+<section id="the-catch-losing-the-conversation-context" class="level3">
+<h3 class="anchored" data-anchor-id="the-catch-losing-the-conversation-context">The Catch: Losing the Conversation Context</h3>
+<p>There is a subtle engineering trade-off here. By moving to a stateless API call for my daily automation, I lose the continuous “thread” of a long-form conversation that I would have in the Gemini web or mobile app.</p>
+<p>In the app, Gemini “remembers” everything we discussed weeks ago. With its massive context window, it can draw connections between a comment I made in February and its impact on a workout in March. My automated script, however, is <strong>stateless</strong>: every morning at 6:00 AM, it’s a “fresh start”. While this approach is cleaner and faster, it doesn’t yet leverage the full power of Gemini’s deep context memory as well as a single, month-long chat thread might.</p>
+<p>Beyond context, there is also a pragmatic matter of <strong>Token Economics</strong>. Running a multi-month coaching conversation through an API would eventually become prohibitively expensive as the history grows. By using the Gemini Web App for my primary preparation, I benefit from its massive context for “free” (within the consumer subscription), reserving the paid API credits for what they do best: precise, high-value daily automation.</p>
+<p>However, implementing this second “stateless” path is also a deliberate engineering test. It creates a perfect opportunity to <strong>benchmark both approaches</strong>: comparing how a highly conversational coach (the manual chat) and a strict, data-driven orchestrator (the automated API) handle the same fatigue spikes.</p>
+<p>For my actual preparation for the 160km in Chiang Mai, I’ll be sticking with the manual conversational app as my primary guide—preserving that vital long-term context—while using this automation project to explore the boundaries of autonomous AI coaching.</p>
+</section>
+</section>
+<section id="beyond-the-calendar-a-brain-first-refactor" class="level2">
+<h2 class="anchored" data-anchor-id="beyond-the-calendar-a-brain-first-refactor">Beyond the Calendar: A “Brain-First” Refactor</h2>
+<p>During this phase, we also made a significant architectural shift. Initially, the system was “Calendar-centric”—it was designed specifically to sync Google Calendar events. But as we added wellness adaptation, we realized the core of the project wasn’t the calendar; it was the <strong>decision-making engine</strong>.</p>
+<p>We refactored the codebase to move away from hardcoded calendar dependencies toward a more abstract <strong>“Brain” architecture</strong>:</p>
+<ul>
+<li><strong>Source Agnosticism</strong>: We renamed core tracking fields from <code>calendar_event_id</code> to <code>source_id</code>. Today it’s Google Calendar, but tomorrow the “source” could be a local JSON file, a Notion database, or a direct feed from another coach.</li>
+<li><strong>The Orchestration Layer</strong>: The <code>CoachService</code> now acts as a central synthesizer. It separates the “Source” (Calendar), the “Context” (Wellness metrics), and the “Reasoning Engine” (Gemini API).</li>
+<li><strong>Decoupling for Testability</strong>: By isolating the coaching logic from the external APIs, we can now test the brain’s decisions in a vacuum. We don’t need a real Google Calendar account or a live Intervals.icu feed to verify if the AI correctly prescribes a rest day when HRV crashes. This structural rigor is what allowed us to increase our test coverage and precision significantly during this update.</li>
+</ul>
+<p>This shift transforms the project from a simple “sync tool” into a modular AI coaching platform. In the age of LLMs, where code generation is becoming a commodity, the real value lies in the <strong>architecture</strong>—designing a system that is robust, testable, and vendor-independent.</p>
+</section>
+<section id="the-cli-experience" class="level2">
+<h2 class="anchored" data-anchor-id="the-cli-experience">The CLI Experience</h2>
+<p>As an engineer, I love the command line. Exposing this orchestration as a simple command makes the whole pipeline incredibly elegant.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Every morning at 6:00 AM (via cron)</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> <span class="at">-m</span> project_chiang_m_ai adapt</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> <span class="at">-m</span> project_chiang_m_ai sync <span class="at">--today</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>If I sleep poorly, I wake up, check my watch, and the brutal threshold workout is magically gone, replaced by a gentle recovery jog.</p>
+</section>
+<section id="conclusion-the-ultimate-synthetic-coach" class="level2">
+<h2 class="anchored" data-anchor-id="conclusion-the-ultimate-synthetic-coach">Conclusion: The Ultimate Synthetic Coach</h2>
+<p>We have successfully built a closed-loop, data-driven, adversarial AI architecture. We generate macro-plans using diverse LLMs (Episode 2), handle weekly chaos with Agile principles (Episode 3), pipe it seamlessly to our devices (Episode 4), and now, dynamically adapt the daily grind based on live physiological metrics (Episode 5).</p>
+<p>The tech stack is ready. The automation is running in the background. The only thing left to do is lace up the shoes and actually run the 160 kilometers in Chiang Mai.</p>
+<p>See you on the trails!</p>
 
 
 </section>
