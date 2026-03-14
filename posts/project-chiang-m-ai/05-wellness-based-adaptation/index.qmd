@@ -1,10 +1,9 @@
 ---
 title: "Project Chiang M-AI - Episode 5: Full Auto Mode (Wellness-Based Adaptation)"
 description: "Closing one of the final loops in the architecture: letting Gemini 3.1-Flash autonomously rewrite my daily workouts based on live HRV and Resting Heart Rate data."
-author: "NakMuayCoder"
-date: "2026-03-11"
+date: "2026-03-14"
 categories: ["AI", "Python", "Ultra-Trail", "Automation", "Google Calendar", "Intervals.icu"]
-image: "assets/workflow.png"
+image: "workflow.png"
 ---
 
 ## The "Static Plan" Problem
