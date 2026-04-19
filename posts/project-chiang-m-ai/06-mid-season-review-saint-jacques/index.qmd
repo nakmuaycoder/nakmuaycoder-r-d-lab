@@ -1,0 +1,83 @@
+---
+title: "Project Chiang M-AI - Episode 6: The Mid-Season Stress Test - Trail du Saint Jacques Post-Mortem"
+subtitle: "Validating the AI Model in Production: Pacing, Nutrition, and the Chassis Integrity."
+description: "A data-driven retrospective of the Trail du Saint Jacques. How the 'Board of Directors' performed in the first real-world deployment."
+author: "nakmuaycoder"
+date: "2026-06-20"
+categories: [race-report, data-analysis, sports-science, project-chiang-m-ai]
+image: "cover.jpg"
+title-block-banner: false
+draft: true
+---
+
+## 1. The Context: The "B-Race" Deployment
+
+The **Trail du Saint Jacques** (72km, 3000m D+) was never the end goal. In our engineering roadmap, it was a **Staging Deployment**. A full-scale integration test to verify if the training logic developed in the first 5 months was robust enough for the 100-miler in Chiang Mai.
+
+### The Objectives
+1. **Model Validation**: Did the Z2/Z3 distribution actually build the endurance predicted?
+2. **Hardware Stress Test**: Did the "Citroën 2CV chassis" (my joints) survive 10+ hours of impact?
+3. **Telemetry Check**: Testing the nutrition and hydration protocol under race conditions.
+
+## 2. Pre-Race: The AI Pacing Strategy
+
+Before the race, I asked the "Board of Directors" to generate a pacing chart based on my LTHR and the course profile. 
+
+> **🤖 Coach Trail (Gemini):** 
+> "Given the 3000m D+, do not exceed [X] BPM on the climbs. You are not racing for the podium; you are racing to collect data for November."
+
+### The "Maltodextrin" Protocol (Carb Loading)
+Beyond the pace, I tested a new **Energy Buffer** strategy. I used a 3-day maltodextrin carb-loading kit (bought at Decathlon/D4). 
+- **Goal:** Maximize glycogen storage without the digestive load of massive pasta meals.
+- **The Experiment:** Drinking [X] liters of malto-solution in the 72h leading up to the start.
+
+> **📝 Note for Post-Mortem:** Evaluate if this prevented the "early-race heavy legs" or if it caused any gastric issues during the first 20km.
+
+### The "Packing Algorithm": Drop Bag Strategy
+Managing a 72km race requires a logical approach to gear. I am working with Gemini to optimize my **Drop Bag (Sac de délestage)**. 
+- **The Problem:** What to leave at the mid-way point to minimize weight while maximizing safety/comfort?
+- **The Decision Matrix:** Spare socks (for the aponévrosite), specific gels for the final 30km, and emergency batteries.
+
+> **🤖 Task for Gemini:** Review the mandatory gear list and the race weather forecast to generate the optimal packing list for the drop bag.
+
+## 3. Race Data Analysis (The Post-Mortem)
+
+### A. Intensity Distribution
+*Insert Heart Rate Distribution Chart here*
+
+**Observation**: I spent [X]% in Zone 2, which was the plan. However, a spike in Zone 4 during the [Name of Climb] indicates a potential "Manual Override" where I ignored the AI's guardrails.
+
+### B. The Nutrition Pipeline
+*Insert Nutrition Log here*
+
+We planned for 60g of carbs/hour. 
+- **Actual**: [X]g/hour.
+- **System Outcome**: [No bonk / Gastric distress / Energy crash].
+
+## 4. Hardware Report: The Chassis Integrity
+
+This is where we measure the **"Injury" Loss Function**. My single point of failure remains the "2CV chassis": a chronic plantar fasciitis (aponévrosite plantaire) that acts as a performance limiter.
+
+### The "Pegasus" Bug: AI as an Equipment Consultant
+A fascinating insight emerged during a chat with Gemini regarding my recurring flare-ups. While I was focused on volume and intensity, the AI "spotted" a pattern in my gear logs:
+> **🤖 Gemini Insight:** "Your plantar fasciitis symptoms correlate with sessions using the Nike Pegasus. The relatively firm and thin forefoot cushioning of this model might be increasing the mechanical stress on your fascia during toe-off."
+
+It was a lightbulb moment. Every time I reverted to the Pegasus for "faster" sessions, the pain returned. 
+
+### The "Trabuco Max" Patch
+To mitigate this, I deployed a hardware update: switching almost exclusively to the **Asics Trabuco Max**. 
+- **The Feature:** High-stack maximalist cushioning and a rockered geometry.
+- **The Result:** The "mechanical noise" in my foot significantly decreased, allowing for higher volume with lower inflammatory debt.
+
+## 5. Conclusion: Updates for the 100-Miler
+
+The Saint Jacques provided the most valuable data since the start of the project. 
+
+### Key Adjustments for the Final Block:
+1. **Refactor [Feature X]**: (e.g., More eccentric loading).
+2. **Optimize [Feature Y]**: (e.g., Pacing on technical descents).
+3. **Scale [Feature Z]**: (e.g., Increasing the volume of the weekend blocks).
+
+---
+
+*Stay tuned for the detailed telemetry analysis.*
