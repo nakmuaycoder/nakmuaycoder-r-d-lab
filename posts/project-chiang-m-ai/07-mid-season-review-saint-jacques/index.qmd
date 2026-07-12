@@ -34,7 +34,7 @@ Our preparation leading to the race was a mix of intense training peaks and AI-p
 April was a massive training block:
 - **Volume**: 95 km per week
 - **Elevation**: 3,000m D+ per week
-- **Strength**: Heavy focus on resistance and strength training (musculation) to build joint integrity.
+- **Strength**: Heavy focus on resistance and strength training (musculation), with a specific emphasis on posterior chain strengthening (renforcement de la chaîne postérieure) based on Gemini's recommendation, to build joint integrity.
 
 At this point, my physical condition felt incredibly strong.
 
@@ -100,7 +100,7 @@ This highlighted how easy it is to spiral when running solo in difficult conditi
 ## 5. Physical Recovery & Next Steps
 
 Despite the DNF, there is positive news:
-1. **No Plantar Fasciitis Flare-up**: The transition to the **Asics Trabuco Max** proved to be the correct choice. The cushioning and geometry kept the foot pain-free.
+1. **No Plantar Fasciitis Issues**: The plantar fasciitis (aponévrosite) did not cause a single issue during the race. This success is due to the transition to the **Asics Trabuco Max** (cushioning and geometry kept the foot pain-free) and, crucially, the heavy emphasis on posterior chain strengthening (renforcement de la chaîne postérieure) during strength training, as recommended by Gemini.
 2. **Fast HRV Recovery & Quick Resume**: Post-race HRV returned to baseline remarkably fast. This indicates that the foundational cardiovascular engine was well-prepared and did not suffer deep systemic damage.
 
 Comparing the HRV evolution 30 days before and 30 days after both races highlights this difference. Unlike in 2025, where recovery was slower, the 2026 post-race HRV shows a very swift rebound:
