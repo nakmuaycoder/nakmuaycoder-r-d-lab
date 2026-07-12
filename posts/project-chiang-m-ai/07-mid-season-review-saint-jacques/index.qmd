@@ -99,11 +99,15 @@ This highlighted a key vulnerability. When running solo for hours in difficult c
 
 Despite the DNF, there is positive news:
 1. **No Plantar Fasciitis Flare-up**: The transition to the **Asics Trabuco Max** proved to be the correct choice. The cushioning and geometry kept the foot pain-free.
-2. **Fast HRV Recovery**: Post-race HRV returned to baseline remarkably fast. This indicates that the foundational cardiovascular engine was well-prepared and did not suffer deep systemic damage.
+2. **Fast HRV Recovery & Quick Resume**: Post-race HRV returned to baseline remarkably fast. This indicates that the foundational cardiovascular engine was well-prepared and did not suffer deep systemic damage.
 
 Comparing the HRV evolution 30 days before and 30 days after both races highlights this difference. Unlike in 2025, where recovery was slower, the 2026 post-race HRV shows a very swift rebound:
 
 ![HRV Trend Comparison: Hoka Chiang Mai 2025 vs. Trail du Saint Jacques 2026](hrv_trend.png)
+
+This physiological recovery is directly reflected in how quickly training resumed:
+* **After Chiang Mai (2025)**: It took **11 days of absolute rest** before attempting a short 4km test run.
+* **After Saint Jacques (2026)**: Active recovery (walking and light cycling) started after **just 3 days**, and structured high-intensity work (10x 1-minute hill repeats) was resumed **only 10 days after the race**.
 
 The preparation is working. I just need to fix the hydration issues, manage my weight, and prepare for the mental battles before the main event in Chiang Mai.
 
