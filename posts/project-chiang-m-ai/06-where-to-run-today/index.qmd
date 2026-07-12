@@ -1,0 +1,113 @@
+---
+title: "Project Chiang M-AI - Episode 6: Forest Fire Logistics (Where to Run Today?)"
+description: "How a Python-based scraper, GitHub Actions, and Free Mobile SMS API alerts keep my ultra-trail long runs safe and legal during the high-risk Mediterranean summer."
+date: "2026-07-12"
+categories: ["Python", "Ultra-Trail", "Automation", "Scraping", "GitHub Actions", "SMS Alerts"]
+image: "forest_monitor.png"
+---
+
+## The Summer Trail Dilemma
+
+Training for a 160km ultra-trail like the Hoka Chiang Mai requires massive volume, which means hours spent on forest trails. However, training during the summer in Southern France (especially around areas like the Bouches-du-Rhône, Var, or Vaucluse) introduces a significant logistical challenge: **wildfire prevention regulations**.
+
+From **June 1st to September 30th**, access to forest massifs is strictly regulated. Depending on heat, wind, and dryness, prefectures assess the risk levels daily. If the risk is too high (Levels 3 & 4), the forests are completely closed to the public. 
+
+This isn't just about avoiding a hefty €135 fine; it's a matter of life and death. **90% of forest fires are caused by human activity**. Keeping people out of the woods during critical risk days prevents accidental fires and keeps hikers and runners out of harm's way, allowing emergency services to focus on active fire fronts if needed.
+
+The rules are updated daily around 5:00 PM (17h) for the following day. Checking the prefecture's website manually every evening to decide *where* I can safely run the next morning became a tedious manual step—a friction point in the "Zero-UI" training setup.
+
+To solve this, I built [where-to-run-today](https://github.com/nakmuaycoder/where-to-run-today), an automated forest fire risk monitor.
+
+![Forest Monitor Concept](forest_monitor.png){width=800px}
+
+## The Architecture of the Alert System
+
+The system operates as a lightweight, automated pipeline designed to run daily. Here is the structure:
+
+```mermaid
+graph TD
+    A[Daily Cron / GH Actions] --> B[Scraper Class]
+    B --> C[Fetch risk levels JSON]
+    B --> D[Parse Prefecture HTML for Forest IDs]
+    C & D --> E[Map Risk Levels to Forest Names]
+    E --> F{Is forest in Watchlist & Open?}
+    F -- Yes --> G[Format SMS Message]
+    F -- No --> H[Log & Terminate]
+    G --> I[Send SMS via Free Mobile API]
+```
+
+### 1. Scraping the Prefecture Data
+
+The prefecture updates the risk levels on a dedicated platform: `risque-prevention-incendie.fr`. The scraper performs a dual-step operation:
+* **HTML Parsing**: It uses `BeautifulSoup` to scrape the prefecture's main page for the department (e.g., `/13` for Bouches-du-Rhône) to extract the mapping of forest IDs to their human-readable names from the official table.
+* **JSON Retrieval**: It fetches the detailed daily risk level data directly from the platform's JSON API (e.g., `import_data/{date}.json`). The script is designed with defensive fallback logic: it attempts to fetch tomorrow's date first (published in the evening) and falls back to today's date if tomorrow's data is not yet online.
+
+### 2. Translating Levels to Running Safety
+
+The script translates the numerical risk levels (0 to 4) into binary execution signals:
+* 🟢 **Levels 1 & 2**: **OPEN** (Access authorized) -> `[OK]`
+* 🔴 **Levels 3 & 4**: **CLOSED** (Access prohibited) -> `[KO]`
+* ⚪ **Level 0**: No data (typically off-season)
+
+### 3. The SMS Alert System (and API Gotchas)
+
+To get the notification directly on my phone without needing a custom mobile app, I integrated the **Free Mobile SMS API** using the `freeMobileSMS` library. 
+
+During early testing, I ran into a classic encoding issue. I initially formatted the SMS payload with visual emojis:
+* `🟢` for open forests
+* `🔴` for closed forests
+* `🏃` for the runner icon
+
+While this looked great on paper, the Free Mobile SMS gateway API proved highly sensitive to non-ASCII unicode characters, resulting in silent delivery failures or garbled text. 
+
+To make the system bulletproof, I refactored the formatting logic to use plain text ASCII tags:
+```python
+def format_status_message(self, date_label: str, is_mock: bool = False) -> str:
+    ...
+    symbol = "[OK]" if level in [1, 2] else "[KO]"
+    lines.append(f"{symbol} {forest}")
+    return "\n".join(lines)
+```
+This ensures 100% delivery reliability while maintaining clean, legible lists directly on my lock screen.
+
+---
+
+## Automating the Pipeline with GitHub Actions
+
+Instead of hosting this on a dedicated server or relying entirely on a local NAS cron, I configured a **GitHub Actions** workflow to run the checks.
+
+The workflow is scheduled via cron to run every day at **20:00 (Paris time)**:
+```yaml
+on:
+  schedule:
+    # 18:00 UTC is 20:00 Paris time (during Daylight Saving Time)
+    - cron: '0 18 * * *'
+  workflow_dispatch: # Allows manual trigger
+```
+
+By specifying the timezone context carefully, we guarantee the check runs after the prefecture's 17:00 publication deadline. The workflow pulls configuration parameters and API credentials securely from GitHub Repository Secrets:
+* `FREE_MOBILE_USER` & `FREE_MOBILE_PASS` for the API gateway.
+* `DEPARTMENT` (to target specific regions, e.g. `13` or `83`).
+* `WATCHLIST` (a JSON array of specific massifs, like `["Alpilles", "Calanques"]` or `["ALL"]`).
+
+---
+
+## Code Quality & Modern Tooling
+
+To keep this project maintainable and clean, I adopted several modern Python standards:
+* **`uv`**: I use Astral's super-fast package manager `uv` to handle dependencies and run the environment. The virtual environment is managed easily via a simple `Makefile`.
+* **`Ruff`**: For formatting and linting, ensuring code style is clean and consistent.
+* **`detect-secrets`**: Integrated into pre-commit hooks to ensure no SMS API credentials ever leak into public commits.
+
+```bash
+# Running mock checks to test formatting
+uv run python -m where_to_run_today.main --mock
+```
+
+## Zero Friction, Zero Fines
+
+With this workflow active, I no longer spend time browsing government websites or risking a fine. Every evening at 20:00, if the Calanques or Alpilles are open for tomorrow, I get a clear, concise SMS. If they are closed, I can pivot my training schedule to road running or treadmill workouts immediately.
+
+Eliminating logistical friction points is just as important as physical training when preparing for a 160km ultra-trail. 
+
+Stay safe, respect the rules, and see you on the trails! 🌲🏃
