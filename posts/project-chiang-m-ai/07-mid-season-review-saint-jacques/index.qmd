@@ -3,7 +3,7 @@ title: "Project Chiang M-AI - Episode 7: The Mid-Season Stress Test - Trail du S
 subtitle: "April Peak, a Weight Anomaly, and a Critical Dehydration Bug in the Heat."
 description: "A post-mortem of the Trail du Saint Jacques (72km, 3000m D+). Training metrics validated, but a system crash in the heat led to my first DNF."
 author: "nakmuaycoder"
-date: "2026-06-20"
+date: "2026-07-14"
 categories: [race-report, data-analysis, sports-science, project-chiang-m-ai]
 image: "dnf.jpeg"
 title-block-banner: false
