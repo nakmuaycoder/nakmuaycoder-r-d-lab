@@ -24,16 +24,14 @@ To solve this, I built [where-to-run-today](https://github.com/nakmuaycoder/wher
 
 The system operates as a lightweight, automated pipeline designed to run daily. Here is the structure:
 
-```mermaid
-graph TD
-    A[Daily Cron / GH Actions] --> B[Scraper Class]
-    B --> C[Fetch daily risk levels JSON]
-    C --> E[Map Risk Levels to Forest Names]
-    E --> F{Is forest in Watchlist & Open?}
-    F -- Yes --> G[Format SMS Message]
-    F -- No --> H[Log & Terminate]
-    G --> I[Send SMS via Free Mobile API]
-```
+The pipeline runs daily through the following steps:
+
+* **Daily Trigger**: Initiated by a scheduled cron job or GitHub Action.
+* **JSON Fetch**: The Scraper retrieves the daily risk levels from the prefecture's platform.
+* **Mapping**: It matches the risk levels to the corresponding forest names.
+* **Watchlist Check**: It checks if the watched forests are currently open (risk levels 1 or 2).
+* **SMS Notification**: If any watched forests are open, it formats the status message and triggers an SMS alert via the Free Mobile API.
+
 
 ### 1. Fetching the Prefecture Data
 
