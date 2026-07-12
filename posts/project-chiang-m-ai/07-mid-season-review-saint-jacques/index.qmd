@@ -7,7 +7,7 @@ date: "2026-07-14"
 categories: [race-report, data-analysis, sports-science, project-chiang-m-ai]
 image: "dnf.jpeg"
 title-block-banner: false
-draft: true
+draft: false
 ---
 
 ## 1. The Context: A Mid-Season Test
