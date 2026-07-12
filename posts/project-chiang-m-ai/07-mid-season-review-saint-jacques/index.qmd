@@ -3,7 +3,7 @@ title: "Project Chiang M-AI - Episode 7: Mid-Season Review - Trail du Saint Jacq
 subtitle: "April Peak, a Weight Anomaly, and Dehydration in the Heat."
 description: "A retrospective of the Trail du Saint Jacques (86km, 3500m D+). Training metrics looked great, but heat, running out of water, and mental fatigue led to a DNF at 70km (3200m D+)."
 author: "nakmuaycoder"
-date: "2026-07-14"
+date: "2026-07-12"
 categories: [race-report, data-analysis, sports-science, project-chiang-m-ai]
 image: "dnf.jpeg"
 title-block-banner: false
