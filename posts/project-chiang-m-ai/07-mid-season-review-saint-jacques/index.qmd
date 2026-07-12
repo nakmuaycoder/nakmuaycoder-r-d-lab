@@ -1,7 +1,7 @@
 ---
 title: "Project Chiang M-AI - Episode 7: Mid-Season Review - Trail du Saint Jacques Post-Mortem"
 subtitle: "April Peak, a Weight Anomaly, and Dehydration in the Heat."
-description: "A retrospective of the Trail du Saint Jacques (72km, 3000m D+). Training metrics looked great, but heat, running out of water, and mental fatigue led to my first DNF."
+description: "A retrospective of the Trail du Saint Jacques (86km, 3500m D+). Training metrics looked great, but heat, running out of water, and mental fatigue led to a DNF at 70km (3200m D+)."
 author: "nakmuaycoder"
 date: "2026-07-14"
 categories: [race-report, data-analysis, sports-science, project-chiang-m-ai]
@@ -12,15 +12,15 @@ draft: true
 
 ## 1. The Context: A Mid-Season Test
 
-The **Trail du Saint Jacques** (72km, 3000m D+) was meant to be the first real test. A full-scale run to verify if the training logic developed over the first five months of *Project Chiang M-AI* was robust enough for the upcoming 100-miler in Chiang Mai.
+The **Trail du Saint Jacques** (86km, 3500m D+) was meant to be the first real test. A full-scale run to verify if the training logic developed over the first five months of *Project Chiang M-AI* was robust enough for the upcoming 100-miler in Chiang Mai.
 
 ### The Goals
 1. **Training Validation**: Did the Z2/Z3 training distribution actually build the endurance predicted?
 2. **Physical Durability**: Did my joints and tendons (especially the plantar fasciitis) survive long hours of impact?
 3. **Nutrition and Hydration**: Testing the fueling protocol under real race conditions.
 
-### The Result: A Heat-Induced DNF
-Unfortunately, the run ended in a **DNF (Did Not Finish)**. It was a failure driven by a combination of extreme heat, running out of water, and mental fatigue, rather than a lack of physical preparation.
+### The Result: A DNF at 70km
+Unfortunately, the run ended in a **DNF (Did Not Finish) at 70km (3200m D+)**. It was a failure driven by a combination of extreme heat, running out of water, and mental fatigue, rather than a lack of physical preparation.
 
 ![Course elevation profile - Black shows the DNF section](dnf.jpeg)
 
@@ -112,6 +112,8 @@ This physiological recovery is directly reflected in how quickly training resume
 * **After Saint Jacques (2026)**: Active recovery (walking and light cycling) started after **just 3 days**, and structured high-intensity work (10x 1-minute hill repeats) was resumed **only 10 days after the race**.
 
 The preparation is working. I just need to fix the hydration issues, manage my weight, and prepare for the mental battles before the main event in Chiang Mai.
+
+Next up: the **Gauja 50k in Latvia** during the summer holidays—a great opportunity to practice mental focus and hydration strategy in a different setting.
 
 ---
 
