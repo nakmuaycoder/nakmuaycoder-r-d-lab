@@ -3,7 +3,7 @@ title: "Project Chiang M-AI - Episode 6: Forest Fire Logistics (Where to Run Tod
 description: "How a Python-based scraper, GitHub Actions, and Free Mobile SMS API alerts keep my ultra-trail long runs safe and legal during the high-risk Mediterranean summer."
 date: "2026-07-12"
 categories: ["Python", "Ultra-Trail", "Automation", "Scraping", "GitHub Actions", "SMS Alerts"]
-image: "forest_monitor.png"
+image: "forest_monitor.jpg"
 ---
 
 ## The Summer Trail Dilemma
@@ -18,7 +18,7 @@ The rules are updated daily around 5:00 PM (17h) for the following day. Checking
 
 To solve this, I built [where-to-run-today](https://github.com/nakmuaycoder/where-to-run-today), an automated forest fire risk monitor.
 
-![Forest Monitor Concept](forest_monitor.png){width=800px}
+![Forest Monitor Concept](forest_monitor.jpg){width=800px}
 
 ## The Architecture of the Alert System
 
