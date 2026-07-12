@@ -1,7 +1,7 @@
 ---
-title: "Project Chiang M-AI - Episode 7: The Mid-Season Stress Test - Trail du Saint Jacques Post-Mortem"
-subtitle: "April Peak, a Weight Anomaly, and a Critical Dehydration Bug in the Heat."
-description: "A post-mortem of the Trail du Saint Jacques (72km, 3000m D+). Training metrics validated, but a system crash in the heat led to my first DNF."
+title: "Project Chiang M-AI - Episode 7: Mid-Season Review - Trail du Saint Jacques Post-Mortem"
+subtitle: "April Peak, a Weight Anomaly, and Dehydration in the Heat."
+description: "A retrospective of the Trail du Saint Jacques (72km, 3000m D+). Training metrics looked great, but heat, running out of water, and mental fatigue led to my first DNF."
 author: "nakmuaycoder"
 date: "2026-07-14"
 categories: [race-report, data-analysis, sports-science, project-chiang-m-ai]
@@ -10,89 +10,87 @@ title-block-banner: false
 draft: true
 ---
 
-## 1. The Context: The "B-Race" Staging Deployment
+## 1. The Context: A Mid-Season Test
 
-The **Trail du Saint Jacques** (72km, 3000m D+) was our **Staging Deployment**—a full-scale integration test to verify the training logic developed over the first five months of *Project Chiang M-AI*. 
+The **Trail du Saint Jacques** (72km, 3000m D+) was meant to be the first real test. A full-scale run to verify if the training logic developed over the first five months of *Project Chiang M-AI* was robust enough for the upcoming 100-miler in Chiang Mai.
 
-The objective was to run under race conditions to validate our software and hardware before the final 100-miler in Chiang Mai.
+### The Goals
+1. **Training Validation**: Did the Z2/Z3 training distribution actually build the endurance predicted?
+2. **Physical Durability**: Did my joints and tendons (especially the plantar fasciitis) survive long hours of impact?
+3. **Nutrition and Hydration**: Testing the fueling protocol under real race conditions.
 
-### The Objectives
-1. **Model Validation**: Did the Z2/Z3 training distribution build the endurance predicted?
-2. **Hardware Stress Test**: Did the "Citroën 2CV chassis" (joints and tendons) survive long hours of impact?
-3. **Telemetry Check**: Testing the nutrition and hydration protocol under race conditions.
-
-### The Staging Result: System Shutdown (DNF)
-Unfortunately, the run ended in a **DNF (Did Not Finish)**. It was a classic multi-system failure under extreme heat, driven not by a lack of physical fitness, but by a combination of a hydration bug and mental fatigue.
+### The Result: A Heat-Induced DNF
+Unfortunately, the run ended in a **DNF (Did Not Finish)**. It was a failure driven by a combination of extreme heat, running out of water, and mental fatigue, rather than a lack of physical preparation.
 
 ![Course elevation profile - Black shows the DNF section](dnf.jpeg)
 
 ---
 
-## 2. Pre-Race: Training Architecture & The Weight Anomaly
+## 2. Pre-Race: High-Volume April and the Weight Anomaly
 
 Our preparation leading to the race was a mix of intense training peaks and AI-prescribed recovery.
 
-### The April Peak (High Load)
-April was a massive training block. I pushed the physical envelope:
+### The April Peak
+April was a massive training block:
 - **Volume**: 95 km per week
 - **Elevation**: 3,000m D+ per week
-- **Strength Protocol**: Heavy focus on resistance and strength training (musculation) to build joints and core integrity.
+- **Strength**: Heavy focus on resistance and strength training (musculation) to build joint integrity.
 
-At this point, the physical model felt incredibly robust.
+At this point, my physical condition felt incredibly strong.
 
 ### The May-June Taper & HRV Response
-Following this high-intensity peak, Gemini (acting as the synthetic coach) stepped in to adapt the training plan. It pushed for a significant reduction in training volume to allow the nervous system to recover. 
+Following this high-intensity peak, Gemini (acting as the coach) prescribed a significant reduction in training volume to allow the body to recover. 
 
-Physiologically, this recovery protocol was a massive success:
-- **HRV (Heart Rate Variability)**: Shot up significantly, indicating that the central nervous system was fully absorbing the training load.
+Physiologically, this worked well:
+- **HRV (Heart Rate Variability)**: Shot up significantly, indicating that the central nervous system was fully absorbing the training load and recovering well.
 
-### The Weight Anomaly: A Dietary Regression
-While the training and recovery volume was managed automatically, the nutritional intake was not. Between mid-May and early June, I mismanaged my diet. 
+### The Weight Anomaly: Gaining 5kg
+While the training and recovery volume was managed well, my nutritional intake was not. Between mid-May and early June, I mismanaged my diet. 
 
-Without the high daily caloric expenditure of the April volume, the lack of dietary discipline led to a significant weight gain. When I stepped on the scale on the morning of the race, I faced the reality of a massive payload penalty: **+5 kg** gained over the last month and a half.
+Without the high daily caloric expenditure of the April volume, the lack of dietary discipline led to a significant weight gain. When I stepped on the scale on the morning of the race, I faced the reality: **+5 kg** gained over the last month and a half.
 
 ---
 
-## 3. Telemetry Check: Race-Day Analysis
+## 3. Race-Day Analysis: Nutrition, Hydration, and Cramps
 
-### A. The Nutrition Pipeline: Success
+### A. Nutrition: A Clear Success
 One of the major successes of the day was the carbohydrate intake protocol. 
 - **Carbohydrate Target**: Held a steady **90g of carbs per hour**.
-- **System Outcome**: Absolutely zero gastric distress or GI issues. The digestive system functioned perfectly throughout, confirming that our gut-training and fueling strategy is solid for Chiang Mai.
+- **Outcome**: Absolutely zero gastric distress or GI issues. The digestive system functioned perfectly throughout, confirming that the gut-training and fueling strategy is solid.
 
-### B. The Hydration Bug: Thermal Throttling
-While nutrition was perfect, hydration suffered a catastrophic failure. The race was held in scorching heat. 
+### B. Hydration: Running Dry
+While nutrition was perfect, hydration suffered a catastrophic failure in the scorching heat.
 
 - **The Incident**: Between Aid Station 3 (R3) and Aid Station 4 (R4), I ran completely out of water. I spent nearly **1.5 hours** dry in the heat.
-- **The Crash**: I arrived at R4 in a state of severe dehydration and electrolyte depletion. 
-- **The R4 Recovery Protocol**: At R4, I met my wife and mother. To recover, I ate instant noodles (Mama) and drank hot broth/bouillon to replenish sodium. 
-- **The Result**: Although the broth and noodles provided immediate relief, the damage was done. The severe dehydration triggered intense cramping that hindered regular running.
+- **The Crash**: I arrived at R4 severely dehydrated and electrolyte-depleted. 
+- **The R4 Recovery**: At R4, I met my wife and mother. To recover, I ate instant noodles (Mama) and drank hot bouillon to replenish sodium. 
+- **The Result**: Although the broth and noodles provided immediate relief, the damage was done. The severe dehydration triggered intense cramping that made running impossible.
 
-> **💡 Future Optimization (Hydration Protocol):** 
-> To prevent running dry between remote aid stations, I will carry bouillon cubes in my pack to quickly mix my own sodium solution when water is refilled, ensuring I don't rely solely on aid station broth.
+> **💡 Lesson for Next Time:** 
+> To prevent running dry between remote aid stations, I will carry bouillon cubes in my pack to quickly mix my own sodium solution when water is refilled, rather than relying solely on aid station broth.
 
 ---
 
-## 4. The Mental Game: "The Dark Place" and Social Hotfixes
+## 4. The Mental Game: \"The Dark Place\" and Social Support
 
-The DNF was ultimately more of a mental shutdown than an absolute physical breakdown. I had the physical fitness to cross the finish line; the decision to stop was driven by intense boredom ("l'ennui") and mental exhaustion in the heat.
+The DNF was ultimately more of a mental shutdown than an absolute physical breakdown. I had the physical fitness to cross the finish line; the decision to stop was driven by intense boredom (\"l'ennui\") and mental exhaustion in the heat.
 
 ### The Social Boost
-Before reaching R4, I was in a very dark place ("dans le dur"). Seeing my family at the aid station was a massive psychological relief. It changed my mental state instantly.
+Before reaching R4, I was in a very dark place (\"dans le dur\"). Seeing my family at the aid station was a massive psychological relief. It changed my mental state instantly.
 
-### The "Phone Call" Hotfix
-This highlighted a key vulnerability in my mental pacing strategy. When running solo for hours in difficult conditions, the mind can spiral. 
-- **Action Item**: For the next race, when entering "the dark place", I will pull out my phone and call someone. Talking to family or a friend is a quick way to break the negative mental loop and get a fresh perspective.
+### The \"Phone Call\" Strategy
+This highlighted a key vulnerability. When running solo for hours in difficult conditions, it's easy to spiral. 
+- **Action Item**: For the next race, when entering \"the dark place\", I will pull out my phone and call someone. Talking to family or a friend is a quick way to break the negative mental loop and clear the mind.
 
 ---
 
-## 5. Hardware Report: The Chassis Integrity & Post-Race Recovery
+## 5. Physical Recovery & Next Steps
 
-Despite the DNF, there is positive news on the hardware front:
-1. **No Plantar Fasciitis Flare-up**: The transition to the **Asics Trabuco Max** proved to be the correct patch. The cushioning and geometry kept the foot pain-free.
+Despite the DNF, there is positive news:
+1. **No Plantar Fasciitis Flare-up**: The transition to the **Asics Trabuco Max** proved to be the correct choice. The cushioning and geometry kept the foot pain-free.
 2. **Fast HRV Recovery**: Post-race HRV returned to baseline remarkably fast. This indicates that the foundational cardiovascular engine was well-prepared and did not suffer deep systemic damage.
 
-Our preparation is working. We just need to debug the hydration volume and manage the payload (weight) before the main deployment in Chiang Mai.
+The preparation is working. I just need to fix the hydration issues, manage my weight, and prepare for the mental battles before the main event in Chiang Mai.
 
 ---
 
