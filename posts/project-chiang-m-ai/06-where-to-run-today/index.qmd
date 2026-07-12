@@ -27,20 +27,19 @@ The system operates as a lightweight, automated pipeline designed to run daily. 
 ```mermaid
 graph TD
     A[Daily Cron / GH Actions] --> B[Scraper Class]
-    B --> C[Fetch risk levels JSON]
-    B --> D[Parse Prefecture HTML for Forest IDs]
-    C & D --> E[Map Risk Levels to Forest Names]
+    B --> C[Fetch daily risk levels JSON]
+    C --> E[Map Risk Levels to Forest Names]
     E --> F{Is forest in Watchlist & Open?}
     F -- Yes --> G[Format SMS Message]
     F -- No --> H[Log & Terminate]
     G --> I[Send SMS via Free Mobile API]
 ```
 
-### 1. Scraping the Prefecture Data
+### 1. Fetching the Prefecture Data
 
-The prefecture updates the risk levels on a dedicated platform: `risque-prevention-incendie.fr`. The scraper performs a dual-step operation:
-* **HTML Parsing**: It uses `BeautifulSoup` to scrape the prefecture's main page for the department (e.g., `/13` for Bouches-du-Rhône) to extract the mapping of forest IDs to their human-readable names from the official table.
-* **JSON Retrieval**: It fetches the detailed daily risk level data directly from the platform's JSON API (e.g., `import_data/{date}.json`). The script is designed with defensive fallback logic: it attempts to fetch tomorrow's date first (published in the evening) and falls back to today's date if tomorrow's data is not yet online.
+The prefecture updates the risk levels on a dedicated platform: `risque-prevention-incendie.fr`. The scraper fetches the detailed daily risk level data directly from the platform's JSON API (e.g., `import_data/{date}.json`). 
+
+The script is designed with defensive fallback logic: it attempts to fetch tomorrow's date first (published in the evening) and falls back to today's date if tomorrow's data is not yet online.
 
 ### 2. Translating Levels to Running Safety
 
@@ -51,7 +50,7 @@ The script translates the numerical risk levels (0 to 4) into binary execution s
 
 ### 3. The SMS Alert System (and API Gotchas)
 
-To get the notification directly on my phone without needing a custom mobile app, I integrated the **Free Mobile SMS API** using the `freeMobileSMS` library. 
+To get the notification directly on my phone without needing a custom mobile app, I integrated the **Free Mobile SMS API** using my personal library, [freeMobileSMS](https://github.com/nakmuaycoder/freeMobileSMS).
 
 During early testing, I ran into a classic encoding issue. I initially formatted the SMS payload with visual emojis:
 * `🟢` for open forests
@@ -60,15 +59,7 @@ During early testing, I ran into a classic encoding issue. I initially formatted
 
 While this looked great on paper, the Free Mobile SMS gateway API proved highly sensitive to non-ASCII unicode characters, resulting in silent delivery failures or garbled text. 
 
-To make the system bulletproof, I refactored the formatting logic to use plain text ASCII tags:
-```python
-def format_status_message(self, date_label: str, is_mock: bool = False) -> str:
-    ...
-    symbol = "[OK]" if level in [1, 2] else "[KO]"
-    lines.append(f"{symbol} {forest}")
-    return "\n".join(lines)
-```
-This ensures 100% delivery reliability while maintaining clean, legible lists directly on my lock screen.
+To make the system bulletproof, I refactored the formatting logic to use plain text ASCII tags (like `[OK]` and `[KO]`) instead of emojis. This ensures delivery reliability while maintaining clean, legible lists directly on my lock screen.
 
 ---
 
@@ -76,33 +67,14 @@ This ensures 100% delivery reliability while maintaining clean, legible lists di
 
 Instead of hosting this on a dedicated server or relying entirely on a local NAS cron, I configured a **GitHub Actions** workflow to run the checks.
 
-The workflow is scheduled via cron to run every day at **20:00 (Paris time)**:
-```yaml
-on:
-  schedule:
-    # 18:00 UTC is 20:00 Paris time (during Daylight Saving Time)
-    - cron: '0 18 * * *'
-  workflow_dispatch: # Allows manual trigger
-```
+The workflow is scheduled via cron to run automatically every day at **20:00 (Paris time)** (18:00 UTC) during the summer season, which corresponds to the time when next-day access data is guaranteed to be updated by the prefectures.
 
-By specifying the timezone context carefully, we guarantee the check runs after the prefecture's 17:00 publication deadline. The workflow pulls configuration parameters and API credentials securely from GitHub Repository Secrets:
+By specifying the timezone context carefully, we guarantee the check runs after the prefecture's publication deadline. The workflow pulls configuration parameters and API credentials securely from GitHub Repository Secrets:
 * `FREE_MOBILE_USER` & `FREE_MOBILE_PASS` for the API gateway.
 * `DEPARTMENT` (to target specific regions, e.g. `13` or `83`).
 * `WATCHLIST` (a JSON array of specific massifs, like `["Alpilles", "Calanques"]` or `["ALL"]`).
 
 ---
-
-## Code Quality & Modern Tooling
-
-To keep this project maintainable and clean, I adopted several modern Python standards:
-* **`uv`**: I use Astral's super-fast package manager `uv` to handle dependencies and run the environment. The virtual environment is managed easily via a simple `Makefile`.
-* **`Ruff`**: For formatting and linting, ensuring code style is clean and consistent.
-* **`detect-secrets`**: Integrated into pre-commit hooks to ensure no SMS API credentials ever leak into public commits.
-
-```bash
-# Running mock checks to test formatting
-uv run python -m where_to_run_today.main --mock
-```
 
 ## Zero Friction, Zero Fines
 
