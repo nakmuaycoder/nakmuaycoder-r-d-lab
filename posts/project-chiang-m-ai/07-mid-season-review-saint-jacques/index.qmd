@@ -3,7 +3,7 @@ title: "Project Chiang M-AI - Episode 7: Mid-Season Review - Trail du Saint Jacq
 subtitle: "April Peak, a Weight Anomaly, and Dehydration in the Heat."
 description: "A retrospective of the Trail du Saint Jacques (86km, 3500m D+). Training metrics looked great, but heat, running out of water, and mental fatigue led to a DNF at 70km (3200m D+)."
 author: "nakmuaycoder"
-date: "2026-07-12"
+date: "2026-07-14"
 categories: [race-report, data-analysis, sports-science, project-chiang-m-ai]
 image: "dnf.jpeg"
 title-block-banner: false
@@ -78,17 +78,17 @@ While nutrition was perfect, hydration suffered a catastrophic failure in the sc
 
 - **The Incident**: Between Aid Station 3 (R3) and Aid Station 4 (R4), I ran completely out of water. I spent nearly **1.5 hours** without water in the heat.
 - **The Crash**: I arrived at R4 severely dehydrated and electrolyte-depleted. 
-- **The R4 Recovery**: At R4, I met my wife and mother. To recover, I ate instant noodles (Mama) and drank hot bouillon to replenish sodium. 
-- **The Result**: The broth and noodles worked wonders. Even though the dehydration triggered cramps, I was still running strong. When I wanted to, I was galloping like a mountain goat ("cavalais comme un cabri"), easily overtaking other runners. The physical capacity to finish was never the limiting factor.
+- **The R4 Recovery**: At R4, I met my wife and mother. To recover, I ate instant noodles (Mama) and drank hot broth to replenish sodium. 
+- **The Result**: The broth and noodles worked wonders. Even though the dehydration triggered cramps, I was still running strong. When I wanted to, I was galloping like a mountain goat, easily overtaking other runners. The physical capacity to finish was never the limiting factor.
 
 > **💡 The Real Lesson:** 
-> Even when you are at peak fitness, you can blow up not because of physical failure or race difficulty, but due to pure mental weariness ("lassitude"). When the mind gets bored and exhausted, finding a way to shift your focus ("se changer les idées") is the key to survival.
+> Even when you are at peak fitness, you can blow up not because of physical failure or race difficulty, but due to pure mental weariness. When the mind gets bored and exhausted, finding a way to shift your focus is the key to survival.
 
 ---
 
 ## 4. The Mental Game: "The Dark Place" and Social Support
 
-The DNF was ultimately a mental choice, not a physical necessity. I had the legs and the cardiovascular engine to cross the finish line; I simply reached a point of intense boredom ("l'ennui") and mental exhaustion in the heat where I decided I had had enough.
+The DNF was ultimately a mental choice, not a physical necessity. I had the legs and the cardiovascular engine to cross the finish line; I simply reached a point of intense boredom and mental exhaustion in the heat where I decided I had had enough.
 
 ### The Social Boost & The Need for a Trigger
 Before reaching R4, I was deep in "the dark place". Seeing my family at the aid station was a massive relief, but it also made it easier to stop. 
@@ -115,9 +115,12 @@ This physiological recovery is directly reflected in how quickly training resume
 * **After Chiang Mai (2025)**: It took **11 days of absolute rest** before attempting a short 4km test run.
 * **After Saint Jacques (2026)**: Active recovery (walking and light cycling) started after **just 3 days**, and I resumed structured high-intensity work (10x 1-minute hill repeats) **only 10 days after the race**.
 
-The preparation is working. I just need to fix the hydration issues, manage my weight, and prepare for the mental battles before the main event in Chiang Mai.
+### The Verdict on the AI-Coached Training
+Ultimately, this race validated the training plan prescribed by Gemini. Physically, the preparation was a success: the joints held up, the cardiovascular engine was powerful, and the body recovered extremely fast. The failure was entirely in execution (hydration) and psychology (mental exhaustion under extreme heat)—areas that no training plan can fully control.
 
-Next up: the **Gauja 50k in Latvia** during the summer holidays—a great opportunity to practice mental focus and hydration strategy in a different setting.
+With the training logic validated, the focus now shifts to managing weight, perfecting the hydration protocol, and building mental resilience before the main event in Chiang Mai.
+
+Next up: the **[Gauja 50k](https://gauja.utmb.world/races/50K)** in Latvia during the summer holidays—a great opportunity to practice mental focus and hydration strategy in a different setting.
 
 ---
 
