@@ -14,8 +14,22 @@
 <title>nakmuaycoder r&amp;d lab</title>
 <link>https://nakmuaycoder.github.io/nakmuaycoder-r-d-lab/</link>
 </image>
-<generator>quarto-1.8.27</generator>
-<lastBuildDate>Sat, 14 Mar 2026 00:00:00 GMT</lastBuildDate>
+<generator>quarto-1.9.38</generator>
+<lastBuildDate>Sun, 12 Jul 2026 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>Project Chiang M-AI - Episode 6: Forest Fire Logistics (Where to Run Today?)</title>
+  <link>https://nakmuaycoder.github.io/nakmuaycoder-r-d-lab/posts/project-chiang-m-ai/06-where-to-run-today/</link>
+  <description><![CDATA[ How a Python-based scraper, GitHub Actions, and Free Mobile SMS API alerts keep my ultra-trail long runs safe and legal during the high-risk Mediterranean summer. ]]></description>
+  <category>Python</category>
+  <category>Ultra-Trail</category>
+  <category>Automation</category>
+  <category>Scraping</category>
+  <category>GitHub Actions</category>
+  <category>SMS Alerts</category>
+  <guid>https://nakmuaycoder.github.io/nakmuaycoder-r-d-lab/posts/project-chiang-m-ai/06-where-to-run-today/</guid>
+  <pubDate>Sun, 12 Jul 2026 00:00:00 GMT</pubDate>
+  <media:content url="https://nakmuaycoder.github.io/nakmuaycoder-r-d-lab/posts/project-chiang-m-ai/06-where-to-run-today/forest_monitor.jpg" medium="image" type="image/jpeg"/>
+</item>
 <item>
   <title>Project Chiang M-AI - Episode 5: Full Auto Mode (Wellness-Based Adaptation)</title>
   <link>https://nakmuaycoder.github.io/nakmuaycoder-r-d-lab/posts/project-chiang-m-ai/05-wellness-based-adaptation/</link>
