@@ -49,6 +49,17 @@ While the training and recovery volume was managed well, my nutritional intake w
 
 Without the high daily caloric expenditure of the April volume, the lack of dietary discipline led to a significant weight gain. When I stepped on the scale on the morning of the race, I faced the reality: **+5 kg** gained over the last month and a half.
 
+### 6-Month Training Volume Comparison
+Comparing the 6 months of running preparation between the 2025 Chiang Mai and the 2026 Saint Jacques races highlights the difference in volume and vertical training:
+
+![6-Month Training Volume Comparison: Chiang Mai 2025 vs. Saint Jacques 2026](training_comparison.png)
+
+To supplement running, cross-training (walking/hiking and biking) was incorporated into the preparation. Below is the comparison of walking and biking volume (distance in kilometers and elevation gain in meters) for the 6 months leading up to both races:
+
+![6-Month Cross-Training Comparison: Chiang Mai 2025 vs. Saint Jacques 2026](crosstraining_comparison.png)
+
+An interesting pattern visible in these comparison plots is the injury period during the 2025 Chiang Mai preparation. Around Week -15, a plantar fasciitis flare-up forced a temporary halt in running. The graphs clearly show this transition: running volume drops to near zero, while biking distance spikes significantly as cross-training was used to preserve aerobic fitness. In comparison, the 2026 build-up to Saint Jacques shows a much more stable and continuous training volume.
+
 ---
 
 ## 3. Race-Day Analysis: Nutrition, Hydration, and Cramps
@@ -89,6 +100,10 @@ This highlighted a key vulnerability. When running solo for hours in difficult c
 Despite the DNF, there is positive news:
 1. **No Plantar Fasciitis Flare-up**: The transition to the **Asics Trabuco Max** proved to be the correct choice. The cushioning and geometry kept the foot pain-free.
 2. **Fast HRV Recovery**: Post-race HRV returned to baseline remarkably fast. This indicates that the foundational cardiovascular engine was well-prepared and did not suffer deep systemic damage.
+
+Comparing the HRV evolution 30 days before and 30 days after both races highlights this difference. Unlike in 2025, where recovery was slower, the 2026 post-race HRV shows a very swift rebound:
+
+![HRV Trend Comparison: Hoka Chiang Mai 2025 vs. Trail du Saint Jacques 2026](hrv_trend.png)
 
 The preparation is working. I just need to fix the hydration issues, manage my weight, and prepare for the mental battles before the main event in Chiang Mai.
 
