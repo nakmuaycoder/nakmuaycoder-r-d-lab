@@ -1,7 +1,7 @@
 ---
-title: "Project Chiang M-AI - Episode 8: Taming Plantar Fasciitis: Footwear, Strength, and Low-Cadence Cycling"
-subtitle: "Managing physical limitations: how my AI coach diagnosed my injury, adapted my gear, and restructured my training."
-description: "When training volume leads to injury, adaptation is the only way forward. A look at how we managed a severe plantar fasciitis flare-up using footwear changes, targeted strength training, and low-cadence bike work."
+title: "Project Chiang M-AI - Episode 8: Taming Plantar Fasciitis and Ankle Sprains: Footwear, Strength, and Low-Cadence Cycling"
+subtitle: "Managing physical limitations: how my AI coach diagnosed my injuries, adapted my gear, and restructured my training."
+description: "When training volume leads to injury, adaptation is the only way forward. A look at how we managed a severe plantar fasciitis flare-up and an early-season ankle sprain using footwear changes, targeted strength training, and low-cadence bike work."
 author: "nakmuaycoder"
 date: "2026-07-19"
 categories: [rehabilitation, strength-training, sports-science, coaching]
@@ -11,27 +11,35 @@ draft: false
 
 No training plan executes perfectly from start to finish. In ultra-running, the high mechanical stress of building volume inevitably tests the durability of the body. When a physical limitation or injury arises, the key is not to push through the pain, but to adapt the training parameters to keep the aerobic engine progressing while allowing the tissues to heal.
 
-In this episode, we analyze how my AI coach helped manage and resolve a severe **plantar fasciitis (aponevrosite plantaire)** that originally occurred in 2025 during the preparation for my first 100k, and how we structured the 2026 training to prevent any recurrence.
+In this episode, we analyze how my AI coach helped manage two distinct physical setbacks: a severe **plantar fasciitis (aponevrosite plantaire)** that originally occurred in 2025, and a sudden **ankle sprain** at the start of the 2026 season.
 
 ---
 
-## 1. The 2025 Flare-up and Initial Adaptation
+## 1. Plantar Fasciitis: The 2025 Flare-up and Initial Adaptation
 
-During the build-up for the Chiang Mai 100k in 2025, my training logs show a sharp disruption in August. I started experiencing severe heel pain, particularly during the first steps out of bed in the morning—a classic symptom of plantar fasciitis.
+During the build-up for the Chiang Mai 100k in 2025, my training was sharply disrupted in August. I started experiencing severe heel pain, particularly during the first steps out of bed in the morning.
 
-Looking at the training records in [2025-workouts.csv](file:///home/nakmuaycoder/Documents/dev/rnd-lab/posts/project-chiang-m-ai/08-injury-management-strength-cycling/2025-workouts.csv), the impact on my schedule was immediate:
-*   **August 24, 2025:** A running session was cancelled with the note: `Remplace CAP inflammation facia`.
-*   **August 27, 2025:** The scheduled running interval session was replaced with the note: `Faciite: Remplace la session intervalles de la veille`.
+The AI coach analyzed my symptoms and suggested a high probability of **plantar fasciitis**. Instead of stopping training completely, the coach recommended an immediate transition to non-impact cross-training on the home trainer. The goal was to match the target cardiovascular zones (endurance and intervals) while giving the plantar fascia complete rest from impact.
 
-Instead of stopping completely, the AI coach recommended a transition to non-impact cross-training. To maintain cardiorespiratory fitness, running sessions were mapped to cycling workouts on the home trainer. The goal was to match the target cardiovascular zones (endurance and high-intensity intervals) while giving the plantar fascia complete rest from impact.
+To build local muscular endurance and tendon strength without running impacts, the coach integrated specific low-cadence cycling sessions. These workouts focused on generating high torque at a low pedaling rate (around 70–75 rpm), simulating the muscular demands of steep mountain climbs.
 
 ---
 
-## 2. Footwear Adaptation
+## 2. The 2026 Ankle Sprain: Triathlete Pedaling and Physio Feedback
 
-Plantar fasciitis is heavily influenced by running mechanics and footwear. The AI coach audited my shoe rotation and suggested that my existing low-drop, minimally cushioned models were placing excessive strain on my calves and Achilles tendon, which in turn increased tension on the plantar fascia.
+Right at the start of the 2026 season, during my very first training run, I suffered a sudden ankle sprain. This mechanical failure was particularly frustrating, as it occurred just the day before I was scheduled to start my proprioception exercises. 
 
-The coach recommended transitioning to shoes with specific characteristics:
+Once again, the AI coach refactored the schedule to keep the cardiovascular engine active. It suggested moving to the home trainer immediately. However, to avoid placing lateral stress or tension on the injured ankle ligaments, the LLM suggested a classic triathlete trick: **pedaling with the foot resting flat on top of the cycling shoe** rather than clipping in.
+
+When I discussed this plan with my physiotherapist, she validated the approach but provided a critical piece of advice:
+*   She warned me to be extremely careful when unclipping. The rotational, twisting movement required to release a cycling shoe from the pedal places significant lateral strain on the ankle ligaments, which could easily aggravate the sprain.
+*   By keeping the foot flat on top of the shoe (or using flat pedals), I could harvest all the cardiorespiratory benefits of the workout while bypassing the danger of the unclipping motion.
+
+---
+
+## 3. Footwear Adaptation
+
+Plantar fasciitis is heavily influenced by running mechanics and footwear. The AI coach audited my shoe rotation and suggested transitioning to shoes with specific characteristics to reduce tension on the plantar fascia:
 1.  **Maximalist Cushioning:** A high stack height to absorb vertical impact forces.
 2.  **Rocker Geometry:** A curved sole that rolls the foot forward, reducing the extension of the toes and the mechanical stretch on the fascia during push-off.
 3.  **Moderate to High Drop:** A higher heel-to-toe drop (8mm+) to reduce the baseline stretch on the calves and Achilles tendon.
@@ -40,38 +48,11 @@ This guidance led directly to the adoption of the **Asics Trabuco Max**, which b
 
 ---
 
-## 3. Low-Cadence Force Work on the Home Trainer
-
-To build local muscular endurance and tendon strength without running impacts, the coach integrated specific low-cadence cycling sessions. These workouts focus on generating high torque at a low pedaling rate, simulating the muscular demands of steep mountain climbs.
-
-Comparing my training logs, we can track these low-cadence sessions:
-*   **In 2025:** On August 29, during the injury recovery phase, I executed a `Velo force: Faible cadence` session on the home trainer, holding an average cadence of **72 rpm** for nearly an hour.
-*   **In 2026:** The low-cadence force work was integrated more systematically from the start of the season. In [2026-workouts.csv](file:///home/nakmuaycoder/Documents/dev/rnd-lab/posts/project-chiang-m-ai/08-injury-management-strength-cycling/2026-workouts.csv), we see workouts like:
-    *   **January 23, 2026:** `Force K3 - Initiation` (1h00, average cadence **71 rpm**).
-    *   **January 27, 2026:** `Force K3 - Volume` (1h15, average cadence **77 rpm**).
-    *   **April 14, 2026:** `Vélo Force - Home Trainer` (1h09, average cadence **65 rpm**).
-
-These sessions built strength in the quadriceps, glutes, and calves while sparing the joints and tendons from the repetitive impact of running.
-
----
-
 ## 4. Restructuring Strength Training to Prevent Recurrence
 
-The biggest change between the 2025 and 2026 preparations lies in the structure and focus of strength work. In 2025, my strength sessions were mostly light core work, ankle stability, and quick morning routines. In [2025-workouts.csv](file:///home/nakmuaycoder/Documents/dev/rnd-lab/posts/project-chiang-m-ai/08-injury-management-strength-cycling/2025-workouts.csv), we see:
-*   `Core training` (focused on abdominal stability).
-*   `Prévention-cheville` (ankle stability work).
-*   `Renforcement stabilisateur de hanche` (hip stabilizers).
-*   `Réveil matin` (short 9 to 15-minute bodyweight routines).
+The biggest change between the 2025 and 2026 preparations lies in the structure and focus of strength work. In 2025, my strength sessions were mostly light core work, ankle stability, and quick bodyweight routines. While helpful, they did not address the chronic weakness in the posterior chain (calves, soleus, hamstrings, glutes) which was the root cause of my plantar fasciitis.
 
-While helpful, this did not address the chronic weakness in the posterior chain (calves, soleus, hamstrings, glutes) which was the root cause of my plantar fasciitis.
-
-For the 2026 preparation, the AI coach overhauled my strength routine, introducing structured sessions targeted at strengthening the posterior chain. In [2026-workouts.csv](file:///home/nakmuaycoder/Documents/dev/rnd-lab/posts/project-chiang-m-ai/08-injury-management-strength-cycling/2026-workouts.csv), these are logged as:
-*   `Musculation Légère Coach`
-*   `Musculation Mobilité Coach`
-*   `Musculation Gainage Coach`
-*   `[Coach] Musculation - Renfo Complet`
-
-These workouts incorporated:
+For the 2026 preparation, the AI coach overhauled my strength routine, introducing structured sessions targeted at strengthening the posterior chain. These workouts incorporated:
 *   **Eccentric Calf and Soleus Raises:** Heavy, slow calf raises to increase the load tolerance of the Achilles tendon and plantar fascia.
 *   **Hamstring and Glute Loading:** Exercises like single-leg deadlifts and glute bridges to ensure the larger muscle groups of the posterior chain absorb the shock of running, rather than transferring it entirely to the foot.
 
@@ -79,7 +60,7 @@ These workouts incorporated:
 
 ## Conclusion: Validation in the Field
 
-The ultimate test of this adaptation strategy was the **Trail du Saint Jacques** (Episode 7). Despite completing 70km with 3,200 meters of elevation gain on steep, technical descents, the plantar fasciitis did not flare up. The combination of targeted posterior chain strength work, protective rockered footwear, and low-cadence cycling force training built the mechanical durability needed to keep my feet healthy.
+The ultimate test of this adaptation strategy was the **Trail du Saint Jacques** (Episode 7). Despite completing 70km with 3,200 meters of elevation gain on steep, technical descents, both my ankle and my plantar fascia remained completely silent. The combination of targeted posterior chain strength work, protective rockered footwear, and low-cadence cycling force training built the mechanical durability needed to keep my feet healthy.
 
 ---
 
