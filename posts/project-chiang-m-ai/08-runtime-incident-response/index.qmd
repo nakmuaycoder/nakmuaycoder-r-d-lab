@@ -1,0 +1,95 @@
+---
+title: "Project Chiang M-AI - Episode 8: Runtime & Plantar Fasciitis Incident Response"
+subtitle: "Handling Hardware Failures: How the LLM diagnosed, refactored, and patched my plantar fasciitis."
+description: "When the body experiences a regression or hardware failure, the coach turns into an Incident Response team. A deep dive into how Gemini diagnosed my aponeurosis, optimized my footwear, and patched my posterior chain."
+author: "nakmuaycoder"
+date: "2026-07-19"
+categories: [ops, incident-management, rehabilitation, ai-coaching, sports-science]
+title-block-banner: false
+draft: false
+---
+
+In the software world, we write unit tests, design clean architectures, and configure automated validation pipelines (as discussed in [Episode 2](../02-from-generation-to-validation/)). But once the application is running in production, it is subjected to high-entropy environments. Systems crash, memory leaks occur, and hardware fails.
+
+For a runner, a "production crash" is an injury.
+
+In this episode, we look at **Runtime & Incident Response**: how we treated a critical mechanical failure—my **Plantar Fasciitis (aponevrosite plantaire)**—not as a season-ending defeat, but as a system bug to be triaged, hotfixed, and permanently patched.
+
+---
+
+## 1. Triage: The 2025 Diagnostic
+
+During the 2025 build-up for the Chiang Mai 160km, my system experienced a sudden runtime error. Every morning, the first steps out of bed felt like stepping on a nail. The heel was radiating pain, and my running volume crashed to zero.
+
+Instead of navigating the traditional cycles of athlete denial, I treated my pain as a system log. I fed the symptoms, timing, and mechanical feedback into Gemini:
+
+*   **Symptoms logged:** Sharp heel pain during early morning load-bearing steps, subsiding slightly after warming up, but flaring up again during running impacts.
+*   **The LLM Triage:** Gemini analyzed the telemetry and flagged a high probability of **plantar fasciitis (aponevrosite plantaire)**. It explained that my mechanical "chassis" was failing under the training load, pointing to local tissue inflammation of the fascia.
+*   **The Circuit Breaker:** The LLM immediately initiated a circuit breaker protocol, disabling all running tasks to prevent further tissue degradation.
+
+---
+
+## 2. Environment Configuration: The Shoe Refactor
+
+A software bug can sometimes be mitigated by modifying the runtime environment. For a runner, the primary physical environment interface is the shoe. 
+
+I asked Gemini to audit my footwear strategy. It identified that my current choice of low-drop, minimally cushioned shoes was placing excessive eccentric load on my posterior chain (calves and Achilles tendon), which directly transferred high tension to the plantar fascia.
+
+It proposed a **footwear refactoring plan**:
+
+1.  **Increase Stack Height / Cushioning:** Deploy highly cushioned midsoles to absorb vertical ground reaction forces.
+2.  **Rocker Geometry:** Use a shoe with a curved, rockered sole profile. This mechanical guide reduces the extension of the toes and the windlass mechanism, taking the mechanical stretch off the plantar fascia during the push-off phase.
+3.  **Optimize the Drop:** Transition to a higher heel-to-toe drop (8mm+) to temporarily shorten the Achilles tendon and calf muscles, reducing the baseline tension pulling on the heel.
+
+This diagnostic and recommendation led directly to the adoption of the **Asics Trabuco Max**. The transition was a massive success: it provided the mechanical workaround my foot needed to sustain volume without triggering the pain threshold.
+
+---
+
+## 3. Failover Protocol: Biking as a Redundant Micro-service
+
+When the "Running" service goes offline, you cannot simply stop training without losing months of accumulated fitness. We needed a failover server to handle the cardiovascular load.
+
+Gemini designed a **Load Balancing** protocol using the bike (home trainer) to replace running sessions while keeping the systemic load constant:
+
+*   **Zone & Quality Translation:** The LLM did not just prescribe lazy recovery spins. It mapped running workouts to cycling equivalents to target the exact same physiological qualities.
+*   **Interval Equivalents:** High-intensity running intervals (e.g., Zone 5 VO2max sessions) were refactored into high-cadence cycling intervals on the trainer, matching the cardiorespiratory stress and heart rate response without the joint impact.
+*   **Volume Preservation:** Endurance runs were replaced with longer, structured Zone 2 cycling blocks to keep the aerobic engine fully optimized. 
+
+By running on this redundant infrastructure, the cardiorespiratory engine remained fully updated, while the foot remained under a 100% impact-free recovery cycle.
+
+---
+
+## 4. The Preventive Patch: Posterior Chain Strengthening
+
+A failover protocol keeps the system alive, but you cannot run an ultra-trail on a bike. To deploy back to the running infrastructure, we needed a permanent patch to prevent **regressions** (reflambage).
+
+Plantar fasciitis is rarely an isolated issue; it is almost always a downstream symptom of upstream weaknesses. Gemini pointed out that the plantar fascia is the anchor of the entire posterior chain. If the calves, soleus, hamstrings, or glutes are weak or tight, the fascia acts as the single point of failure.
+
+During the previous training blocks, the LLM forced the integration of a **Posterior Chain Strengthening Patch** into my weekly sprints:
+
+*   **Eccentric Calf & Soleus Loading:** Heavy, slow heel raises (both straight-leg and bent-knee to target the gastrocnemius and soleus muscles).
+*   **Posterior Activation:** Hamstring curls, glute bridges, and single-leg deadlifts to distribute the mechanical load upward.
+*   **Mechanical Integrity:** Building a strong posterior chain allowed my body to absorb impact through the large muscle groups rather than dumping the stress directly into the foot.
+
+### The Validation
+
+As we reviewed in the [Saint-Jacques Post-Mortem](../07-mid-season-review-saint-jacques/), the effectiveness of this patch was fully validated in competition. Despite running 70km with 3200m of vertical drop on rugged terrain, the plantar fascia remained completely silent. The posterior chain did its job, the shoes protected the chassis, and the system did not reflambé.
+
+---
+
+## Conclusion: Empathy-Free Operations
+
+An AI coach has a unique advantage over a human coach: it is completely immune to the emotional biases of the athlete. When I wanted to push through the pain, the LLM looked at the data, triggered the circuit breaker, and deployed the hotfix.
+
+By treating the body as an engineering system, we solved the plantar fasciitis bug with:
+1.  **Diagnostic & Triage:** Identifying the aponeurositis early.
+2.  **Environment Tuning:** Swapping shoes for optimal mechanical geometry.
+3.  **Failover Operations:** Balancing the load with targeted bike work.
+4.  **Security Patches:** Strengthening the posterior chain to prevent regressions.
+
+The system is now patched, stable, and ready for the final build phase.
+
+---
+
+**Project Chiang M-AI:**
+[< Ep. 7: Saint Jacques Post-Mortem](../07-mid-season-review-saint-jacques/) | **Ep. 8: Runtime & Plantar Fasciitis** | [Ep. 9: The Final Build (Coming Soon)](#)
