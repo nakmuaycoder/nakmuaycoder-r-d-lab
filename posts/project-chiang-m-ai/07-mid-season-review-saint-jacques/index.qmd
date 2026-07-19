@@ -6,7 +6,7 @@ author: "nakmuaycoder"
 date: "2026-07-14"
 categories: [race-report, data-analysis, sports-science, project-chiang-m-ai]
 image: "dnf.jpeg"
-title-block-banner: false
+title-block-banner: true
 draft: false
 ---
 
