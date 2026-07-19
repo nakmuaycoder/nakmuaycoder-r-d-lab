@@ -29,11 +29,11 @@ To preserve local muscular endurance and tendon stiffness without running, the c
 
 Right at the start of the 2026 season, during my very first training run, I suffered a sudden ankle sprain. The timing was bitterly ironic—it happened just one day before I was scheduled to begin my proprioception block.
 
-Once again, the AI refactored the schedule to protect the injured joint while keeping the cardiorespiratory engine active. It directed me back to the home trainer, but with a crucial modification to avoid placing lateral tension on the healing ankle ligaments: instead of switching to flat pedals, it suggested a triathlete trick of leaving the cycling shoes clipped into the pedals and **pedaling with the feet resting on top of the shoes** to avoid unclipping.
+Once again, the AI refactored the schedule to protect the injured joint while keeping the cardiorespiratory engine active. It directed me back to the home trainer, but with a crucial modification to avoid placing lateral tension on the healing ankle ligaments: it suggested riding normally with my cycling shoes clipped in, but **slipping my foot out of the shoe when stopping**, leaving the shoe itself clipped to the pedal to avoid having to perform the twisting unclipping motion.
 
 When I ran this protocol by my physiotherapist, she validated the approach and added a critical piece of biomechanical insight:
 * **The Danger of Unclipping:** She warned that the sharp, twisting motion required to release a cycling cleat places immense lateral shear force on the ankle ligaments, which could easily re-tear the healing tissue.
-* **The Foot-on-Shoe Workaround:** By leaving the shoes clipped into the pedals and resting my feet flat on top of them, I could harvest 100% of the cardiovascular benefits while completely bypassing the risk and twisting motion of unclipping.
+* **The Slip-Out Workaround:** By riding normally and simply sliding my foot out of the shoe at the end of the session, leaving the shoe clipped to the pedal, I could harvest 100% of the cardiovascular benefits while completely bypassing the risk and twisting motion of unclipping.
 
 ---
 
