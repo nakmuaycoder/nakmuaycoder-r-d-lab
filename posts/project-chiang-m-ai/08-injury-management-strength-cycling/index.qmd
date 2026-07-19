@@ -7,7 +7,7 @@ date: "2026-07-19"
 categories: [rehabilitation, strength-training, sports-science, coaching]
 title-block-banner: false
 image: "ep08.png"
-draft: false
+draft: true
 ---
 
 No ultra-running training plan executes perfectly from start to finish. The high mechanical stress of building volume inevitably tests the body's durability. When a physical limitation arises, the goal isn't to stubbornly push through the pain, but to adapt the parameters—keeping the aerobic engine running while allowing damaged tissues time to heal.
