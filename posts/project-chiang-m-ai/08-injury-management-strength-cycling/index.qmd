@@ -5,7 +5,7 @@ description: "When training volume leads to injury, adaptation is the only way f
 author: "nakmuaycoder"
 date: "2026-07-19"
 categories: [rehabilitation, strength-training, sports-science, coaching]
-title-block-banner: false
+title-block-banner: true
 image: "ep08.png"
 draft: true
 ---
