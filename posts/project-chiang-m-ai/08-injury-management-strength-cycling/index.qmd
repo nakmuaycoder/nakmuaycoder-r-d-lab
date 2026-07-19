@@ -9,58 +9,63 @@ title-block-banner: false
 draft: false
 ---
 
-No training plan executes perfectly from start to finish. In ultra-running, the high mechanical stress of building volume inevitably tests the durability of the body. When a physical limitation or injury arises, the key is not to push through the pain, but to adapt the training parameters to keep the aerobic engine progressing while allowing the tissues to heal.
+No ultra-running training plan executes perfectly from start to finish. The high mechanical stress of building volume inevitably tests the body's durability. When a physical limitation arises, the goal isn't to stubbornly push through the pain, but to adapt the parameters—keeping the aerobic engine running while allowing damaged tissues time to heal.
 
-In this episode, we analyze how my AI coach helped manage two distinct physical setbacks: a severe **plantar fasciitis (aponevrosite plantaire)** that originally occurred in 2025, and a sudden **ankle sprain** at the start of the 2026 season.
-
----
-
-## 1. Plantar Fasciitis: The 2025 Flare-up and Initial Adaptation
-
-During the build-up for the Chiang Mai 100k in 2025, my training was sharply disrupted in August. I started experiencing severe heel pain, particularly during the first steps out of bed in the morning.
-
-The AI coach analyzed my symptoms and suggested a high probability of **plantar fasciitis**. Instead of stopping training completely, the coach recommended an immediate transition to non-impact cross-training on the home trainer. The goal was to match the target cardiovascular zones (endurance and intervals) while giving the plantar fascia complete rest from impact.
-
-To build local muscular endurance and tendon strength without running impacts, the coach integrated specific low-cadence cycling sessions. These workouts focused on generating high torque at a low pedaling rate (around 70–75 rpm), simulating the muscular demands of steep mountain climbs.
+In this episode, we break down how my AI coach helped me navigate two distinct physical setbacks: a severe bout of **plantar fasciitis (aponevrosite plantaire)** in 2025, and a sudden **ankle sprain** at the dawn of the 2026 season.
 
 ---
 
-## 2. The 2026 Ankle Sprain: Triathlete Pedaling and Physio Feedback
+## 1. Plantar Fasciitis: The 2025 Flare-Up
 
-Right at the start of the 2026 season, during my very first training run, I suffered a sudden ankle sprain. This mechanical failure was particularly frustrating, as it occurred just the day before I was scheduled to start my proprioception exercises. 
+During the build-up for the 2025 Chiang Mai 100k, my August training block was sharply derailed. I began experiencing severe, localized heel pain—most aggressively during those first few agonizing steps out of bed in the morning. 
 
-Once again, the AI coach refactored the schedule to keep the cardiovascular engine active. It suggested moving to the home trainer immediately. However, to avoid placing lateral stress or tension on the injured ankle ligaments, the LLM suggested a classic triathlete trick: **pedaling with the foot resting flat on top of the cycling shoe** rather than clipping in.
+Based on the symptom profile, the AI coach suggested a high probability of **plantar fasciitis**, a diagnosis later confirmed by a doctor and an ultrasound. Rather than prescribing complete rest, the system immediately pivoted my schedule to non-impact cross-training on the home trainer, and later designed a progressive return-to-running plan to rebuild impact tolerance without triggering a relapse. The objective was simple: match the targeted cardiovascular stimulus (both endurance and intervals) while giving the plantar fascia absolute rest from ground impact.
 
-When I discussed this plan with my physiotherapist, she validated the approach but provided a critical piece of advice:
-*   She warned me to be extremely careful when unclipping. The rotational, twisting movement required to release a cycling shoe from the pedal places significant lateral strain on the ankle ligaments, which could easily aggravate the sprain.
-*   By keeping the foot flat on top of the shoe (or using flat pedals), I could harvest all the cardiorespiratory benefits of the workout while bypassing the danger of the unclipping motion.
+To preserve local muscular endurance and tendon stiffness without running, the coach prescribed specific low-cadence cycling sessions. By grinding out high torque at a low pedaling rate (around 50–60 rpm), these workouts successfully simulated the heavy muscular demands of steep mountain climbing.
 
 ---
 
-## 3. Footwear Adaptation
+## 2. The 2026 Ankle Sprain: Triathlete Hacks & Physio Validation
 
-Plantar fasciitis is heavily influenced by running mechanics and footwear. The AI coach audited my shoe rotation and suggested transitioning to shoes with specific characteristics to reduce tension on the plantar fascia:
-1.  **Maximalist Cushioning:** A high stack height to absorb vertical impact forces.
-2.  **Rocker Geometry:** A curved sole that rolls the foot forward, reducing the extension of the toes and the mechanical stretch on the fascia during push-off.
-3.  **Moderate to High Drop:** A higher heel-to-toe drop (8mm+) to reduce the baseline stretch on the calves and Achilles tendon.
+Right at the start of the 2026 season, during my very first training run, I suffered a sudden ankle sprain. The timing was bitterly ironic—it happened just one day before I was scheduled to begin my proprioception block.
 
-This guidance led directly to the adoption of the **Asics Trabuco Max**, which became my primary shoe for volume, keeping the foot comfortable and pain-free.
+Once again, the AI refactored the schedule to protect the injured joint while keeping the cardiorespiratory engine active. It directed me back to the home trainer, but with a crucial modification to avoid placing lateral tension on the healing ankle ligaments: instead of switching to flat pedals, it suggested a triathlete trick of leaving the cycling shoes clipped into the pedals and **pedaling with the feet resting on top of the shoes** to avoid unclipping.
 
----
-
-## 4. Restructuring Strength Training to Prevent Recurrence
-
-The biggest change between the 2025 and 2026 preparations lies in the structure and focus of strength work. In 2025, my strength sessions were mostly light core work, ankle stability, and quick bodyweight routines. While helpful, they did not address the chronic weakness in the posterior chain (calves, soleus, hamstrings, glutes) which was the root cause of my plantar fasciitis.
-
-For the 2026 preparation, the AI coach overhauled my strength routine, introducing structured sessions targeted at strengthening the posterior chain. These workouts incorporated:
-*   **Eccentric Calf and Soleus Raises:** Heavy, slow calf raises to increase the load tolerance of the Achilles tendon and plantar fascia.
-*   **Hamstring and Glute Loading:** Exercises like single-leg deadlifts and glute bridges to ensure the larger muscle groups of the posterior chain absorb the shock of running, rather than transferring it entirely to the foot.
+When I ran this protocol by my physiotherapist, she validated the approach and added a critical piece of biomechanical insight:
+* **The Danger of Unclipping:** She warned that the sharp, twisting motion required to release a cycling cleat places immense lateral shear force on the ankle ligaments, which could easily re-tear the healing tissue.
+* **The Foot-on-Shoe Workaround:** By leaving the shoes clipped into the pedals and resting my feet flat on top of them, I could harvest 100% of the cardiovascular benefits while completely bypassing the risk and twisting motion of unclipping.
 
 ---
 
-## Conclusion: Validation in the Field
+## 3. Engineering the Footwear Rotation
 
-The ultimate test of this adaptation strategy was the **Trail du Saint Jacques** (Episode 7). Despite completing 70km with 3,200 meters of elevation gain on steep, technical descents, both my ankle and my plantar fascia remained completely silent. The combination of targeted posterior chain strength work, protective rockered footwear, and low-cadence cycling force training built the mechanical durability needed to keep my feet healthy.
+Plantar fasciitis is heavily influenced by running mechanics and load distribution. The AI coach audited my shoe rotation and prescribed a transition to footwear engineered specifically to offload tension from the plantar fascia:
+
+1.  **Maximalist Cushioning:** High stack heights to aggressively dampen vertical impact forces.
+2.  **Rocker Geometry:** A curved sole that acts as a fulcrum, rolling the foot forward to reduce toe extension and minimize mechanical stretch on the fascia during push-off.
+3.  **Moderate to High Drop:** An 8mm+ heel-to-toe drop to reduce the baseline stretch and eccentric load on the calves and Achilles tendon.
+
+This targeted criteria led directly to adopting the **Asics Trabuco Max**, which became my primary volume shoe, keeping my feet heavily protected and pain-free over long mileage.
+
+---
+
+## 4. Restructuring Strength Training for Durability
+
+The biggest delta between my 2025 and 2026 preparations was the complete overhaul of my strength conditioning. 
+
+In 2025, my strength sessions were limited to light core work, basic ankle stability, and quick bodyweight routines. While beneficial, they failed to address the chronic weakness in my posterior chain (calves, soleus, hamstrings, and glutes)—the root biomechanical cause of my plantar fasciitis.
+
+For 2026, the AI coach introduced highly structured, progressive load sessions explicitly targeting the posterior chain:
+*   **Eccentric Calf and Soleus Loading:** Heavy, slow calf raises designed to increase the structural load tolerance of the Achilles tendon and plantar fascia.
+*   **Proximal Chain Integration:** Movements like single-leg deadlifts and heavy glute bridges. The goal was to ensure the massive muscle groups of the upper leg absorb the shock of running, rather than letting those forces travel down to be absorbed entirely by the foot.
+
+---
+
+## Conclusion: Field-Tested Validation
+
+The ultimate stress test for this rehabilitation and adaptation strategy was the **Trail du Saint Jacques** (Episode 7). Despite hammering through 70km with 3,200 meters of elevation gain across steep, highly technical descents, both my ankle and my plantar fascia remained completely silent. 
+
+By combining targeted posterior chain strength work, protective rockered footwear, and low-cadence cycling to build force without impact, we successfully engineered the mechanical durability required to keep my feet healthy on race day.
 
 ---
 
