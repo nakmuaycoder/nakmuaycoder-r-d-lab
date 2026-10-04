@@ -1,21 +1,14 @@
 [
   {
-    "listing": "/posts/project-chiang-m-ai/index.html",
+    "listing": "/posts/index.html",
     "items": [
-      "/posts/project-chiang-m-ai/01-ai-board-of-directors/index.html",
-      "/posts/project-chiang-m-ai/02-from-generation-to-validation/index.html",
-      "/posts/project-chiang-m-ai/03-the-runtime-loop/index.html",
-      "/posts/project-chiang-m-ai/04-the-automation-warehouse/index.html",
-      "/posts/project-chiang-m-ai/05-wellness-based-adaptation/index.html",
-      "/posts/project-chiang-m-ai/06-where-to-run-today/index.html",
-      "/posts/project-chiang-m-ai/07-mid-season-review-saint-jacques/index.html",
-      "/posts/project-chiang-m-ai/08-injury-management-strength-cycling/index.html",
-      "/posts/project-chiang-m-ai/09-plan-tuning-and-lumbar-crisis/index.html"
+      "/posts/project-chiang-m-ai/index.html"
     ]
   },
   {
     "listing": "/index.html",
     "items": [
+      "/posts/project-chiang-m-ai/10-nutrition-weight-management-and-rice-plan/index.html",
       "/posts/project-chiang-m-ai/09-plan-tuning-and-lumbar-crisis/index.html",
       "/posts/project-chiang-m-ai/08-injury-management-strength-cycling/index.html",
       "/posts/project-chiang-m-ai/07-mid-season-review-saint-jacques/index.html",
@@ -28,9 +21,18 @@
     ]
   },
   {
-    "listing": "/posts/index.html",
+    "listing": "/posts/project-chiang-m-ai/index.html",
     "items": [
-      "/posts/project-chiang-m-ai/index.html"
+      "/posts/project-chiang-m-ai/01-ai-board-of-directors/index.html",
+      "/posts/project-chiang-m-ai/02-from-generation-to-validation/index.html",
+      "/posts/project-chiang-m-ai/03-the-runtime-loop/index.html",
+      "/posts/project-chiang-m-ai/04-the-automation-warehouse/index.html",
+      "/posts/project-chiang-m-ai/05-wellness-based-adaptation/index.html",
+      "/posts/project-chiang-m-ai/06-where-to-run-today/index.html",
+      "/posts/project-chiang-m-ai/07-mid-season-review-saint-jacques/index.html",
+      "/posts/project-chiang-m-ai/08-injury-management-strength-cycling/index.html",
+      "/posts/project-chiang-m-ai/09-plan-tuning-and-lumbar-crisis/index.html",
+      "/posts/project-chiang-m-ai/10-nutrition-weight-management-and-rice-plan/index.html"
     ]
   }
 ]
