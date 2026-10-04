@@ -6,10 +6,11 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2026-03-06">
-<meta name="description" content="How I built a Python script to automate the ‘Last Mile’ of AI coaching: syncing Gemini chats directly to my watch via Google Calendar and Intervals.icu.">
+<meta name="author" content="nakmuaycoder">
+<meta name="dcterms.date" content="2026-09-06">
+<meta name="description" content="Why off-the-shelf training plans can be dangerous. A deep dive into how we audited a 100-mile plan, fixed absurd Z5 workouts and missing tapers, and adapted our build for Chiang Mai 173km after a severe back injury.">
 
-<title>Project Chiang M-AI - Episode 4: The “Zero-UI” Warehouse: Shipping AI Plans to Production (Garmin) – My R&amp;D Lab</title>
+<title>Project Chiang M-AI - Episode 9: Tuning a 100-Mile Plan After a Heatwave Summer: From Commercial Anomalies to a Locked Back – My R&amp;D Lab</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -27,41 +28,6 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
-}
-/* CSS for syntax highlighting */
-html { -webkit-text-size-adjust: 100%; }
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -113,17 +79,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <link rel="stylesheet" href="../../../styles.css">
-<meta property="og:title" content="Project Chiang M-AI - Episode 4: The “Zero-UI” Warehouse: Shipping AI Plans to Production (Garmin) – My R&amp;D Lab">
-<meta property="og:description" content="How I built a Python script to automate the ‘Last Mile’ of AI coaching: syncing Gemini chats directly to my watch via Google Calendar and Intervals.icu.">
-<meta property="og:image" content="https://nakmuaycoder.github.io/nakmuaycoder-r-d-lab/posts/project-chiang-m-ai/04-the-automation-warehouse/workflow.png">
+<meta property="og:title" content="Project Chiang M-AI - Episode 9: Tuning a 100-Mile Plan After a Heatwave Summer: From Commercial Anomalies to a Locked Back – My R&amp;D Lab">
+<meta property="og:description" content="Why off-the-shelf training plans can be dangerous. A deep dive into how we audited a 100-mile plan, fixed absurd Z5 workouts and missing tapers, and adapted our build for Chiang Mai 173km after a severe back injury.">
+<meta property="og:image" content="https://nakmuaycoder.github.io/nakmuaycoder-r-d-lab/posts/project-chiang-m-ai/09-plan-tuning-and-lumbar-crisis/ep09.png">
 <meta property="og:site_name" content="My R&amp;D Lab">
-<meta property="og:image:height" content="624">
-<meta property="og:image:width" content="1121">
-<meta name="twitter:title" content="Project Chiang M-AI - Episode 4: The “Zero-UI” Warehouse: Shipping AI Plans to Production (Garmin) – My R&amp;D Lab">
-<meta name="twitter:description" content="How I built a Python script to automate the ‘Last Mile’ of AI coaching: syncing Gemini chats directly to my watch via Google Calendar and Intervals.icu.">
-<meta name="twitter:image" content="https://nakmuaycoder.github.io/nakmuaycoder-r-d-lab/posts/project-chiang-m-ai/04-the-automation-warehouse/workflow.png">
-<meta name="twitter:image-height" content="624">
-<meta name="twitter:image-width" content="1121">
+<meta property="og:image:height" content="768">
+<meta property="og:image:width" content="1376">
+<meta name="twitter:title" content="Project Chiang M-AI - Episode 9: Tuning a 100-Mile Plan After a Heatwave Summer: From Commercial Anomalies to a Locked Back – My R&amp;D Lab">
+<meta name="twitter:description" content="Why off-the-shelf training plans can be dangerous. A deep dive into how we audited a 100-mile plan, fixed absurd Z5 workouts and missing tapers, and adapted our build for Chiang Mai 173km after a severe back injury.">
+<meta name="twitter:image" content="https://nakmuaycoder.github.io/nakmuaycoder-r-d-lab/posts/project-chiang-m-ai/09-plan-tuning-and-lumbar-crisis/ep09.png">
+<meta name="twitter:image-height" content="768">
+<meta name="twitter:image-width" content="1376">
 <meta name="twitter:card" content="summary_large_image">
 </head>
 
@@ -180,17 +146,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Project Chiang M-AI - Episode 4: The “Zero-UI” Warehouse: Shipping AI Plans to Production (Garmin)</h1>
+      <h1 class="title">Project Chiang M-AI - Episode 9: Tuning a 100-Mile Plan After a Heatwave Summer: From Commercial Anomalies to a Locked Back</h1>
+            <p class="subtitle lead">Auditing an off-the-shelf TrainingPeaks plan with AI, handling heatwave disruptions, and recovering from an acute lumbar crisis.</p>
                   <div>
         <div class="description">
-          How I built a Python script to automate the ‘Last Mile’ of AI coaching: syncing Gemini chats directly to my watch via Google Calendar and Intervals.icu.
+          Why off-the-shelf training plans can be dangerous. A deep dive into how we audited a 100-mile plan, fixed absurd Z5 workouts and missing tapers, and adapted our build for Chiang Mai 173km after a severe back injury.
         </div>
       </div>
                           <div class="quarto-categories">
-                <div class="quarto-category">python</div>
-                <div class="quarto-category">automation</div>
-                <div class="quarto-category">gemini</div>
-                <div class="quarto-category">intervals.icu</div>
+                <div class="quarto-category">training-plans</div>
+                <div class="quarto-category">data-analysis</div>
+                <div class="quarto-category">injury-prevention</div>
+                <div class="quarto-category">sports-science</div>
                 <div class="quarto-category">project-chiang-m-ai</div>
               </div>
                   </div>
@@ -199,11 +166,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   
   <div class="quarto-title-meta">
 
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>nakmuaycoder </p>
+            </div>
+    </div>
       
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">March 6, 2026</p>
+        <p class="date">September 6, 2026</p>
       </div>
     </div>
     
@@ -219,18 +192,22 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#the-last-mile-problem-of-ai-coaching" id="toc-the-last-mile-problem-of-ai-coaching" class="nav-link active" data-scroll-target="#the-last-mile-problem-of-ai-coaching">The “Last Mile” Problem of AI Coaching</a></li>
-  <li><a href="#the-stack-google-calendar-as-a-database" id="toc-the-stack-google-calendar-as-a-database" class="nav-link" data-scroll-target="#the-stack-google-calendar-as-a-database">The Stack: Google Calendar as a Database</a></li>
-  <li><a href="#the-architecture" id="toc-the-architecture" class="nav-link" data-scroll-target="#the-architecture">The Architecture</a></li>
-  <li><a href="#the-workflow-from-text-to-tarmac" id="toc-the-workflow-from-text-to-tarmac" class="nav-link" data-scroll-target="#the-workflow-from-text-to-tarmac">The Workflow: From Text to Tarmac</a>
+  <li><a href="#why-buy-a-plan-just-to-tune-it-with-ai" id="toc-why-buy-a-plan-just-to-tune-it-with-ai" class="nav-link active" data-scroll-target="#why-buy-a-plan-just-to-tune-it-with-ai">1. Why Buy a Plan Just to Tune It with AI?</a></li>
+  <li><a href="#the-ai-audit-anomalies-found-in-the-commercial-plan" id="toc-the-ai-audit-anomalies-found-in-the-commercial-plan" class="nav-link" data-scroll-target="#the-ai-audit-anomalies-found-in-the-commercial-plan">2. The AI Audit: Anomalies Found in the Commercial Plan</a>
   <ul class="collapse">
-  <li><a href="#step-1-the-plan" id="toc-step-1-the-plan" class="nav-link" data-scroll-target="#step-1-the-plan">Step 1: The Plan</a></li>
-  <li><a href="#step-2-the-data-schema-taming-the-ai" id="toc-step-2-the-data-schema-taming-the-ai" class="nav-link" data-scroll-target="#step-2-the-data-schema-taming-the-ai">Step 2: The Data Schema (Taming the AI)</a></li>
-  <li><a href="#step-3-the-sync" id="toc-step-3-the-sync" class="nav-link" data-scroll-target="#step-3-the-sync">Step 3: The Sync</a></li>
-  <li><a href="#step-4-the-backward-loop-daily-feedback" id="toc-step-4-the-backward-loop-daily-feedback" class="nav-link" data-scroll-target="#step-4-the-backward-loop-daily-feedback">Step 4: The Backward Loop (Daily Feedback)</a></li>
+  <li><a href="#anomaly-1-physiologically-impossible-workouts-e.g.-40-min-in-z5c" id="toc-anomaly-1-physiologically-impossible-workouts-e.g.-40-min-in-z5c" class="nav-link" data-scroll-target="#anomaly-1-physiologically-impossible-workouts-e.g.-40-min-in-z5c">⚠️ Anomaly #1: Physiologically Impossible Workouts (e.g., 40 min in Z5c)</a></li>
+  <li><a href="#anomaly-2-zero-recovery-weeks-deload" id="toc-anomaly-2-zero-recovery-weeks-deload" class="nav-link" data-scroll-target="#anomaly-2-zero-recovery-weeks-deload">⚠️ Anomaly #2: Zero Recovery Weeks (Deload)</a></li>
+  <li><a href="#anomaly-3-complete-absence-of-a-taper-period" id="toc-anomaly-3-complete-absence-of-a-taper-period" class="nav-link" data-scroll-target="#anomaly-3-complete-absence-of-a-taper-period">⚠️ Anomaly #3: Complete Absence of a Taper Period</a></li>
   </ul></li>
-  <li><a href="#running-cycling-strength-what-works" id="toc-running-cycling-strength-what-works" class="nav-link" data-scroll-target="#running-cycling-strength-what-works">Running, Cycling &amp; Strength: What works?</a></li>
-  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion">Conclusion</a></li>
+  <li><a href="#the-crash-a-sudden-ramp-up-and-a-locked-back" id="toc-the-crash-a-sudden-ramp-up-and-a-locked-back" class="nav-link" data-scroll-target="#the-crash-a-sudden-ramp-up-and-a-locked-back">3. The Crash: A Sudden Ramp-Up and a Locked Back</a>
+  <ul class="collapse">
+  <li><a href="#emergency-protocol-implemented" id="toc-emergency-protocol-implemented" class="nav-link" data-scroll-target="#emergency-protocol-implemented">Emergency Protocol Implemented:</a></li>
+  </ul></li>
+  <li><a href="#the-re-tuned-build-for-chiang-mai-173km" id="toc-the-re-tuned-build-for-chiang-mai-173km" class="nav-link" data-scroll-target="#the-re-tuned-build-for-chiang-mai-173km">4. The Re-Tuned Build for Chiang Mai 173km</a>
+  <ul class="collapse">
+  <li><a href="#key-adjustments-to-the-final-blueprint" id="toc-key-adjustments-to-the-final-blueprint" class="nav-link" data-scroll-target="#key-adjustments-to-the-final-blueprint">Key Adjustments to the Final Blueprint:</a></li>
+  </ul></li>
+  <li><a href="#conclusion-ai-as-the-blueprint-filter" id="toc-conclusion-ai-as-the-blueprint-filter" class="nav-link" data-scroll-target="#conclusion-ai-as-the-blueprint-filter">Conclusion: AI as the Blueprint Filter</a></li>
   </ul>
 </nav>
     </div>
@@ -241,83 +218,129 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 
-<section id="the-last-mile-problem-of-ai-coaching" class="level2">
-<h2 class="anchored" data-anchor-id="the-last-mile-problem-of-ai-coaching">The “Last Mile” Problem of AI Coaching</h2>
-<p>In <a href="../01-ai-board-of-directors/index.html">Episode 1</a>, we designed the strategy. In <a href="../02-from-generation-to-validation/index.html">Episode 2</a>, we validated the plan. In <a href="../03-the-runtime-loop/index.html">Episode 3</a>, we adapted the plan to the chaos of real life. Now comes the boring part: <strong>Data Entry</strong>.</p>
-<p>You have a perfect 4-week block generated by Gemini Advanced. It exists as a beautiful markdown table in your chat window. But your Garmin watch doesn’t read markdown.</p>
-<p>Manually creating 28 workouts in Garmin Connect or TrainingPeaks takes about <strong>90 minutes</strong> of clicking, dragging, and typing. Worse, it is <strong>highly error-prone</strong>. Selecting “Zone 5” instead of “Zone 2” by mistake during a manual entry can ruin a session.</p>
-<blockquote class="blockquote">
-<p><strong>The Goal</strong>: A “Zero-UI” workflow. I want to chat with my coach (Gemini) on my phone, approve the plan, and wake up the next morning with the workout already loaded on my watch.</p>
-</blockquote>
-</section>
-<section id="the-stack-google-calendar-as-a-database" class="level2">
-<h2 class="anchored" data-anchor-id="the-stack-google-calendar-as-a-database">The Stack: Google Calendar as a Database</h2>
-<p>Why build a custom app when Google has already built the perfect infrastructure?</p>
-<ol type="1">
-<li><strong>Frontend</strong>: <strong>Google Gemini App</strong> (Mobile). It has native integration with Google Workspace. I can say <em>“add these sessions to my calendar”</em> and it just works.</li>
-<li><strong>Database</strong>: <strong>Google Calendar</strong>. It handles timezones, recurrence, and drag-and-drop rescheduling seamlessly.</li>
-<li><strong>The Engine</strong>: <strong>Project Chiang M-AI</strong> (My Python Script). A simple automation tool that reads the calendar and pushes to the fitness ecosystem.</li>
-<li><strong>The Bridge</strong>: <strong>Intervals.icu</strong>.
-<ul>
-<li><em>Why not TrainingPeaks?</em> I have a Premium TP account, but their API is closed to individual developers.</li>
-<li><em>Why Intervals.icu?</em> It has an open API and pushes workouts to Garmin, Wahoo, Zwift, and TrainingPeaks Virtual automatically.</li>
-</ul></li>
-</ol>
-</section>
-<section id="the-architecture" class="level2">
-<h2 class="anchored" data-anchor-id="the-architecture">The Architecture</h2>
+<p>The summer of 2026 was anything but a smooth build-up. Between heatwaves in Marseille choking off daily training consistency and the lessons learned from a June 100k preparation that revealed a chronic weakness—Saturday training volume was systematically too low, leaving Sunday long runs unprimed without prior fatigue—the summer training block was fragmented at best.</p>
+<p>In early August, I lined up at the <strong>Gauja by UTMB (50 km)</strong> in Latvia. The heatwave wasn’t an issue there—the weather was cool—but the Nordic climate presented a completely different trap: <strong>miles of deep, slick mud</strong>. It turned into a grinding <strong>7-hour effort</strong>, where a massive amount of energy was lost simply fighting for traction on a heavy trail.</p>
+<p>Upon returning from Latvia, reality set in. The ultimate target of the season was looming: the <strong>Hoka Chiang Mai 173 km (9,800m D+)</strong> in December.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="workflow.png" class="img-fluid figure-img"></p>
-<figcaption>Project Chiang M-AI Automation Workflow</figcaption>
+<p><img src="ep09.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<figcaption>Training Analytics and Lumbar Biomechanics Overview</figcaption>
 </figure>
 </div>
+<hr>
+<section id="why-buy-a-plan-just-to-tune-it-with-ai" class="level2">
+<h2 class="anchored" data-anchor-id="why-buy-a-plan-just-to-tune-it-with-ai">1. Why Buy a Plan Just to Tune It with AI?</h2>
+<p>During the post-mortem of my 100k preparation in June, data analysis highlighted a consistent flaw: <strong>Saturday volume was chronically low</strong>, failing to generate the necessary pre-fatigue before Sunday long runs.</p>
+<p>To prepare for a 173 km ultra with nearly 10,000 meters of elevation gain, I needed a more rigid framework. Rather than building a 14-week schedule from scratch, we decided to <strong>purchase an established 100-mile training plan on TrainingPeaks</strong> and use our <strong>Project Chiang M-AI</strong> architecture to audit, clean, and re-engineer it.</p>
+<p>The objective was never to blindly follow a static <code>.fit</code> calendar, but to use it as raw material—passing it through our AI reasoning engine to adapt it to my actual biomechanics and real-world recovery limits.</p>
+<hr>
 </section>
-<section id="the-workflow-from-text-to-tarmac" class="level2">
-<h2 class="anchored" data-anchor-id="the-workflow-from-text-to-tarmac">The Workflow: From Text to Tarmac</h2>
-<p>I’ve been using this system for a couple of weeks now, and it has completely removed the friction of managing a complex plan.</p>
-<p>Here is the loop that runs my training:</p>
-<section id="step-1-the-plan" class="level3">
-<h3 class="anchored" data-anchor-id="step-1-the-plan">Step 1: The Plan</h3>
-<p>I open the Gemini app on my phone. &gt; <em>“Context: Week 3/4. Heavy Load. Focus: VO2 Max. Generate the specific sessions.”</em></p>
-<p>Gemini outputs the JSON structure for the workouts. I verify it. &gt; <em>“Looks good. Schedule them in Google Calendar.”</em></p>
-<p><strong>Done.</strong> Gemini calls the Google Calendar API itself (via the <strong>Google Workspace Extension</strong>) and places the events in my “Training” calendar.</p>
+<section id="the-ai-audit-anomalies-found-in-the-commercial-plan" class="level2">
+<h2 class="anchored" data-anchor-id="the-ai-audit-anomalies-found-in-the-commercial-plan">2. The AI Audit: Anomalies Found in the Commercial Plan</h2>
+<p>When we ingested the 14-week commercial plan into <strong>Project Chiang M-AI</strong>, the system immediately flagged several major methodological flaws. The off-the-shelf plan contained absurdities that no human athlete should execute:</p>
+<section id="anomaly-1-physiologically-impossible-workouts-e.g.-40-min-in-z5c" class="level3">
+<h3 class="anchored" data-anchor-id="anomaly-1-physiologically-impossible-workouts-e.g.-40-min-in-z5c">⚠️ Anomaly #1: Physiologically Impossible Workouts (e.g., 40 min in Z5c)</h3>
+<p>The plan prescribed intensity sessions that were physically impossible, such as <strong>40 continuous minutes in Zone 5 Cardiac (Z5c)</strong>—the heart rate zone corresponding to maximal aerobic effort (&gt;95% of maximum heart rate, or HRmax). Unlike Zone 5 Pace or Power (which can be sustained in short micro-intervals), holding a continuous cardiovascular effort above 95% HRmax for 40 minutes straight is a physiological impossibility; it leads directly to acute central nervous system exhaustion and rapid injury.</p>
 </section>
-<section id="step-2-the-data-schema-taming-the-ai" class="level3">
-<h3 class="anchored" data-anchor-id="step-2-the-data-schema-taming-the-ai">Step 2: The Data Schema (Taming the AI)</h3>
-<p>As a Data Scientist, my biggest fear with Large Language Models is <strong>hallucination</strong>. I don’t want Gemini accidentally prescribing a “Zone 6 Heart Rate” (which generally implies cardiac arrest).</p>
-<p>But beyond AI, this solves a <strong>Human Error</strong> problem. I have a confession: Before automating this, I frequently messed up manual data entry in TrainingPeaks. Entering <code>Zone 1</code> instead of <code>Zone 5</code> is obvious and easy to spot. But typing <code>Zone 4</code> instead of <code>Zone 3</code>? Unnoticeable on the screen, until you are on the trail and your watch forces you into the red for 45 minutes, completely exploding your fatigue score for the week.</p>
-<p>To bridge the gap between probabilist AI, clumsy human fingers, and the deterministic API of intervals.icu, I built a strict validation layer using <strong>Pydantic</strong>. If Gemini provides parameters that physically don’t make sense or aren’t parsable into my exact Lactate Threshold zones, the pipeline rejects it <em>before</em> it ever gets sent to my watch.</p>
-<p><em>The validation layer is implemented using Pydantic models that enforce strict constraints on zones, durations, and workout structure before any API call is made. You can find the implementation in the GitHub repository.</em></p>
+<section id="anomaly-2-zero-recovery-weeks-deload" class="level3">
+<h3 class="anchored" data-anchor-id="anomaly-2-zero-recovery-weeks-deload">⚠️ Anomaly #2: Zero Recovery Weeks (Deload)</h3>
+<p>Proper periodization relies on a 3:1 progression (3 load weeks followed by 1 deload week). In this plan, week 4 maintained massive long runs (<strong>2,000m D+</strong>), offering only trivial intensity reductions early in the week. Without a true volume reduction, supercompensation cannot occur.</p>
 </section>
-<section id="step-3-the-sync" class="level3">
-<h3 class="anchored" data-anchor-id="step-3-the-sync">Step 3: The Sync</h3>
-<p>I run my script:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> <span class="at">-m</span> project_chiang_m_ai sync <span class="at">--block</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>The script: 1. Reads the Google Calendar events. 2. Validates the workout structure. 3. Uploads them to Intervals.icu. 4. Intervals.icu pushes them to my Garmin Forerunner 955 and Wahoo ELEMNT ROAM.</p>
+<section id="anomaly-3-complete-absence-of-a-taper-period" class="level3">
+<h3 class="anchored" data-anchor-id="anomaly-3-complete-absence-of-a-taper-period">⚠️ Anomaly #3: Complete Absence of a Taper Period</h3>
+<p>Most absurdly, while the plan pushed high volume deep into the schedule, it completely lacked a progressive tapering phase before the main event. Arriving at the start line of a <strong>173 km / 9,800m D+</strong> race without a 2 to 3 week volume reduction means starting with half-empty batteries.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Detected Anomaly</th>
+<th style="text-align: left;">Off-the-Shelf Plan Prescription</th>
+<th style="text-align: left;">Project Chiang M-AI Fix</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>Absurd Intensity</strong></td>
+<td style="text-align: left;">40 min continuous in Zone 5 HR (Z5c)</td>
+<td style="text-align: left;">🔄 <strong>Controlled Flat Tempo/Threshold (3x8 min Z3)</strong></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Missing Deload</strong></td>
+<td style="text-align: left;">Week 4 maintained 2,000m D+ long runs</td>
+<td style="text-align: left;">🛑 <strong>Enforced 3:1 cycles with 30% volume drops</strong></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>Missing Taper</strong></td>
+<td style="text-align: left;">Zero taper period before target race</td>
+<td style="text-align: left;">📉 <strong>Sanctuarized 14-day progressive taper</strong></td>
+</tr>
+</tbody>
+</table>
+<hr>
 </section>
-<section id="step-4-the-backward-loop-daily-feedback" class="level3">
-<h3 class="anchored" data-anchor-id="step-4-the-backward-loop-daily-feedback">Step 4: The Backward Loop (Daily Feedback)</h3>
-<p>This is where the system actually becomes a “Coach” and not just a “Plan Generator”.</p>
-<p>Every morning, I give Gemini my context: &gt; <em>“Morning Check-in. HRV is 50ms (baseline 75ms). Resting HR is up +5bpm. Feeling drained.”</em></p>
-<p>Gemini analyzes the state and decides to adapt: &gt; <em>“Recovery required. I am downgrading today’s Threshold session to a Zone 2 recovery ride. Updating your calendar now.”</em></p>
-<p>Gemini <strong>updates the Google Calendar event directly</strong>. My script detects the change, deletes the old high-intensity session from Intervals.icu, and pushes the new recovery ride.</p>
 </section>
-</section>
-<section id="running-cycling-strength-what-works" class="level2">
-<h2 class="anchored" data-anchor-id="running-cycling-strength-what-works">Running, Cycling &amp; Strength: What works?</h2>
-<p>The script currently handles 3 types of workouts, but with different levels of integration:</p>
+<section id="the-crash-a-sudden-ramp-up-and-a-locked-back" class="level2">
+<h2 class="anchored" data-anchor-id="the-crash-a-sudden-ramp-up-and-a-locked-back">3. The Crash: A Sudden Ramp-Up and a Locked Back</h2>
+<p>Even after catching these theoretical flaws, attempting to ramp up training load in early September after an irregular summer in Marseille proved costly.</p>
+<p>The resumption was too violent. On <strong>September 1st</strong>, the body put a hard stop to the build: <strong>an acute lumbar spasm (bas du dos bloqué)</strong>.</p>
+<blockquote class="blockquote">
+<p><strong>Biomechanical Reality at 92.5 kg:</strong><br>
+At 92.5 kg body weight, every ground impact generates <strong>200 to 250 kg of axial force</strong> transmitted up the posterior chain. When the lumbar erectors and psoas lock up in a protective reflex spasm, continuing to run forces those impact loads directly into spinal discs.</p>
+</blockquote>
+<section id="emergency-protocol-implemented" class="level3">
+<h3 class="anchored" data-anchor-id="emergency-protocol-implemented">Emergency Protocol Implemented:</h3>
 <ol type="1">
-<li><strong>Running</strong>: 🟢 <strong>Fully Automated</strong>. Workouts are built using <strong>% of Lactate Threshold Heart Rate (LTHR)</strong>. They sync perfectly to my Garmin.</li>
-<li><strong>Cycling</strong>: 🟢 <strong>Fully Automated</strong>. Workouts are built using <strong>% of FTP (Power)</strong>. They sync to Garmin, Wahoo, and Zwift.</li>
-<li><strong>Strength</strong>: 🟡 <strong>Partially Automated</strong>. I have implemented the <em>Strength Workout</em> model in the script. It successfully uploads the text description to Intervals.icu, but the API bridge to Garmin currently <em>does not</em> support pushing step-by-step strength workouts to the watch. For now, I read the plan on my phone for these sessions.</li>
+<li>🛑 <strong>Immediate Stop of Running Impacts:</strong> Absolute pause on running during acute spasm.</li>
+<li>🛑 <strong>No Heavy Core Planks:</strong> Traditional planks heavily engage the psoas, worsening lumbar shear stress during an acute flare-up.</li>
+<li>🧘 <strong>90/90 Passive Decompression:</strong> Lying flat on the floor with calves resting on a chair at 90 degrees (15 min, 3x/day) to unload the lumbar spine.</li>
+<li>🚶‍♂️ <strong>Gentle Flat Walking:</strong> “Motion is Lotion”—low-intensity walking to promote local blood flow and drain inflammation without impact shock.</li>
 </ol>
+<hr>
 </section>
-<section id="conclusion" class="level2">
-<h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
-<p>We often over-engineer “Apps” when “Scripts” are enough. By leveraging existing robust tools (Google Calendar + Intervals.icu API), I built a complete Coaching Platform that is responsive, automated, and error-free.</p>
-<p>This allows me to spend time on what matters: <strong>Running the miles</strong>, not managing the database.</p>
-<p>I open-sourced the tool here: <a href="https://github.com/nakmuaycoder/project-chiang-m-ai">github.com/nakmuaycoder/project-chiang-m-ai</a>.</p>
+</section>
+<section id="the-re-tuned-build-for-chiang-mai-173km" class="level2">
+<h2 class="anchored" data-anchor-id="the-re-tuned-build-for-chiang-mai-173km">4. The Re-Tuned Build for Chiang Mai 173km</h2>
+<p>With the back injury stabilizing, we fully re-engineered the remaining build within <strong>Project Chiang M-AI</strong>.</p>
+<section id="key-adjustments-to-the-final-blueprint" class="level3">
+<h3 class="anchored" data-anchor-id="key-adjustments-to-the-final-blueprint">Key Adjustments to the Final Blueprint:</h3>
+<ul>
+<li><strong>Sanctuarizing Saturdays:</strong> Re-introducing structured Saturday runs to create true Back-to-Back (B2B) weekend blocks, directly fixing the structural weakness from our June 100k preparation.</li>
+<li><strong>Strict 3:1 Periodization:</strong> Enforcing a full recovery week every 4th week.</li>
+<li><strong>Dedicated Taper Phase:</strong> Locking in a 14-day progressive volume reduction leading into race day in Thailand.</li>
+</ul>
+<pre><code>                  ┌─────────────────────────────────────────┐
+                  │ 1. REVISED WEEKLY TEMPLATE              │
+                  │    - Tue: REST (Recovery)               │
+                  │    - Wed: Controlled Tempo (3x8m Z3)    │
+                  │    - Fri: Trail Hill Repeats            │
+                  │    - Sat: Saturday Pre-Fatigue Run      │
+                  │    - Sun: Long Mountain Trail D+        │
+                  └────────────────────┬────────────────────┘
+                                       │
+                                       ▼
+                  ┌─────────────────────────────────────────┐
+                  │ 2. STRICT 3:1 PERIODIZATION             │
+                  │    - 3 progressive load weeks           │
+                  │    - 1 mandatory Deload / Recovery week │
+                  └────────────────────┬────────────────────┘
+                                       │
+                                       ▼
+                  ┌─────────────────────────────────────────┐
+                  │ 3. TAPER &amp; CHIANG MAI 173KM (9800M+)    │
+                  │    - 14-day progressive taper           │
+                  │    - Race day in Thailand (Dec 2026)    │
+                  └────────────────────┬────────────────────┘</code></pre>
+<hr>
+</section>
+</section>
+<section id="conclusion-ai-as-the-blueprint-filter" class="level2">
+<h2 class="anchored" data-anchor-id="conclusion-ai-as-the-blueprint-filter">Conclusion: AI as the Blueprint Filter</h2>
+<p>Buying a commercial training plan can provide a useful starting point, but <strong>blindly executing a static plan with impossible heart rate targets or missing tapers is a direct path to injury</strong>.</p>
+<p>By using <strong>Project Chiang M-AI</strong> to audit and tune the raw plan, we converted a flawed off-the-shelf program into an individualized, data-driven build tailored for <strong>Chiang Mai 173 km</strong>. The back is recovered, the schedule is clean, and the focus shifts to the final build! 🏔️⚡</p>
 
 
 </section>
