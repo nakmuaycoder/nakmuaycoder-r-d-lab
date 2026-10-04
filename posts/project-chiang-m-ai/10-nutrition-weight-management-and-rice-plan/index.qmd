@@ -134,8 +134,8 @@ Every morning at 10:00 AM Paris time (`0 8 * * *` UTC cron), GitHub Actions exec
                                ▼
 ┌─────────────────────────────────────────────────────────────┐
 │ 2. RECIPIENT DISPATCH LOOP                                  │
-│    - Recipient 1 (User / 32308831): Format in French (fr)   │
-│    - Recipient 2 (Wife / 47153306): Format in Thai (th)    │
+│    - Recipient 1 (User): Format in French (fr)              │
+│    - Recipient 2 (Wife): Format in Thai (th)                │
 └──────────────────────────────┬──────────────────────────────┘
                                │
                                ▼
