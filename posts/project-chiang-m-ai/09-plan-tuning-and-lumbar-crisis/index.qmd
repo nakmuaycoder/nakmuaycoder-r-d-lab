@@ -35,7 +35,7 @@ The objective was never to blindly follow a static `.fit` calendar, but to use i
 When we ingested the 14-week commercial plan into **Project Chiang M-AI**, the system immediately flagged several major methodological flaws. The off-the-shelf plan contained absurdities that no human athlete should execute:
 
 ### ⚠️ Anomaly #1: Physiologically Impossible Workouts (e.g., 40 min in Z5c)
-The plan prescribed intensity sessions that were physically impossible, such as **40 continuous minutes in Zone 5 Heart Rate (Z5c)**. Holding an effort above 95% of maximum heart rate for 40 minutes straight is a physiological impossibility—it leads directly to acute central nervous system exhaustion and injury.
+The plan prescribed intensity sessions that were physically impossible, such as **40 continuous minutes in Zone 5 Cardiac (Z5c)**—the heart rate zone corresponding to maximal aerobic effort (>95% of maximum heart rate, or HRmax). Unlike Zone 5 Pace or Power (which can be sustained in short micro-intervals), holding a continuous cardiovascular effort above 95% HRmax for 40 minutes straight is a physiological impossibility; it leads directly to acute central nervous system exhaustion and rapid injury.
 
 ### ⚠️ Anomaly #2: Zero Recovery Weeks (Deload)
 Proper periodization relies on a 3:1 progression (3 load weeks followed by 1 deload week). In this plan, week 4 maintained massive long runs (**2,000m D+**), offering only trivial intensity reductions early in the week. Without a true volume reduction, supercompensation cannot occur.
