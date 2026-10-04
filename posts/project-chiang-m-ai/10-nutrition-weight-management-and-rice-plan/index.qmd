@@ -66,13 +66,10 @@ As detailed in [Episode 9](../09-plan-tuning-and-lumbar-crisis/index.qmd), carry
 
 To solve this problem systematically, we built a dedicated module in `src/project_chiang_m_ai/nutrition.py` that computes daily carbohydrate and meal targets based on Basal Metabolic Rate (BMR) and planned workout metrics (Duration, TSS, Elevation Gain).
 
-### A. The Hom Mali Rice Cooker Math ($2.35\times$)
+### A. The Hom Mali Rice Cooker Ratio (2.35x)
 In Southeast Asian and endurance diets, cooked rice is the primary clean carbohydrate source. However, measuring cooked rice at mealtime is prone to error, whereas measuring dry rice before cooking ensures exact precision.
 
-Through empirical testing with a standard electric rice cooker, we calibrated the exact expansion ratio for **Hom Mali Jasmine Rice**:
-$$\text{Cooked Rice Weight} = \text{Dry Rice Weight} \times 2.35$$
-
-$$\text{Dry Rice Weight} = \left\lfloor \frac{\text{Cooked Rice Weight}}{2.35} \right\rfloor$$
+Through empirical testing with a standard electric rice cooker, we calibrated the expansion ratio for **Hom Mali Jasmine Rice**: dry rice expands by a factor of 2.35 when cooked (or conversely, the required dry rice weight equals cooked rice divided by 2.35).
 
 By incorporating this constant (`HOM_MALI_RATIO = 2.35`) into our engine, the system automatically tells the athlete exactly how many grams of **dry Hom Mali rice** to measure into the rice cooker every morning to cover both lunch and dinner.
 
@@ -87,10 +84,10 @@ The algorithm then analyzes all planned workouts for the day and categorizes ene
 | Category Key | Workout Condition | Breakfast Oats | Lunch Rice (Cuit) | Dinner Rice (Cuit) | Intra-Workout Carbs | 16h Banana Snack |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | **`rest`** 🛋️ | Rest Day / 0h / 0 TSS | 60g | 120g (Baseline) | 120g (Baseline) | 0g | Rest (0g) |
-| **`light`** 🏃 | $\le 1.25$h & TSS $< 75$ | 60g (70g W/E) | +20g / +40g | +40g / +20g | 30g | 1 Banana (~25g) |
-| **`moderate`** ⛰️ | $\le 2.6$h or TSS $< 160$ (e.g. 2h30 Figuerolles) | 60g (80g W/E) | +60g / +60g | +100g / +60g | 120g | 1 Banana (~25g) |
-| **`high`** 💣 | $\le 4.0$h or TSS $< 260$ | 60g (80g W/E) | +100g / +100g | +130g / +100g | 200g | 1 Banana (~25g) |
-| **`peak`** 👑 | $> 4.0$h / Ultra Session | 60g (90g W/E) | +140g / +130g | +180g / +160g | 300g | 1 Banana (~25g) |
+| **`light`** 🏃 | ≤ 1.25h & TSS < 75 | 60g (70g W/E) | +20g / +40g | +40g / +20g | 30g | 1 Banana (~25g) |
+| **`moderate`** ⛰️ | ≤ 2.6h or TSS < 160 (e.g. 2h30 Figuerolles) | 60g (80g W/E) | +60g / +60g | +100g / +60g | 120g | 1 Banana (~25g) |
+| **`high`** 💣 | ≤ 4.0h or TSS < 260 | 60g (80g W/E) | +100g / +100g | +130g / +100g | 200g | 1 Banana (~25g) |
+| **`peak`** 👑 | > 4.0h / Ultra Session | 60g (90g W/E) | +140g / +130g | +180g / +160g | 300g | 1 Banana (~25g) |
 
 *Note: On weekends, the algorithm shifts a higher proportion of carbohydrate intake to lunch to replenish glycogen earlier in the day.*
 
@@ -153,7 +150,7 @@ Every morning at 10:00 AM Paris time (`0 8 * * *` UTC cron), GitHub Actions exec
 ### Key Engineering Constraints:
 1. **Single TrainingPeaks API Call**: To avoid hit rate limits, the script fetches TrainingPeaks workouts once per run and passes the resulting plan dictionary to all recipients.
 2. **Secrets Formatting**: Multi-recipient credentials are stored securely in GitHub Secrets as `USER_ID_1:API_KEY_1:LANG_1,USER_ID_2:API_KEY_2:LANG_2`.
-3. **Free Mobile Payload Sanitization (`sanitize_for_free_mobile_sms`)**: The Free Mobile SMS API returns an HTTP 400 error if payloads exceed ~450 UTF-8 characters or contain consecutive newlines (`\n\n`) or 4-byte Emojis. The sanitizer replaces Emojis with bracketed text tags (`🍚` $\rightarrow$ `[RIZ]`, `🛋️` $\rightarrow$ `[Repos]`), strips header bloat when `for_sms=True`, and collapses blank lines.
+3. **Free Mobile Payload Sanitization (`sanitize_for_free_mobile_sms`)**: The Free Mobile SMS API returns an HTTP 400 error if payloads exceed ~450 UTF-8 characters or contain consecutive newlines (`\n\n`) or 4-byte Emojis. The sanitizer replaces Emojis with bracketed text tags (`🍚` → `[RIZ]`, `🛋️` → `[Repos]`), strips header bloat when `for_sms=True`, and collapses blank lines.
 
 ---
 
